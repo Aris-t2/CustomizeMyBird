@@ -1,0 +1,5 @@
+
+#tabbar-toolbar #calendar-tab-button,
+#tabbar-toolbar #task-tab-button {
+  visibility: collapse !important;
+}

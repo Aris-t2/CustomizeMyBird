@@ -1,0 +1,84 @@
+<!ENTITY CMB_title			"CustomizeMyBird">
+<!ENTITY Generalui			"General UI">
+<!ENTITY Classictabs		"Tabs: classic squared tabs">
+<!ENTITY BlueAerocolors		"- blue Aero colors">
+<!ENTITY Tabheight			"Tabs: custom height (in px)">
+<!ENTITY Tabborderradius	"- top border roundness (in px)">
+<!ENTITY Tabtbbuttons_bt	"Tabs and tab toolbar buttons: switch positions">
+<!ENTITY Tabtb_lightning	"Tabs toolbar: hide Lightning buttons">
+
+<!ENTITY Menubarposition	"Main menu bar">
+<!ENTITY Menubarposition_at	"above tabs">
+<!ENTITY Menubarposition_bt	"below tabs">
+<!ENTITY Menubar_compact	"Main menubar: compact view">
+<!ENTITY Main_tb_compact	"Main toolbar: compact view">
+<!ENTITY Statusbar_hidden	"Statusbar: hide statusbar">
+<!ENTITY Attachmentbox_hp	"Attachments: move above mail content">
+<!ENTITY Attachmentbox_bp	"Attachments: move button to start position">
+<!ENTITY Quickfilterbar_lp	"Quick-filter-bar: move below mail list">
+<!ENTITY Aerocolorstoolbar	"Toolbars: blue Aero colors">
+
+<!ENTITY Windowheader		"Windows header colors">
+<!ENTITY Windowheaderbg		"- custom background color">
+
+<!ENTITY Appmenubutton0		"Appmenu button">
+<!ENTITY Appmenubutton		"Alternative appearance">
+<!ENTITY Appmenubuttonct	"- transparent background (overrides custom background)">
+<!ENTITY Appmenubuttonc1	"- custom top background color">
+<!ENTITY Appmenubuttonc2	"- custom bottom background color">
+<!ENTITY Appmenubuttontxt	"- custom text">
+<!ENTITY Appmenubuttontxtc	"- custom text color">
+<!ENTITY Appmenubuttontxtcs	"- custom text shadow">
+<!ENTITY Appmenubuttonhp	"- higher position (tab toolbar / menubar)">
+<!ENTITY Appmenubuttondm	"- dropmarker">
+<!ENTITY Appmenubuttonicon	"- icon (instead of text)">
+<!ENTITY Appmenubuttonicont	"&apos;Text&apos;">
+
+<!ENTITY Ctb_settings		"Classic toolbar button appearance">
+<!ENTITY Ctb_maintoolbar	"Main toolbar">
+<!ENTITY Ctb_menubar		"Menubar">
+<!ENTITY Ctb_tabstoolbar	"Tabs toolbar">
+<!ENTITY Ctb_borderradius	"- border roundness (in px)">
+<!ENTITY Ctb_buttonheight	"- minimum height (in px)">
+<!ENTITY Ctb_buttonwidth	"- minimum width (in px)">
+<!ENTITY Ctb_icons_main		"Main icons">
+<!ENTITY Ctb_icons_default	"Default">
+<!ENTITY Ctb_icons_dark		"dark">
+<!ENTITY Ctb_icons_white	"bright">
+<!ENTITY Large				"large">
+<!ENTITY Medium				"medium">
+<!ENTITY Small				"small">
+<!ENTITY Tiny				"tiny">
+<!ENTITY Nb_tbmailicons_hr	"Reduce icon size on hover">
+
+<!ENTITY Addonsmanager		"Add-on manager">
+<!ENTITY Altaddonsmanager	"Alternative appearance">
+<!ENTITY Addonsm_compact	"Compact view">
+<!ENTITY Addonsm_version	"Show add-on version number">
+
+<!ENTITY Scrollbars									"Scrollbars">
+<!ENTITY Scrollbars_hidden							"Hide scrollbars">
+<!ENTITY Scrollbar_buttons_hidden					"Hide scrollbar buttons">
+<!ENTITY Scrollbar_csize							"Custom size">
+<!ENTITY Scrollbar_csize_value						"Custom size value (in px)">
+<!ENTITY Scrollbar_copacity							"Custom opacity">
+<!ENTITY Scrollbar_copacity_value					"Custom opacity value (in percent)">
+<!ENTITY Scrollbars_cappearance						"Custom appearance">
+<!ENTITY Scrollbars_cappearance_gradient			"-- gradient">
+<!ENTITY Scrollbars_cappearance_background_color	"- background color">
+<!ENTITY Scrollbars_cappearance_thumb_color			"- thumb color">
+<!ENTITY Scrollbars_cappearance_thumb_hover_color	"- thumb hover color">
+<!ENTITY Scrollbars_cappearance_thumb_roundness		"- thumb roundness (in px)">
+<!ENTITY Scrollbars_cappearance_thumb_border		"- thumb border width (in px)">
+<!ENTITY Scrollbars_cappearance_thumb_border_color	"- thumb border color">
+<!ENTITY Scrollbars_cappearance_buttons_color		"- button color">
+<!ENTITY Scrollbars_cappearance_buttons_hover_color	"- button hover color">
+<!ENTITY Scrollbars_cappearance_buttons_roundness	"- button roundness (in px)">
+<!ENTITY Scrollbars_vertical						"vertical">
+<!ENTITY Scrollbar_horizontal						"horizontal">
+
+
+<!ENTITY Nondefault_theme	"The 'CustomizeMyBird' add-on is not compatible with 'full themes'!">
+
+<!ENTITY Supportsite		"Support site">
+<!ENTITY Latestversion		"Download latest version here">

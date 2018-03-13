@@ -1,0 +1,28 @@
+
+@-moz-document url-prefix(chrome://customizemybirdextension/content/options.xul) {
+
+	#CustomizeMyBird_prefwindow {
+	  min-width: 800px !important;
+	  width: unset !important;
+	  max-width: 96vw !important;
+	  min-height: 600px !important;
+	  height: 600px !important;
+	  max-height: 600px !important;
+	  overflow: auto !important;
+	  overflow-x: visible !important;
+	  overflow-y: visible !important;
+	  font-size: 12px !important;
+	}
+
+	#CustomizeMyBird_prefwindow #customizemybird_content_box {
+	  min-height: 500px !important;
+	  height: unset !important;
+	  max-height: 96vh !important;
+	}
+
+	#CustomizeMyBird_prefwindow #customizemybird_content_box > * {
+	  -moz-margin-start: 0px !important;
+	  -moz-margin-end: 0px !important;
+	}
+
+}

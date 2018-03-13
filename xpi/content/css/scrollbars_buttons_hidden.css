@@ -1,0 +1,15 @@
+scrollbar[orient="vertical"] scrollbarbutton {
+  -moz-appearance: none !important;
+  min-height: 1px !important;
+  height: 1px !important;
+  max-height: 1px !important;
+  opacity: 0 !important;
+}
+
+scrollbar[orient="horizontal"] scrollbarbutton {
+  -moz-appearance: none !important;
+  min-width: 1px !important;
+  width: 1px !important;
+  max-width: 1px !important;
+  opacity: 0 !important;
+}

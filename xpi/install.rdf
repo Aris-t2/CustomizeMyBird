@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>CustomizeMyBird@Aris_CTRdev</em:id>
+        <em:type>2</em:type>
+        <em:name>CustomizeMyBird</em:name>
+        <em:version>2.0.4</em:version>
+        <em:bootstrap>true</em:bootstrap>
+        <em:creator>Aris</em:creator>
+		<em:description>CustomizeMyBird offers tweaks to customize Thunderbirds default theme and lightweight themes (e.g. squared tabs, custom tab height, alternative menu button, alternative add-on manager and more).</em:description>
+		<em:homepageURL>https://addons.mozilla.org/addon/customizemybird</em:homepageURL>
+		<em:optionsType>3</em:optionsType>
+		<em:optionsURL>chrome://customizemybirdextension/content/options.xul</em:optionsURL>
+        <em:targetApplication>
+            <Description>
+                <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+                <em:minVersion>52.0</em:minVersion>
+                <em:maxVersion>61.0</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+		
+		<!-- Localizations -->
+		<em:localized>
+		  <Description>
+			<em:locale>en-US</em:locale>
+			<em:name>CustomizeMyBird</em:name>
+			<em:description>CustomizeMyBird offers tweaks to customize Thunderbirds default and lightweight themes (e.g. squared tabs, custom tab height, alternative menu button, alternative add-on manager and more).</em:description>
+		  </Description>
+		</em:localized>
+		<em:localized>
+		  <Description>
+			<em:locale>de</em:locale>
+			<em:name>CustomizeMyBird</em:name>
+			<em:description>Die Erweiterung CustomizeMyBird bietet Einstellungen für Thunderbirds Standard- sowie Lightweight-Themes (u.a. quadratische Tabs, benutzerdefinierte Tabhöhe, alternative Menüschaltfläche, alternative Add-ons-Verwaltung und mehr).</em:description>
+		  </Description>
+		</em:localized>
+		<em:localized>
+		  <Description>
+			<em:locale>es</em:locale>
+			<em:name>CustomizeMyBird</em:name>
+			<em:description>CustomizeMyBird ofrece ajustes para personalizar los temas predeterminados y ligeros (personas) de Thunderbird (ej. pestañas cuadradas, altura de pestaña personalizada, botón de menú alternativo, administrador de complementos alternativo y más).</em:description>
+			<em:translator>strel</em:translator>
+		  </Description>
+		</em:localized>
+		
+    </Description>
+</RDF>

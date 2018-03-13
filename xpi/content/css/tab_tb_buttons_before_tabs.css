@@ -1,0 +1,11 @@
+
+#tabbar-toolbar {
+  -moz-box-ordinal-group: 0 !important;
+  -moz-padding-end: 1px !important;
+}
+
+@media all and (-moz-windows-classic) {
+	#mail-toolbar-menubar2[autohide="false"] + #tabs-toolbar > .titlebar-placeholder {
+	  display: block !important;
+	}
+}

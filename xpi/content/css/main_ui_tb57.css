@@ -1,0 +1,140 @@
+
+/* adjust menubar border */
+#mail-toolbar-menubar2{
+  border-bottom: 0px !important;
+}
+
+/* Windows 'Aero' */
+@media all and (-moz-windows-theme:aero) {
+
+	/* move tabs to windows top edge */
+	#messengerWindow #tabs-toolbar {
+	  margin-top:6px !important;
+	}
+	#messengerWindow[hcp_platformPlus="windows"] #tabs-toolbar {
+	  margin-top:8px !important;
+	}
+
+	#messengerWindow[sizemode="maximized"] #tabs-toolbar {
+	  margin-top:-1px !important;
+	}
+	#messengerWindow[sizemode="maximized"][hcp_platformPlus="windows"] #tabs-toolbar {
+	  margin-top:1px !important;
+	}
+
+}
+
+/* compose window */
+#addresses-box textbox {
+  background: white !important;
+  color: black !important;
+  border: 1px solid #a9b7c9 !important;
+}
+#addresses-box textbox:hover,
+#addresses-box textbox[focused] {
+  background: white !important;
+  color: black !important;
+  border: 1px solid Highlight !important;
+}
+
+#addresses-box textbox[nomatch="true"][highlightnonmatches="true"] {
+  color: red !important;
+}
+
+/* Win7/Vista Aero tweaks*/
+@media not all and (-moz-os-version:windows-win10) {
+ @media not all and (-moz-os-version:windows-win8) {
+  @media all and (-moz-windows-theme:aero) {
+  
+	/* menubar */
+	.chromeclass-menubar{
+	  border-bottom: 0px !important;
+	}
+
+  }
+ }
+}
+
+@media (-moz-os-version:windows-win8),(-moz-os-version:windows-win10) {
+	/* menubar */
+	.chromeclass-menubar{
+	  border-bottom: 0px !important;
+	}
+	.chromeclass-toolbar{
+	  margin-top: 0px !important;
+	}
+	
+	/*status bar*/
+	#messengerWindow:not(:-moz-lwtheme) #status-bar {
+	  -moz-appearance: none !important;  
+	  border-top: unset !important;  
+	}
+	
+	#messengerWindow:not(:-moz-lwtheme) #status-bar statusbarpanel,
+	#messengerWindow:not(:-moz-lwtheme) #status-bar .statusbar-resizerpanel{
+	  -moz-appearance: none !important;  
+	  border-top: 1px solid rgba(0,0,0,.2) !important;
+	  border-left: 0px !important;
+	  border-right: 0px !important;
+	  border-bottom: 0px !important;
+	}
+	
+	#messengerWindow:not(:-moz-lwtheme) #status-bar statusbarpanel toolbarbutton{
+	  background: unset !important;
+	}
+
+}
+
+/* Tb 57 tweaks */
+#tabs-toolbar > *{
+  /*padding: unset !important;*/
+}
+@media (-moz-os-version: windows-win7),
+       (-moz-os-version: windows-win8) {
+  .mail-toolbox:not([mode="full"]) > toolbar:only-of-type,
+  .mail-toolbox[mode="full"][labelalign="end"] > toolbar:only-of-type {
+    margin-top: unset !important;
+    margin-bottom: unset !important;
+  }
+}
+
+/* remove fckng rtrdd space before tabs, seriously devs what is wrong with you? */
+:root[tabsintitlebar][sizemode=normal] #mail-toolbar-menubar2[autohide=true] ~ #tabs-toolbar > #tabbar-toolbar {
+  margin-inline-start: 0px !important;
+}
+
+:root[tabsintitlebar][sizemode=normal] #mail-toolbar-menubar2[autohide=true] ~ #tabs-toolbar {
+  margin-top: 2px !important;
+}
+
+/* reduce tab height */
+:root {
+  --tab-min-height: 26px !important;
+}
+
+/* tree columns */
+treecol,
+treecolpicker {
+  -moz-appearance: none !important;
+  background-image: linear-gradient(to top, #f8f8f8, #fbfbfb) !important;
+  border-bottom: 1px solid lightgrey !important;
+  padding: 1px 4px !important;
+}
+
+treecol {
+  border-right: 1px solid lightgrey !important;
+}
+
+treecol:hover,
+treecolpicker:hover{
+  background-image: linear-gradient(to bottom, #e3f7ff, #b7e7fb) !important;
+}
+
+treecol:hover:active,
+treecolpicker:hover:active {
+  background-image: linear-gradient(to bottom, #bdedff, #8ad1f5) !important;
+}
+
+.treecol-image {
+  padding-top: 4px !important;
+}

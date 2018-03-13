@@ -1,0 +1,84 @@
+<!ENTITY CMB_title			"CustomizeMyBird">
+<!ENTITY Generalui			"Oberfläche">
+<!ENTITY Classictabs		"Tabs: klassische quadratische Tabs">
+<!ENTITY BlueAerocolors		"- blaue Aero-Farben">
+<!ENTITY Tabheight			"Tabs: benutzerdefinierte Höhe (in px)">
+<!ENTITY Tabborderradius	"- obere Randrundung (in px)">
+<!ENTITY Tabtbbuttons_bt	"Tabs und Tableistenschaltflächen: Positionen tauschen">
+<!ENTITY Tabtb_lightning	"Tableiste: Lightning-Schaltflächen verstecken">
+
+<!ENTITY Menubarposition	"Menüleiste">
+<!ENTITY Menubarposition_at	"über der Tableiste anzeigen">
+<!ENTITY Menubarposition_bt	"unter der Tableiste anzeigen">
+<!ENTITY Menubar_compact	"Menüleiste: kompakte Darstellung">
+<!ENTITY Main_tb_compact	"Hauptleiste: kompakte Darstellung">
+<!ENTITY Statusbar_hidden	"Statusleiste: Statusleiste verstecken">
+<!ENTITY Attachmentbox_hp	"Mailanhänge: über dem Mailinhalt anzeigen">
+<!ENTITY Attachmentbox_bp	"Mailanhänge: Schaltfläche nach links verschieben">
+<!ENTITY Quickfilterbar_lp	"Schnellfilterleiste: unter der Mailliste anzeigen">
+<!ENTITY Aerocolorstoolbar	"Leisten: blaue Aero-Farben">
+
+<!ENTITY Windowheader		"Oberer Fensterbereich">
+<!ENTITY Windowheaderbg		"- benutzerdefinierte Hintergrundfarbe">
+
+<!ENTITY Appmenubutton0		"Hauptmenüschaltfläche">
+<!ENTITY Appmenubutton		"Alternative Darstellung">
+<!ENTITY Appmenubuttonct	"- keine Hintergrundfarbe (entfernt benutzerdefinierte Hintergrundfarbe)">
+<!ENTITY Appmenubuttonc1	"- benutzerdefinierte obere Hintergrundfarbe">
+<!ENTITY Appmenubuttonc2	"- benutzerdefinierte untere Hintergrundfarbe">
+<!ENTITY Appmenubuttontxt	"- benutzerdefinierter Text">
+<!ENTITY Appmenubuttontxtc	"- benutzerdefinierte Textfarbe">
+<!ENTITY Appmenubuttontxtcs	"- benutzerdefinierter Textschatten">
+<!ENTITY Appmenubuttonhp	"- höhere Position auf Tab- und Menüleiste)">
+<!ENTITY Appmenubuttondm	"- Aufklappschaltfläche anzeigen">
+<!ENTITY Appmenubuttonicon	"- Text oder Symbol">
+<!ENTITY Appmenubuttonicont	"'Text'">
+
+<!ENTITY Ctb_settings		"Alte Schaltflächendarstellung">
+<!ENTITY Ctb_maintoolbar	"Hauptleiste">
+<!ENTITY Ctb_menubar		"Menüleiste">
+<!ENTITY Ctb_tabstoolbar	"Tableiste">
+<!ENTITY Ctb_borderradius	"- Randrundung (in px)">
+<!ENTITY Ctb_buttonheight	"- minimale Höhe (in px)">
+<!ENTITY Ctb_buttonwidth	"- minimale Breite (in px)">
+<!ENTITY Ctb_icons_main		"Hauptsymbole">
+<!ENTITY Ctb_icons_default	"Standard">
+<!ENTITY Ctb_icons_dark		"dunkel">
+<!ENTITY Ctb_icons_white	"hell">
+<!ENTITY Large				"groß">
+<!ENTITY Medium				"mittel">
+<!ENTITY Small				"klein">
+<!ENTITY Tiny				"winzig">
+<!ENTITY Nb_tbmailicons_hr	"Symbolgröße reduzieren (hover/über)">
+
+<!ENTITY Addonsmanager		"Add-ons-Verwaltung">
+<!ENTITY Altaddonsmanager	"Alternative Darstellung">
+<!ENTITY Addonsm_compact	"Kompakte Erweiterungseinträge">
+<!ENTITY Addonsm_version	"Versionsnummern von Erweiterungen anzeigen">
+
+<!ENTITY Scrollbars									"Bildlaufleisten">
+<!ENTITY Scrollbars_hidden							"Bildlaufleisten ausblenden">
+<!ENTITY Scrollbar_buttons_hidden					"Bildlaufleistenschaltflächen ausblenden">
+<!ENTITY Scrollbar_csize							"Benutzerdefinierte Größe">
+<!ENTITY Scrollbar_csize_value						"Benutzerdefinierter Größenwert (in px)">
+<!ENTITY Scrollbar_copacity							"Benutzerdefinierte Sichtbarkeit">
+<!ENTITY Scrollbar_copacity_value					"Benutzerdefinierter Sichtbarkeitsgrad (in Prozent)">
+<!ENTITY Scrollbars_cappearance						"Benutzerdefiniertes Aussehen">
+<!ENTITY Scrollbars_cappearance_gradient			"-- Farbverlauf">
+<!ENTITY Scrollbars_cappearance_background_color	"- Hintergrundfarbe">
+<!ENTITY Scrollbars_cappearance_thumb_color			"- Schiebereglerfarbe">
+<!ENTITY Scrollbars_cappearance_thumb_image			"- Schiebereglerfarbverlauf">
+<!ENTITY Scrollbars_cappearance_thumb_hover_color	"- Schiebereglerfarbe (hover/über)">
+<!ENTITY Scrollbars_cappearance_thumb_roundness		"- Schiebereglerundung (in px)">
+<!ENTITY Scrollbars_cappearance_thumb_border		"- Schiebereglerrandbreite (in px)">
+<!ENTITY Scrollbars_cappearance_thumb_border_color	"- Schiebereglerrandfarbe">
+<!ENTITY Scrollbars_cappearance_buttons_color		"- Schaltflächenfarbe">
+<!ENTITY Scrollbars_cappearance_buttons_hover_color	"- Schaltflächenfarbe (hover/über)">
+<!ENTITY Scrollbars_cappearance_buttons_roundness	"- Schaltflächenrundung (in px)">
+<!ENTITY Scrollbars_vertical						"vertikal">
+<!ENTITY Scrollbar_horizontal						"horizontal">
+
+<!ENTITY Nondefault_theme	"Die Erweiterung 'CustomizeMyBird' ist nicht mit 'vollständigen Themes' kompatibel!">
+
+<!ENTITY Supportsite		"Support-Seite">
+<!ENTITY Latestversion		"Aktuellste Version herunterladen">

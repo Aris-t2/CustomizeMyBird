@@ -1,0 +1,164 @@
+/* menubar */
+#messengerWindow .chromeclass-menubar{
+  border-bottom: 0px !important;
+}
+
+window:not(#messengerWindow) .toolbox-top:not(:-moz-lwtheme),
+window:not(#messengerWindow) .mail-toolbox:not(:-moz-lwtheme),
+dialog .mail-toolbox:not(:-moz-lwtheme),
+#messengerWindow .mail-toolbox:not(:-moz-lwtheme) {
+  background: linear-gradient(#eaf2fb,#dceaf9) !important;
+}
+
+#messengerWindow:not(:-moz-lwtheme) #mail-bar3:not(:-moz-lwtheme){
+  background: unset !important;
+}
+
+/* filter bar */
+#messengerWindow:not(:-moz-lwtheme) #quick-filter-bar,
+#messengerWindow:not(:-moz-lwtheme) #quick-filter-bar-main-bar {
+  -moz-appearance: none !important;
+  background: #dbeaf9 !important;
+}
+
+/* attachment bar */
+#messengerWindow:not(:-moz-lwtheme) #attachmentBar{
+  background: #dbeaf9 !important;
+}
+
+/* folder pane bar */
+#messengerWindow:not(:-moz-lwtheme) #folderPane-toolbar{
+  background: #dbeaf9 !important;
+}
+
+/* header */
+#messengerWindow:not(:-moz-lwtheme) #expandedHeadersBox {
+  background: #eef3fa !important;
+}
+
+/* Lightning */
+#messengerWindow:not(:-moz-lwtheme) #unifinder-searchBox,
+#messengerWindow:not(:-moz-lwtheme) #task-addition-box,
+#messengerWindow:not(:-moz-lwtheme) #calendar-nav-control{
+  background: #dbeaf9 !important;
+}
+
+/*status bar*/
+#messengerWindow:not(:-moz-lwtheme) statusbar,
+#messengerWindow:not(:-moz-lwtheme) #status-bar {
+  -moz-appearance: none !important;  
+  border-top: unset !important; 
+  -moz-padding-end: 0px !important;
+}
+
+@media all and (-moz-windows-classic) {
+	#messengerWindow:not(:-moz-lwtheme) statusbar,
+	#messengerWindow:not(:-moz-lwtheme) #status-bar {
+	  border: unset !important;  
+	}
+	
+	.chromeclass-status:not(:-moz-lwtheme) statusbarpanel,
+	.chromeclass-status:not(:-moz-lwtheme) .statusbar-resizerpanel{
+	  -moz-appearance: none !important;  
+	  background: #dbeaf9 !important;
+	  border-left: 0px !important;
+	  border-right: 0px !important;
+	  border-bottom: 0px !important;
+	}
+}
+
+#messengerWindow:not(:-moz-lwtheme) #status-bar statusbarpanel,
+#messengerWindow:not(:-moz-lwtheme) #status-bar .statusbar-resizerpanel{
+  -moz-appearance: none !important;  
+  background: #dbeaf9 !important;
+  border-top: 1px solid rgba(0,0,0,.2) !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-bottom: 0px !important;
+}
+
+#messengerWindow:not(:-moz-lwtheme) #status-bar .statusbar-resizerpanel{
+  display: -moz-inline-box !important;
+}
+
+#messengerWindow:not(:-moz-lwtheme) #status-bar statusbarpanel toolbarbutton{
+  background: unset !important;
+}
+
+#messengerWindow:not(:-moz-lwtheme) .contentTabInstance notification {
+  background-color: #dbeaf9 !important;
+}
+
+resizer {
+  -moz-appearance: none !important;
+}
+
+/* Lightning */
+#messengerWindow #today-pane-panel:not(:-moz-lwtheme) > sidebarheader,
+#messengerWindow #today-pane-panel:not(:-moz-lwtheme) {
+  background-color: #eaf2fb !important;
+}
+#messengerWindow:not(:-moz-lwtheme) #today-pane-panel > sidebarheader {
+  border-top: 1px solid rgba(10%, 10%, 10%, .4) !important;
+}
+
+/* Win8/10 tweaks*/
+@media (-moz-os-version:windows-win8),(-moz-os-version:windows-win10) {
+  @media all and (-moz-windows-theme:aero) {
+	#mail-toolbar-menubar2:not(:-moz-lwtheme) {
+      background: #eaf2fb !important;
+	}
+  
+	/* appmenus first pane */
+	#messengerWindow #appmenuPrimaryPane{
+	  background: white !important;
+	}
+
+	/* appmenus second pane */
+	#messengerWindow #appmenuSecondaryPane{
+	  background: #f1f5fb !important;
+	}
+  }
+}
+
+#folderTree,#dirTree,
+window:not(#messengerWindow) .chromeclass-menubar:not(:-moz-lwtheme),
+#msgcomposeWindow:not(:-moz-lwtheme) .toolbox-top{
+  background: #eaf2fb !important;
+}
+	
+.chromeclass-status:not(:-moz-lwtheme) statusbarpanel,
+.chromeclass-status:not(:-moz-lwtheme) .statusbar-resizerpanel{
+  -moz-appearance: none !important;  
+  background: #dbeaf9 !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-bottom: 0px !important;
+}
+
+/* tree columns */
+treecol,
+treecolpicker {
+  -moz-appearance: none !important;
+  background-image: linear-gradient(to top, #ddeaf9, #f5f7fa) !important;
+  border-bottom: 1px solid #a9b7c9 !important;
+  padding: 1px 4px !important;
+}
+
+treecol {
+  border-right: 1px solid #a9b7c9 !important;
+}
+
+treecol:hover,
+treecolpicker:hover{
+  background-image: linear-gradient(to bottom, #e3f7ff, #b7e7fb) !important;
+}
+
+treecol:hover:active,
+treecolpicker:hover:active {
+  background-image: linear-gradient(to bottom, #bdedff, #8ad1f5) !important;
+}
+
+.treecol-image {
+  padding-top: 4px !important;
+}

@@ -1,0 +1,9 @@
+
+@media not all and (-moz-windows-classic) {
+	#mail-toolbar-menubar2,
+	#mail-menubar,
+	#menubar-items {
+	  padding: 0px !important;
+	  margin: 0px !important;
+	}
+}

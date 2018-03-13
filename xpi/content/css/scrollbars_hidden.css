@@ -1,0 +1,6 @@
+
+scrollbar, scrollcorner {
+  opacity: 0 !important;
+  /*display: none !important;*/
+  visibility: collapse !important;
+}

@@ -1,0 +1,83 @@
+<!ENTITY CMB_title			"CustomizeMyBird">
+<!ENTITY Generalui			"Interfaz general de usuario">
+<!ENTITY Classictabs		"Pestañas: Cuadradas (clásico)">
+<!ENTITY BlueAerocolors		"- Colores azul Aero (celeste)">
+<!ENTITY Tabheight			"Pestañas: Altura personalizada (en píxeles)">
+<!ENTITY Tabborderradius	"- Redondeado personalizado del borde (en píxeles)">
+<!ENTITY Tabtbbuttons_bt	"Pestañas y botones de la barra de pestañas: Intercambiar posiciones">
+<!ENTITY Tabtb_lightning	"Barra de pestañas: Ocultar botones de Lightning">
+
+<!ENTITY Menubarposition	"Barra de menú principal">
+<!ENTITY Menubarposition_at	"encima de la barra de pestañas">
+<!ENTITY Menubarposition_bt	"debajo de la barra de pestañas">
+<!ENTITY Menubar_compact	"Barra de menú principal: Vista compacta">
+<!ENTITY Main_tb_compact	"Barra de herramientas principal: Vista compacta">
+<!ENTITY Statusbar_hidden	"Barra de estado: Ocultar barra de estado">
+<!ENTITY Attachmentbox_hp	"Recuadro de adjuntos: Situarlo encima del contenido del correo">
+<!ENTITY Attachmentbox_bp	"Recuadro de adjuntos: move button to start position">
+<!ENTITY Quickfilterbar_lp	"Barra de filtrado rápido: Situarla debajo de la lista de correos">
+<!ENTITY Aerocolorstoolbar	"Barras de herramientas: Colores azul Aero (celeste)">
+
+<!ENTITY Windowheader		"Windows header colors">
+<!ENTITY Windowheaderbg		"- color personalizado">
+
+<!ENTITY Appmenubutton0		"Botón principal de menú de la aplicación">
+<!ENTITY Appmenubutton		"Apariencia alternativa">
+<!ENTITY Appmenubuttonct	"- fondo transparente (prevalece sobre el fondo personalizado)">
+<!ENTITY Appmenubuttonc1	"- color personalizado del fondo superior">
+<!ENTITY Appmenubuttonc2	"- color personalizado del fondo inferior">
+<!ENTITY Appmenubuttontxt	"- texto personalizado">
+<!ENTITY Appmenubuttontxtc	"- color personalizado del texto">
+<!ENTITY Appmenubuttontxtcs	"- sombra del texto personalizada">
+<!ENTITY Appmenubuttonhp	"- posición más alta (barra de pestañas / barra de menú)">
+<!ENTITY Appmenubuttondm	"- flecha de despliegue">
+<!ENTITY Appmenubuttonicon	"- icono (en lugar de texto)">
+<!ENTITY Appmenubuttonicont	"&apos;Texto&apos;">
+
+<!ENTITY Ctb_settings		"Estilo clásico para botones">
+<!ENTITY Ctb_maintoolbar	"Barra de herramientas principal">
+<!ENTITY Ctb_menubar		"Barra de menú">
+<!ENTITY Ctb_tabstoolbar	"Barra de pestañas">
+<!ENTITY Ctb_borderradius	"- Radio del borde (en píxeles)">
+<!ENTITY Ctb_buttonheight	"- Altura(-mínima) (en píxeles)">
+<!ENTITY Ctb_buttonwidth	"- Anchura(-mínima) (en píxeles)">
+<!ENTITY Ctb_icons_main		"Estilo de iconos principal">
+<!ENTITY Ctb_icons_default	"Predeterminado">
+<!ENTITY Ctb_icons_dark		"oscuro">
+<!ENTITY Ctb_icons_white	"claro">
+<!ENTITY Large				"grande">
+<!ENTITY Medium				"mediano">
+<!ENTITY Small				"pequeño">
+<!ENTITY Tiny				"minúsculo">
+<!ENTITY Nb_tbmailicons_hr	"Reducir tamaño del icono al señalar">
+
+<!ENTITY Addonsmanager		"Administrador de complementos">
+<!ENTITY Altaddonsmanager	"Apariencia alternativa">
+<!ENTITY Addonsm_compact	"Vista compacta">
+<!ENTITY Addonsm_version	"Mostrar la versión del complemento">
+
+<!ENTITY Scrollbars									"Barras de desplazamiento">
+<!ENTITY Scrollbars_hidden							"Ocultar barras">
+<!ENTITY Scrollbar_buttons_hidden					"Ocultar botones">
+<!ENTITY Scrollbar_csize							"Tamaño personalizado">
+<!ENTITY Scrollbar_csize_value						"Valor de tamaño personalizado (en píxeles)">
+<!ENTITY Scrollbar_copacity							"Opacidad">
+<!ENTITY Scrollbar_copacity_value					"Valor de opacidad (en porcentaje)">
+<!ENTITY Scrollbars_cappearance						"Apariencia personalizada">
+<!ENTITY Scrollbars_cappearance_gradient			"-- gradiente">
+<!ENTITY Scrollbars_cappearance_background_color	"- color de fondo">
+<!ENTITY Scrollbars_cappearance_thumb_color			"- color del deslizador">
+<!ENTITY Scrollbars_cappearance_thumb_hover_color	"- color del deslizador señalado">
+<!ENTITY Scrollbars_cappearance_thumb_roundness		"- redondeado del deslizador (en píxeles)">
+<!ENTITY Scrollbars_cappearance_thumb_border		"- anchura del borde del deslizador (en píxeles)">
+<!ENTITY Scrollbars_cappearance_thumb_border_color	"- color del borde del deslizador">
+<!ENTITY Scrollbars_cappearance_buttons_color		"- color de botón">
+<!ENTITY Scrollbars_cappearance_buttons_hover_color	"- color del botón señalado">
+<!ENTITY Scrollbars_cappearance_buttons_roundness	"- redondeado de botón (en píxeles)">
+<!ENTITY Scrollbars_vertical						"vertical">
+<!ENTITY Scrollbar_horizontal						"horizontal">
+
+<!ENTITY Nondefault_theme	"¡El complemento 'CustomizeMyBird' no es compatible con 'temas completos'!">
+
+<!ENTITY Supportsite		"Sitio de soporte">
+<!ENTITY Latestversion		"Descargue la versión más reciente aquí">

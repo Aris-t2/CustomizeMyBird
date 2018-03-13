@@ -1,0 +1,47 @@
+
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
+	
+	#cmb_nondefault_theme {
+	  display: none !important;
+	}
+	
+	.cmb_supportsite{
+	  border: 0px !important;
+	  background:none !important;
+	  box-shadow: none !important;
+	  margin-left:0px !important;
+	}
+
+	#customizemybirdextension_pref_appmenubuttonicon_tb_icon_white .radio-icon {
+	  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_white.png") !important;
+	}
+	#customizemybirdextension_pref_appmenubuttonicon_tb_icon_white2 .radio-icon {
+	  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_white2.png") !important;
+	}
+	#customizemybirdextension_pref_appmenubuttonicon_tb_icon_def .radio-icon {
+	  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_def.png") !important;
+	}
+	#customizemybirdextension_pref_appmenubuttonicon_tb_icon_def2 .radio-icon {
+	  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_def2.png") !important;
+	}
+	#customizemybirdextension_pref_appmenubuttonicon_tb_icon_def3 .radio-icon {
+	  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_def3.png") !important;
+	}
+	#customizemybirdextension_pref_appmenubuttonicon_tb_icon_flat .radio-icon {
+	  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_flat.png") !important;
+	}
+	
+	#customizemybirdextension_pref_appmenubuttonicon_radiogroup radio {
+	  -moz-margin-start: 0 !important;
+	  -moz-margin-end: 0 !important;
+	}
+
+	#customizemybirdextension_pref_appmenubuttonicon_tb_icon_none .radio-icon {
+	  display: none !important;
+	}
+
+	#customizemybirdextension_pref_appmenubuttonicon_tb_icon_none .radio-label {
+	  -moz-padding-start: 2px !important;
+	}
+
+}

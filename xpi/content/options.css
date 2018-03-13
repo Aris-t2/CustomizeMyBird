@@ -1,0 +1,76 @@
+
+#CustomizeMyBird_prefwindow {
+  background: #fbfbfb;
+  font-size: 16px;
+}
+
+#CustomizeMyBird_prefwindow #customizemybird_title {
+  font-size: 30px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.customizemybird_headline{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cmb_groupbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cmb_groupbox > hbox {
+  border: 1px solid lightgrey;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  background: white;
+}
+
+#CustomizeMyBird_prefwindow #customizemybird_content_box {
+  overflow: auto;
+  min-width: 300px;
+  width: 100vw;
+  margin: 0px;
+}
+
+#CustomizeMyBird_prefwindow #customizemybird_content_box > * {
+  -moz-margin-start: 150px;
+  -moz-margin-end: 150px;
+}
+
+#customizemybird_rg_appbutton_icons #tb_icon_white .radio-icon {
+  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_white.png") !important;
+}
+#customizemybird_rg_appbutton_icons #tb_icon_white2 .radio-icon {
+  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_white2.png") !important;
+}
+#customizemybird_rg_appbutton_icons #tb_icon_def .radio-icon {
+  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_def.png") !important;
+}
+#customizemybird_rg_appbutton_icons #tb_icon_def2 .radio-icon {
+  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_def2.png") !important;
+}
+#customizemybird_rg_appbutton_icons #tb_icon_def3 .radio-icon {
+  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_def3.png") !important;
+}
+#customizemybird_rg_appbutton_icons #tb_icon_flat .radio-icon {
+  list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_flat.png") !important;
+}
+
+#customizemybird_rg_appbutton_icons radio {
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 0 !important;
+}
+
+#customizemybird_rg_appbutton_icons #tb_icon_none .radio-icon {
+  display: none !important;
+}
+
+#customizemybird_rg_appbutton_icons #tb_icon_none .radio-label {
+  -moz-padding-start: 2px !important;
+}
+
+#customizemybird_ml_ctb_tbmailicons {
+  min-width: 200px;
+}

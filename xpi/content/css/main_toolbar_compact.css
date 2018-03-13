@@ -1,0 +1,16 @@
+
+#messengerWindow .chromeclass-toolbar {
+  margin-top:0px !important;
+  margin-bottom:0px !important;
+}
+
+#messengerWindow .searchBox {
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+  min-height: 0 !important;
+}
+
+#messengerWindow #unifinder-searchBox{
+  min-height: 20px !important;
+  height: unset !important;
+}
