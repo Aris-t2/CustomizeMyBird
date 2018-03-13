@@ -27,8 +27,12 @@
 		</hbox>
 		
 		<hbox>
-		  <label value="&Supportsite; (Mozillazine)" class="text-link" href="http://forums.mozillazine.org/viewtopic.php?t=3024866"/>
-		  <label value="&Latestversion; (AMO)" class="text-link" href="https://addons.mozilla.org/addon/customizemybird/"/>
+		  <label value="Github (&Supportsite; / &Latestversion;)" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
+		  <label value=" "/>
+		</hbox>
+		<hbox>
+		  <label value="Mozillazine" class="text-link" href="http://forums.mozillazine.org/viewtopic.php?t=3024866"/>
+		  <label value="CustomizeMyBird @ addons.mozilla.org" class="text-link" href="https://addons.mozilla.org/addon/customizemybird/"/>
 		</hbox>
 		
 		<hbox>
