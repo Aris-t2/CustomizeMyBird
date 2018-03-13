@@ -52,7 +52,7 @@
 - compatible to light and dark lw-themes (aka Personas)
 - <b>not compatible to complete themes</b> (add-ons options page only shows a note in that case, but nothing to select)
 
-## AMO (add-ons.mozilla.org)
+## AMO (addons.mozilla.org)
 AMO stopped being a reliable source to distribute new versions of add-ons. Reviewers stopped looking into "legacy" add-ons and bootstrapped/restartless add-ons, which are still valid  in Thunderbird.
 AMOs focus shifted to crappy and powerless WebExtensions, that do not even have to be reviewed by humans. [The shitty add-on validator is enough allowing tons of spam and malicious WebExtensions being installed by anybody.](https://www.ghacks.net/2017/12/13/mozillas-extensions-store-has-a-spam-infestation/)
 Good thing Thunderbird add-ons don't require the idiotic add-on signing, so users can just install downloaded files. It is also possible to look through the code (which is not possible on AMO anymore) and to build own installation packages.
