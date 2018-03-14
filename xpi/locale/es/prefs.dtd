@@ -18,7 +18,7 @@
 <!ENTITY Quickfilterbar_lp	"Barra de filtrado rápido: Situarla debajo de la lista de correos">
 <!ENTITY Aerocolorstoolbar	"Barras de herramientas: Colores azul Aero (celeste)">
 
-<!ENTITY Windowheader		"Windows header colors">
+<!ENTITY Windowheader		"Colores de cabecera de ventanas">
 <!ENTITY Windowheaderbg		"- color personalizado">
 
 <!ENTITY Appmenubutton0		"Botón principal de menú de la aplicación">
