@@ -16,6 +16,7 @@
 <!ENTITY Attachmentbox_hp	"Attachments: move above mail content">
 <!ENTITY Attachmentbox_bp	"Attachments: move button to start position">
 <!ENTITY Quickfilterbar_lp	"Quick-filter-bar: move below mail list">
+<!ENTITY Treecol			"Column headers: alternative appearance">
 <!ENTITY Aerocolorstoolbar	"Toolbars: blue Aero colors">
 
 <!ENTITY Windowheader		"Windows header colors">

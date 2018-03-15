@@ -30,6 +30,12 @@ init: function() {
 	document.getElementById("customizemybird_cb_attachmentbox_hp").checked = this.prefs.getBoolPref("attachmentbox_hp");
 	document.getElementById("customizemybird_cb_attachmentbox_bp").checked = this.prefs.getBoolPref("attachmentbox_bp");
 	document.getElementById("customizemybird_cb_quickfilterbar_lp").checked = this.prefs.getBoolPref("quickfilterbar_lp");
+	document.getElementById("customizemybird_cb_treecol").checked = this.prefs.getBoolPref("treecol");
+	document.getElementById("customizemybird_cb_treecol_aero").checked = this.prefs.getBoolPref("treecol_aero");
+	
+	if(this.prefs.getBoolPref("treecol"))
+	  document.getElementById("customizemybird_cb_treecol_aero").disabled = false;
+	else document.getElementById("customizemybird_cb_treecol_aero").disabled = true;
 	
 	document.getElementById("customizemybird_cb_appmenubutton").checked = this.prefs.getBoolPref("appmenubutton");
 	document.getElementById("customizemybird_cb_appmenubuttonct").checked = this.prefs.getBoolPref("appmenubuttonct");
@@ -126,9 +132,9 @@ classictabs: function() {
   document.getElementById("customizemybird_cb_classictabs").checked = this.prefs.getBoolPref("classictabs");
   document.getElementById("customizemybird_cb_classictabsaero").checked = this.prefs.getBoolPref("classictabsaero");
   
-	if(this.prefs.getBoolPref("classictabs"))
-	  document.getElementById("customizemybird_cb_classictabsaero").disabled = false;
-	else document.getElementById("customizemybird_cb_classictabsaero").disabled = true;
+  if(this.prefs.getBoolPref("classictabs"))
+	document.getElementById("customizemybird_cb_classictabsaero").disabled = false;
+  else document.getElementById("customizemybird_cb_classictabsaero").disabled = true;
 },
 
 classictabsaero: function() {
@@ -218,6 +224,30 @@ quickfilterbar_lp: function() {
   if(this.prefs.getBoolPref("quickfilterbar_lp")) this.prefs.setBoolPref("quickfilterbar_lp",false); else this.prefs.setBoolPref("quickfilterbar_lp",true);
 },
 
+treecol: function() {
+  if(this.prefs.getBoolPref("treecol")) {
+	this.prefs.setBoolPref("treecol",false);
+	this.prefs.setBoolPref("treecol_aero",false);
+  } else this.prefs.setBoolPref("treecol",true);
+  
+  document.getElementById("customizemybird_cb_treecol").checked = this.prefs.getBoolPref("treecol");
+  document.getElementById("customizemybird_cb_treecol_aero").checked = this.prefs.getBoolPref("treecol_aero");
+  
+  if(this.prefs.getBoolPref("treecol"))
+	document.getElementById("customizemybird_cb_treecol_aero").disabled = false;
+  else document.getElementById("customizemybird_cb_treecol_aero").disabled = true;
+},
+
+treecol_aero: function() {
+  if(this.prefs.getBoolPref("treecol_aero"))
+	this.prefs.setBoolPref("treecol_aero",false);
+  else {
+	if(this.prefs.getBoolPref("treecol")) this.prefs.setBoolPref("treecol_aero",true);
+  }
+  
+  document.getElementById("customizemybird_cb_treecol").checked = this.prefs.getBoolPref("treecol");
+  document.getElementById("customizemybird_cb_treecol_aero").checked = this.prefs.getBoolPref("treecol_aero");
+},
 
 winheader: function() {
   if(this.prefs.getBoolPref("winheader")) this.prefs.setBoolPref("winheader",false); else this.prefs.setBoolPref("winheader",true);

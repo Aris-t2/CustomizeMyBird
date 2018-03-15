@@ -16,6 +16,7 @@
 <!ENTITY Attachmentbox_hp	"Mailanhänge: über dem Mailinhalt anzeigen">
 <!ENTITY Attachmentbox_bp	"Mailanhänge: Schaltfläche nach links verschieben">
 <!ENTITY Quickfilterbar_lp	"Schnellfilterleiste: unter der Mailliste anzeigen">
+<!ENTITY Treecol			"Spaltenbezeichnungen: alternative Darstellung">
 <!ENTITY Aerocolorstoolbar	"Leisten: blaue Aero-Farben">
 
 <!ENTITY Windowheader		"Oberer Fensterbereich">

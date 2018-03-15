@@ -119,6 +119,16 @@
 			<description>&Quickfilterbar_lp;</description>
 			<checkbox id="customizemybird_cb_quickfilterbar_lp" label="" oncommand="customizemybird.options.quickfilterbar_lp();"/>
 		  </hbox>
+	 
+		  <hbox align="center">
+			<description>&Treecol;</description>
+			<checkbox id="customizemybird_cb_treecol" label="" oncommand="customizemybird.options.treecol();"/>
+		  </hbox>
+		  
+		  <hbox align="center">
+			<description>&BlueAerocolors;</description>
+			<checkbox id="customizemybird_cb_treecol_aero" label="" oncommand="customizemybird.options.treecol_aero();"/>
+		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Windowheader;</description>

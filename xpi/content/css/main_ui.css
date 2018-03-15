@@ -146,29 +146,3 @@
 	}
 
 }
-
-/* tree columns */
-treecol,treecolpicker {
-  -moz-appearance: none !important;
-  background-image: linear-gradient(to top, #f8f8f8, #fbfbfb) !important;
-  border-bottom: 1px solid lightgrey !important;
-  padding: 1px 4px !important;
-}
-
-treecol {
-  border-right: 1px solid lightgrey !important;
-}
-
-treecol:hover,
-treecolpicker:hover{
-  background-image: linear-gradient(to bottom, #e3f7ff, #b7e7fb) !important;
-}
-
-treecol:hover:active,
-treecolpicker:hover:active {
-  background-image: linear-gradient(to bottom, #bdedff, #8ad1f5) !important;
-}
-
-.treecol-image {
-  padding-top: 4px !important;
-}

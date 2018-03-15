@@ -56,6 +56,8 @@ function startup(params, reason){
   defaultbranch.setBoolPref("winheader",false);
   defaultbranch.setCharPref("winheaderbg","#eaf2fb");
   defaultbranch.setCharPref("winheadertc","#000000");
+  defaultbranch.setBoolPref("treecol",false);
+  defaultbranch.setBoolPref("treecol_aero",false);
   
   defaultbranch.setBoolPref("ctb_maintoolbar",false);
   defaultbranch.setIntPref("ctb_maintoolbar_br",0);
@@ -480,6 +482,26 @@ var QuickFilterBarLowerPosition = Object.create(StylesheetManager, {
         get: function() {
 		  if(tbdefaulttheme)
 			return "chrome://customizemybirdextension/content/css/quickfilterbar_lp.css";
+		}
+    }
+});
+
+var TreeColumns = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {
+		  if(tbdefaulttheme)
+			return "chrome://customizemybirdextension/content/css/treecol.css";
+		}
+    }
+});
+
+var TreeColumnsAero = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {
+		  if(tbdefaulttheme)
+			return "chrome://customizemybirdextension/content/css/treecol_aero.css";
 		}
     }
 });
@@ -1185,6 +1207,8 @@ var customizemybirdsettings = {
 	"attachmentbox_hp": AttachmentboxHigherPosition,
 	"attachmentbox_bp": AttachmentboxButtonPosition,
 	"quickfilterbar_lp": QuickFilterBarLowerPosition,
+	"treecol": TreeColumns,
+	"treecol_aero": TreeColumnsAero,
 	"appmenubutton": AppmenuButton,
 	"appmenubuttonct": AppmenuButton,
 	"appmenubuttonc1": AppmenuButton,
