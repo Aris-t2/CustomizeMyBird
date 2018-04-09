@@ -2,8 +2,8 @@
   "addons": {
     "CustomizeMyBird@Aris_CTRdev": {
       "updates": [
-        { "version": "2.0.6",
-          "update_link": "https://github.com/Aris-t2/CustomizeMyBird/releases/download/2.0.6/CMB_v2.0.6.xpi",
+        { "version": "2.0.7",
+          "update_link": "https://github.com/Aris-t2/CustomizeMyBird/releases/download/2.0.7/CMB_v2.0.7.xpi",
           "applications": {
             "gecko": { "strict_min_version": "52" } } }
       ]

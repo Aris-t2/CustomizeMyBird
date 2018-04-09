@@ -263,7 +263,8 @@ var ClassicTabs = Object.create(StylesheetManager, {
         get: function() {
 		  if(tbdefaulttheme) {
 			if(app_version>=57) return "chrome://customizemybirdextension/content/css/classictabs_tb57.css";
-		    else return "chrome://customizemybirdextension/content/css/classictabs.css";
+		    else if(os_platform != "Darwin") return "chrome://customizemybirdextension/content/css/classictabs.css";
+			  else return "chrome://customizemybirdextension/content/css/classictabs_mac.css";
 		  }
 		}
     }

@@ -1,0 +1,5 @@
+@import url(./classictabs.css);
+
+#tabs-toolbar{
+  -moz-padding-start: 8px !important;
+}
