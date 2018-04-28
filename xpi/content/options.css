@@ -1,6 +1,6 @@
 
 #CustomizeMyBird_prefwindow {
-  background: #fbfbfb;
+  /*background: #fbfbfb;*/
   font-size: 16px;
 }
 
@@ -24,7 +24,8 @@
   border: 1px solid lightgrey;
   margin-top: 1px;
   margin-bottom: 1px;
-  background: white;
+  /*background: white;
+  color: black;*/
 }
 
 #CustomizeMyBird_prefwindow #customizemybird_content_box {
