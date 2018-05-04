@@ -2,11 +2,32 @@
 if (!customizemybird) {var customizemybird = {};}
 if (!customizemybird.options) {customizemybird.options = {};}
 
+var Cc = Components.classes, Ci = Components.interfaces, Cu = Components.utils;
+
+var {Services} = Cu.import("resource://gre/modules/Services.jsm", {});
+
 customizemybird.options = {
 
 prefs: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.customizemybirdextension."),
 
+appversion: parseInt(Services.appinfo.version),
+tbdefaulttheme: Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
+
 init: function() {
+	
+	if (!this.tbdefaulttheme) { 
+	  document.getElementById('customizemybird_content_box').style.visibility = 'collapse';
+	} else {
+	  document.getElementById('customizemybird_notcompatible_box').style.visibility = 'collapse';
+	}
+	
+	if (this.appversion < 57 && !this.tbdefaulttheme) { 
+	  document.getElementById('CustomizeMyBird_prefwindow').style.minWidth = '800px';
+	  document.getElementById('CustomizeMyBird_prefwindow').style.maxWidth = '800px';
+	  document.getElementById('CustomizeMyBird_prefwindow').style.minHeight = '300px';
+	  document.getElementById('CustomizeMyBird_prefwindow').style.maxHeight = '300px';
+	} 
+	
 	document.getElementById("customizemybird_cb_classictabs").checked = this.prefs.getBoolPref("classictabs");
 	document.getElementById("customizemybird_cb_classictabsaero").checked = this.prefs.getBoolPref("classictabsaero");
 	

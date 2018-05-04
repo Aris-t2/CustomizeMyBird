@@ -18,6 +18,40 @@
   <script type="application/x-javascript" src="options.js"/>
   
   <prefpane align="center" flex="1">
+  
+	<vbox id="customizemybird_notcompatible_box" orient="vertical">
+	
+		<hbox>
+		  <description id="customizemybird_title">&CMB_title;</description>
+		  <spacer flex="1"/>
+		</hbox>
+		
+		<hbox>
+		  <label value="Github (&Supportsite; / &Latestversion;)" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
+		  <label value=" "/>
+		</hbox>
+		<hbox>
+		  <label value="Mozillazine" class="text-link" href="http://forums.mozillazine.org/viewtopic.php?t=3024866"/>
+		  <label value="CustomizeMyBird @ addons.mozilla.org" class="text-link" href="https://addons.mozilla.org/addon/customizemybird/"/>
+		</hbox>
+		
+		<hbox>
+		  <description>[!] &Nondefault_theme;</description>
+		  <description> </description>
+		</hbox>
+		
+		<vbox class="cmb_groupbox">
+
+		  <description class="customizemybird_headline">&Addonsmanager;</description>
+	  
+		  <hbox align="center">
+			<description>&Addonsm_version;</description>
+			<checkbox id="customizemybird_cb_addonsmanager_version" label="" oncommand="customizemybird.options.addonsmanager_version();"/>
+		  </hbox>
+		
+		</vbox>
+
+	</vbox>
 
 	<vbox id="customizemybird_content_box" orient="vertical">
 	

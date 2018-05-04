@@ -10,10 +10,6 @@
   background-image: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;
 }
 
-window#CustomizeMyBird_prefwindow {
-  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;
-}
-
 #CustomizeMyBird_prefwindow .cmb_groupbox > hbox {
   background: white !important;
   color: black !important;
