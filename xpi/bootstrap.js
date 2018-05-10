@@ -574,9 +574,9 @@ var AppmenuButton = Object.create(StylesheetManager, {
 				#button-appmenu > hbox .toolbarbutton-icon {\
 				  display: block !important;\
 				  list-style-image: url("chrome://customizemybirdextension/content/images/'+Services.prefs.getCharPref(PrefsObserver.branch + "appmenubuttonicon")+'.png") !important;\
-				  -moz-image-region: rect(0, 16px, 16px, 0) !important;\
-				  width: unset !important;\
-				  height: unset !important;\
+				  -moz-image-region: rect(0, 32px, 32px, 0) !important;\
+				  width: 16px !important;\
+				  height: 16px !important;\
 				  padding: 1px !important;\
 				  margin-top: -1px !important;\
 				  margin-bottom: -1px !important;\

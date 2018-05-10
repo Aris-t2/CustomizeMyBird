@@ -59,6 +59,11 @@
   list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_flat.png") !important;
 }
 
+#customizemybird_rg_appbutton_icons .radio-icon {
+  width: 16px !important;
+  height: 16px !important;
+}
+
 #customizemybird_rg_appbutton_icons radio {
   -moz-margin-start: 0 !important;
   -moz-margin-end: 0 !important;
