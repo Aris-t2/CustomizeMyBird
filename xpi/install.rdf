@@ -4,23 +4,22 @@
         <em:id>CustomizeMyBird@Aris_CTRdev</em:id>
         <em:type>2</em:type>
         <em:name>CustomizeMyBird</em:name>
-        <em:version>2.1.0</em:version>
+        <em:version>2.1.1</em:version>
         <em:bootstrap>true</em:bootstrap>
         <em:creator>Aris</em:creator>
 		<em:description>CustomizeMyBird offers tweaks to customize Thunderbirds default theme and lightweight themes (e.g. squared tabs, custom tab height, alternative menu button, alternative add-on manager and more).</em:description>
-		<em:homepageURL>https://addons.mozilla.org/addon/customizemybird</em:homepageURL>
+		<em:homepageURL>https://github.com/Aris-t2/CustomizeMyBird</em:homepageURL>
+		<em:updateURL>https://raw.githubusercontent.com/Aris-t2/CustomizeMyBird/master/updates.json</em:updateURL>
 		<em:optionsType>3</em:optionsType>
 		<em:optionsURL>chrome://customizemybirdextension/content/options.xul</em:optionsURL>
         <em:targetApplication>
             <Description>
                 <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
                 <em:minVersion>52.0</em:minVersion>
-                <em:maxVersion>62.*</em:maxVersion>
+                <em:maxVersion>62.0</em:maxVersion>
             </Description>
         </em:targetApplication>
-		
-		<em:updateURL>https://raw.githubusercontent.com/Aris-t2/CustomizeMyBird/master/updates.json</em:updateURL>
-		
+
 		<!-- Localizations -->
 		<em:localized>
 		  <Description>

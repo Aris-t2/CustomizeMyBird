@@ -1,6 +1,4 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-@-moz-document	url(chrome://messenger/content/messenger.xul),
-				url(chrome://messenger/content/messengercompose/messengercompose.xul){
+
 	#tabs-toolbar #alltabs-button,
 	#tabbar-toolbar toolbarbutton[type="menu-button"] > .toolbarbutton-icon,
 	/*#tabbar-toolbar .toolbarbutton-menubutton-dropmarker > image,*/
@@ -112,4 +110,3 @@
 	#tabbar-toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 	  -moz-margin-end: 0 !important;
 	}
-}

@@ -104,6 +104,7 @@ init: function() {
 	
 	document.getElementById("customizemybird_cb_addonsmanager_compact").checked = this.prefs.getBoolPref("addonsmanager_compact");
 	document.getElementById("customizemybird_cb_addonsmanager_version").checked = this.prefs.getBoolPref("addonsmanager_version");
+	document.getElementById("customizemybird_cb_addonsmanager_version2").checked = this.prefs.getBoolPref("addonsmanager_version");
 	
 	document.getElementById("customizemybird_cb_scrollbars_hidden").checked = this.prefs.getBoolPref("scrollbars_hidden");
 	document.getElementById("customizemybird_cb_scrollbar_buttons_hidden").checked = this.prefs.getBoolPref("scrollbar_buttons_hidden");

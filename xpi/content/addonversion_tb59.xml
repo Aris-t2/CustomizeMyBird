@@ -19,27 +19,24 @@
         <xul:label anonid="warning" flex="1"/>
         <xul:label anonid="warning-link" class="text-link"/>
         <xul:button anonid="warning-btn" class="button-link" hidden="true"/>
-        <xul:spacer flex="5000"/> <!-- Necessary to allow the message to wrap -->
+        <xul:spacer flex="5000"/>
       </xul:hbox>
       <xul:hbox anonid="error-container"
                 class="error">
         <xul:image class="error-icon"/>
         <xul:label anonid="error" flex="1"/>
         <xul:label anonid="error-link" class="text-link" hidden="true"/>
-        <xul:spacer flex="5000"/> <!-- Necessary to allow the message to wrap -->
+        <xul:spacer flex="5000"/>
       </xul:hbox>
       <xul:hbox anonid="pending-container"
                 class="pending">
         <xul:image class="pending-icon"/>
         <xul:label anonid="pending" flex="1"/>
-        <xul:button anonid="restart-btn" class="button-link"
-                    label="&addon.restartNow.label;"
-                    oncommand="document.getBindingParent(this).restart();"/>
         <xul:button anonid="undo-btn" class="button-link"
                     label="&addon.undoAction.label;"
                     tooltipText="&addon.undoAction.tooltip;"
                     oncommand="document.getBindingParent(this).undo();"/>
-        <xul:spacer flex="5000"/> <!-- Necessary to allow the message to wrap -->
+        <xul:spacer flex="5000"/>
       </xul:hbox>
 
       <xul:hbox class="content-container" align="center">
@@ -55,19 +52,10 @@
                 <xul:label anonid="legacy" class="legacy-warning text-link" value="&addon.legacy.label;"/>
                 <xul:label class="disabled-postfix" value="&addon.disabled.postfix;"/>
                 <xul:label class="update-postfix" value="&addon.update.postfix;"/>
-                <xul:spacer flex="5000"/> <!-- Necessary to make the name crop -->
+                <xul:spacer flex="5000"/>
               </xul:hbox>
             <xul:label anonid="date-updated" class="date-updated"
                        unknown="&addon.unknownDate;"/>
-          </xul:hbox>
-          <xul:hbox class="experiment-container">
-            <svg width="6" height="6" viewBox="0 0 6 6" version="1.1"
-                 xmlns="http://www.w3.org/2000/svg"
-                 class="experiment-bullet-container">
-              <circle cx="3" cy="3" r="3" class="experiment-bullet"/>
-            </svg>
-            <xul:label anonid="experiment-state" class="experiment-state"/>
-            <xul:label anonid="experiment-time" class="experiment-time"/>
           </xul:hbox>
 
           <xul:hbox class="advancedinfo-container" flex="1">
@@ -78,7 +66,7 @@
                             label="&addon.details.label;"
                             tooltiptext="&addon.details.tooltip;"
                             oncommand="document.getBindingParent(this).showInDetailView();"/>
-                <xul:spacer flex="5000"/> <!-- Necessary to make the description crop -->
+                <xul:spacer flex="5000"/>
               </xul:hbox>
               <xul:vbox anonid="relnotes-container" class="relnotes-container">
                 <xul:label class="relnotes-header" value="&addon.releaseNotes.label;"/>
@@ -209,7 +197,7 @@
               (this.mAddon.applyBackgroundUpdates == AddonManager.AUTOUPDATE_DISABLE ||
                (this.mAddon.applyBackgroundUpdates == AddonManager.AUTOUPDATE_DEFAULT &&
                 !AddonManager.autoUpdateDefault))) {
-            AddonManager.getAllInstalls(aInstallsList => {
+            AddonManager.getAllInstalls().then(aInstallsList => {
               // This can return after the binding has been destroyed,
               // so try to detect that and return early
               if (!("onNewInstall" in this))

@@ -46,7 +46,7 @@
 	  
 		  <hbox align="center">
 			<description>&Addonsm_version;</description>
-			<checkbox id="customizemybird_cb_addonsmanager_version" label="" oncommand="customizemybird.options.addonsmanager_version();"/>
+			<checkbox id="customizemybird_cb_addonsmanager_version2" label="" oncommand="customizemybird.options.addonsmanager_version();"/>
 		  </hbox>
 		
 		</vbox>

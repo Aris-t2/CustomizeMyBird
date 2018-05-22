@@ -38,6 +38,10 @@
 	  padding: 0px !important;
 	}
 	
+	#addons-page .addon .experiment-container {
+	  display: none !important;
+	}
+	
 	/* Highlight */
 	#addons-page .main-content .addon:hover,
 	#addons-page .main-content .addon[active="false"]:hover{
