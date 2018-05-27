@@ -523,7 +523,8 @@ var AppmenuButton = Object.create(StylesheetManager, {
 			var appmenubuttondmi = "url('chrome://customizemybirdextension/content/images/toolbarbutton-arrow-inverted.png')";
 			  
 			if(Services.prefs.getBoolPref(PrefsObserver.branch + "appmenubuttondm"))
-			  appmenubuttondm = "inline";
+			  if(app_version>=61) appmenubuttondm = "block";
+				else appmenubuttondm = "inline";
 		  
 			if (os_platform != "WINNT" && os_platform != "Darwin" && app_version>=59)
 			  appmenubuttondmi = "none";

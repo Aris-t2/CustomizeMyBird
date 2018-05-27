@@ -14,9 +14,9 @@
 <!ENTITY Main_tb_compact	"Barra de herramientas principal: Vista compacta">
 <!ENTITY Statusbar_hidden	"Barra de estado: Ocultar barra de estado">
 <!ENTITY Attachmentbox_hp	"Recuadro de adjuntos: Situarlo encima del contenido del correo">
-<!ENTITY Attachmentbox_bp	"Recuadro de adjuntos: move button to start position">
+<!ENTITY Attachmentbox_bp	"Recuadro de adjuntos: Mover botón a la posición inicial">
 <!ENTITY Quickfilterbar_lp	"Barra de filtrado rápido: Situarla debajo de la lista de correos">
-<!ENTITY Treecol			"Cabeceras de columna: apariencia alternativa">
+<!ENTITY Treecol			"Cabeceras de columna: Apariencia alternativa">
 <!ENTITY Aerocolorstoolbar	"Barras de herramientas: Colores azul Aero (celeste)">
 
 <!ENTITY Windowheader		"Colores de cabecera de ventanas">

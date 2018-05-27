@@ -4,7 +4,6 @@ treecolpicker {
   -moz-appearance: none !important;
   background-image: linear-gradient(to top, #ddeaf9, #f5f7fa) !important;
   border-bottom: 1px solid #a9b7c9 !important;
-  padding: 1px 4px !important;
   color: black !important;
 }
 
@@ -23,5 +22,6 @@ treecolpicker:hover:active {
 }
 
 .treecol-image {
+  padding: 0 !important;
   padding-top: 4px !important;
 }
