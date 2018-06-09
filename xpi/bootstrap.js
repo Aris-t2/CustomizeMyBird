@@ -717,8 +717,26 @@ var WindowHeaderColor = Object.create(StylesheetManager, {
 				
 				var header_background_color = Services.prefs.getCharPref(PrefsObserver.branch + "winheaderbg");
 				var header_text_color = Services.prefs.getCharPref(PrefsObserver.branch + "winheadertc");
+				
+				var menubar_tb52 = '';
 
+				if(app_version < 57)
+				  menubar_tb52 = '\
+					#messengerWindow:not([style*="--lwt-header-image"]):-moz-lwtheme #mail-menubar > menu,\
+					#mail-menubar:not(:-moz-lwtheme) > menu{\
+					  color: '+header_text_color+';\
+					}\
+					@media (-moz-os-version:windows-win8),(-moz-os-version:windows-win10) {\
+						#messengerWindow:not([style*="--lwt-header-image"]):-moz-lwtheme #mail-menubar > menu, \
+						#mail-menubar:not(:-moz-lwtheme) > menu {\
+						  color: '+header_text_color+' !important;\
+						}\
+					}\
+					';
+				
 				return "data:text/css;charset=utf-8," + encodeURIComponent('\
+					'+menubar_tb52+'\
+					#messengerWindow:not([style*="--lwt-header-image"]):-moz-lwtheme #navigation-toolbox, \
 					#navigation-toolbox:not(:-moz-lwtheme) {\
 					  background: '+header_background_color+' !important;\
 					  color: '+header_text_color+' !important;\

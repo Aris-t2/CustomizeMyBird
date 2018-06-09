@@ -174,6 +174,7 @@
 	}
 /*}*/
 
+
 /* Windows 'Aero' */
 @media all and (-moz-windows-theme:aero) {
 
@@ -229,6 +230,33 @@
 		}
 		
 	}
+}
+
+
+/* default Dark lw-theme */
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #tabs-toolbar .tabmail-tab {
+  background-image: linear-gradient(#0c0c0d, #0c0c0d) !important;
+}
+
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #tabs-toolbar .tabmail-tab:hover{
+  background-image: linear-gradient(#252526, #252526) !important;
+}
+
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #tabs-toolbar .tabmail-tab[selected] {
+  background-image: linear-gradient(#323234, #323234) !important;
+}
+
+/* default Light lw-theme */
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-darktext #tabs-toolbar .tabmail-tab {
+  background-image: linear-gradient(#e3e4e6, #e3e4e6) !important;
+}
+
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-darktext #tabs-toolbar .tabmail-tab:hover{
+  background-image: linear-gradient(#cccdcf, #cccdcf) !important;
+}
+
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-darktext #tabs-toolbar .tabmail-tab[selected] {
+  background-image: linear-gradient(#f5f6f7, #f5f6f7) !important;
 }
 
 /*@media all and (-moz-windows-theme:aero) {

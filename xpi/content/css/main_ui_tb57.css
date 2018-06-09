@@ -109,3 +109,21 @@
   --tab-min-height: 26px !important;
 }
 
+/* Dark theme tweaks */
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #folderpane-mode-selector-menulist,
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #folderPaneBox #folderTree treechildren,
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext :-moz-any(#quick-filter-bar,#quick-filter-bar-main-bar) {
+  background: #323234 !important;
+  color: white !important;
+}
+
+/* Fix for remaining hovering borders */
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext *::-moz-tree-row {
+ outline: none !important;
+ /*border: none !important;*/
+}
+
+#messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #folderPane-toolbar {
+  border: 0 !important;
+}
+

@@ -15,8 +15,7 @@ dialog .mail-toolbox:not(:-moz-lwtheme),
 }
 
 /* filter bar */
-#messengerWindow:not(:-moz-lwtheme) #quick-filter-bar,
-#messengerWindow:not(:-moz-lwtheme) #quick-filter-bar-main-bar {
+#messengerWindow:not(:-moz-lwtheme) :-moz-any(#quick-filter-bar,#quick-filter-bar-main-bar) {
   -moz-appearance: none !important;
   background: #dbeaf9 !important;
 }

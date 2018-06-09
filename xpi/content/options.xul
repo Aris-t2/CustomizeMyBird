@@ -27,7 +27,8 @@
 		</hbox>
 		
 		<hbox>
-		  <label value="Github (&Supportsite; / &Latestversion;)" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
+		  <label value="Github &Supportsite;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
+		  <label value="&Latestversion;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/releases/"/>
 		  <label value=" "/>
 		</hbox>
 		<hbox>
@@ -61,7 +62,8 @@
 		</hbox>
 		
 		<hbox>
-		  <label value="Github (&Supportsite; / &Latestversion;)" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
+		  <label value="Github &Supportsite;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
+		  <label value="&Latestversion;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/releases/"/>
 		  <label value=" "/>
 		</hbox>
 		<hbox>
