@@ -294,6 +294,13 @@ var TabHeight = Object.create(StylesheetManager, {
 						  height: '+tabheight+'px !important;\
 						  max-height: '+tabheight+'px !important;\
 						}\
+						@media (-moz-os-version:windows-win10) {\
+						  #messengerWindow[sizemode="maximized"] #titlebar-buttonbox toolbarbutton {\
+							padding-top: 6px !important;\
+							padding-bottom: 6px !important;\
+							margin-bottom: 3px !important;\
+						  }\
+						}\
 					');
 				} else if(tabheight>=26 && tabheight<30){
 					return "data:text/css;charset=utf-8," + encodeURIComponent('\
@@ -302,9 +309,14 @@ var TabHeight = Object.create(StylesheetManager, {
 						  max-height: '+tabheight+'px !important;\
 						}\
 						@media (-moz-os-version:windows-win10) {\
+						  #messengerWindow[sizemode="normal"] #titlebar-buttonbox toolbarbutton {\
+							padding-top: 6px !important;\
+							padding-bottom: 6px !important;\
+						  }\
 						  #messengerWindow[sizemode="maximized"] #titlebar-buttonbox toolbarbutton {\
 							padding-top: 6px !important;\
 							padding-bottom: 6px !important;\
+							margin-bottom: 2px !important;\
 						  }\
 						}\
 					');
