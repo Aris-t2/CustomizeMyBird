@@ -1,8 +1,10 @@
 
+#messengerWindow #messagepanebox #messagepane,
 #msgNotificationBar{
   -moz-box-ordinal-group: 20 !important;
 }
 
+#messengerWindow #messagepanebox #FindToolbar,
 #messagepanewrapper {
   -moz-box-ordinal-group: 21 !important;
 }
