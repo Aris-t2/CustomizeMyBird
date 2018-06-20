@@ -1,27 +1,6 @@
-
 /* adjust menubar border */
 #mail-toolbar-menubar2{
   border-bottom: 0px !important;
-}
-
-/* Windows 'Aero' */
-@media all and (-moz-windows-theme:aero) {
-
-	/* move tabs to windows top edge */
-	#messengerWindow #tabs-toolbar {
-	  margin-top:6px !important;
-	}
-	#messengerWindow[hcp_platformPlus="windows"] #tabs-toolbar {
-	  margin-top:8px !important;
-	}
-
-	#messengerWindow[sizemode="maximized"] #tabs-toolbar {
-	  margin-top:-1px !important;
-	}
-	#messengerWindow[sizemode="maximized"][hcp_platformPlus="windows"] #tabs-toolbar {
-	  margin-top:1px !important;
-	}
-
 }
 
 /* compose window */
@@ -104,11 +83,6 @@
   margin-top: 2px !important;
 }
 
-/* reduce tab height */
-:root {
-  --tab-min-height: 26px !important;
-}
-
 /* Dark theme tweaks */
 #messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #folderpane-mode-selector-menulist,
 #messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #folderPaneBox #folderTree treechildren,
@@ -119,11 +93,9 @@
 
 /* Fix for remaining hovering borders */
 #messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext *::-moz-tree-row {
- outline: none !important;
- /*border: none !important;*/
+  outline: none !important;
 }
 
 #messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #folderPane-toolbar {
   border: 0 !important;
 }
-

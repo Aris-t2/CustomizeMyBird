@@ -287,58 +287,27 @@ var TabHeight = Object.create(StylesheetManager, {
 			try{
 			  if(tbdefaulttheme){
 				var tabheight = Services.prefs.getIntPref(PrefsObserver.branch + "tabheight");
+				var xheight = 32-tabheight;
+				var xheight2 = 9-xheight;
+				if(xheight2 > 9) xheight2=9;
 				
-				if(tabheight>=30){
-					return "data:text/css;charset=utf-8," + encodeURIComponent('\
-						#tabs-toolbar .tabmail-tab { \
-						  height: '+tabheight+'px !important;\
-						  max-height: '+tabheight+'px !important;\
-						}\
-						@media (-moz-os-version:windows-win10) {\
-						  #messengerWindow[sizemode="maximized"] #titlebar-buttonbox toolbarbutton {\
-							padding-top: 6px !important;\
-							padding-bottom: 6px !important;\
-							margin-bottom: 3px !important;\
-						  }\
-						}\
-					');
-				} else if(tabheight>=26 && tabheight<30){
-					return "data:text/css;charset=utf-8," + encodeURIComponent('\
-						#tabs-toolbar .tabmail-tab { \
-						  height: '+tabheight+'px !important;\
-						  max-height: '+tabheight+'px !important;\
-						}\
-						@media (-moz-os-version:windows-win10) {\
-						  #messengerWindow[sizemode="normal"] #titlebar-buttonbox toolbarbutton {\
-							padding-top: 6px !important;\
-							padding-bottom: 6px !important;\
-						  }\
-						  #messengerWindow[sizemode="maximized"] #titlebar-buttonbox toolbarbutton {\
-							padding-top: 6px !important;\
-							padding-bottom: 6px !important;\
-							margin-bottom: 2px !important;\
-						  }\
-						}\
-					');
-				} else if(tabheight<26){
-					return "data:text/css;charset=utf-8," + encodeURIComponent('\
-						#tabs-toolbar .tabmail-tab { \
-						  height: '+tabheight+'px !important;\
-						  max-height: '+tabheight+'px !important;\
-						}\
-						@media (-moz-os-version:windows-win10) {\
-						  #messengerWindow[sizemode="normal"] #titlebar-buttonbox toolbarbutton {\
-							padding-top: 8px !important;\
-							padding-bottom: 8px !important;\
-						  }\
-						  #messengerWindow[sizemode="maximized"] #titlebar-buttonbox toolbarbutton {\
-							padding-top: 5px !important;\
-							padding-bottom: 5px !important;\
-						  }\
-						}\
-					');
-				}
-
+				return "data:text/css;charset=utf-8," + encodeURIComponent('\
+					:root {\
+					  --tab-min-height: '+tabheight+'px !important;\
+					}\
+					#tabs-toolbar .tabmail-tab { \
+					  height: '+tabheight+'px !important;\
+					  max-height: '+tabheight+'px !important;\
+					}\
+					@media (-moz-os-version:windows-win10) {\
+					  #titlebar-buttonbox toolbarbutton,\
+					  #titlebar-buttonbox[style="height: '+tabheight+'px;"] toolbarbutton {\
+						padding-top: '+xheight2+'px !important;\
+						padding-bottom: '+xheight2+'px !important;\
+					  }\
+					}\
+				');
+				
 			  }
 			}catch(e) {Cu.reportError(e)}
 		}
