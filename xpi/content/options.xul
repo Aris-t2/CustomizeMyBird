@@ -95,7 +95,7 @@
 		  
 		  <hbox align="center">
 			<description>&Tabheight;</description>
-			<textbox id="customizemybird_cb_tabheight" maxlength="3" size="6" min="26" type="number" onkeyup="customizemybird.options.tabheight();" onchange="customizemybird.options.tabheight();"/>
+			<textbox id="customizemybird_cb_tabheight" maxlength="3" size="6" min="24" type="number" onkeyup="customizemybird.options.tabheight();" onchange="customizemybird.options.tabheight();"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
@@ -161,21 +161,21 @@
 			<checkbox id="customizemybird_cb_treecol" label="" oncommand="customizemybird.options.treecol();"/>
 		  </hbox>
 		  
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_winlin">
 			<description>&BlueAerocolors;</description>
 			<checkbox id="customizemybird_cb_treecol_aero" label="" oncommand="customizemybird.options.treecol_aero();"/>
 		  </hbox>
 		  
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_win">
 			<description>&Windowheader;</description>
 			<checkbox id="customizemybird_cb_winheader" label="" oncommand="customizemybird.options.winheader();"/>
 		  </hbox>
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_win">
 			<description>&Windowheaderbg;</description>
 			<colorpicker id="customizemybird_cb_winheaderbg" type="button" onselect="customizemybird.options.winheaderbg();"/>
 			<textbox id="customizemybird_cb_winheaderbgt" size="9" onkeyup="customizemybird.options.winheaderbgt();"/>
 		  </hbox>
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_win">
 			<description>&Appmenubuttontxtc;</description>
 			<colorpicker id="customizemybird_cb_winheadertc" type="button" onselect="customizemybird.options.winheadertc();"/>
 			<textbox id="customizemybird_cb_winheadertct" size="9" onkeyup="customizemybird.options.winheadertct();"/>

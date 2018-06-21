@@ -481,8 +481,7 @@ var TreeColumnsAero = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/treecol_aero.css";
+		  if(os_platform != "Darwin" && tbdefaulttheme) return "chrome://customizemybirdextension/content/css/treecol_aero.css";
 		}
     }
 });
@@ -570,7 +569,8 @@ var AppmenuButton = Object.create(StylesheetManager, {
 
 			// create custom appbutton
 			var customappbutton = "data:text/css;charset=utf-8," + encodeURIComponent('\
-				#button-appmenu:not(:hover):not(:active):not([open]){\
+				#button-appmenu:not(:hover):not(:active):not([open="true"]){\
+				  -moz-appearance: none !important;\
 				  background: linear-gradient('+appmenubuttonc1+', '+appmenubuttonc2+' 95%) !important;\
 				  transition: unset !important;\
 				  border-top-color:hsla(214,89%,21%,.5) !important;\
@@ -584,7 +584,8 @@ var AppmenuButton = Object.create(StylesheetManager, {
 							  1px 0 0 0px rgba(255,255,255,.6),\
 							  -1px 0 0 0px rgba(255,255,255,.6) !important;\
 				}\
-				#button-appmenu:hover:not(:active):not([open]){\
+				#button-appmenu:hover:not(:active):not([open="true"]){\
+				  -moz-appearance: none !important;\
 				  background: radial-gradient(farthest-side at center bottom, hsla(0,0%,100%,.5) 10%, hsla(0,0%,100%,0) 70%),\
 							  radial-gradient(farthest-side at center bottom, hsla(0,0%,100%,.7), hsla(0,0%,100%,0)),\
 							  linear-gradient('+appmenubuttonc1+', '+appmenubuttonc2+' 95%) !important;\
@@ -598,7 +599,10 @@ var AppmenuButton = Object.create(StylesheetManager, {
 							  1px 0 0 0px rgba(255,255,255,.6),\
 							  -1px 0 0 0px rgba(255,255,255,.6) !important;\
 				}\
-				#button-appmenu:-moz-any(:hover:active,[open]) {\
+				#button-appmenu:active,\
+				#button-appmenu:hover:active,\
+				#button-appmenu[open="true"] {\
+				  -moz-appearance: none !important;\
 				  background: radial-gradient(farthest-side at center bottom, hsla(0,0%,100%,.5) 10%, hsla(0,0%,100%,0) 70%),\
 							  radial-gradient(farthest-side at center bottom, hsla(0,0%,100%,.7), hsla(0,0%,100%,0)),\
 							  linear-gradient('+appmenubuttonc1+', '+appmenubuttonc2+' 95%) !important;\
@@ -694,7 +698,7 @@ var WindowHeaderColor = Object.create(StylesheetManager, {
 		configurable: false,
         get: function() {	
 			try{
-			  if(tbdefaulttheme && Services.prefs.getBoolPref(PrefsObserver.branch + "winheader")) {
+			  if(tbdefaulttheme && os_platform == "WINNT" && Services.prefs.getBoolPref(PrefsObserver.branch + "winheader")) {
 				
 				var header_background_color = Services.prefs.getCharPref(PrefsObserver.branch + "winheaderbg");
 				var header_text_color = Services.prefs.getCharPref(PrefsObserver.branch + "winheadertc");
