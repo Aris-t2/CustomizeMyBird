@@ -4,8 +4,7 @@
   background: unset !important;
   border: unset !important;
 }
-		
-		
+
 /* move menubar above tabs for Windows Vista/7 AeroGlass */
 @media (-moz-os-version: windows-vista), (-moz-os-version: windows-win7) {
   @media all and (-moz-windows-compositor) {
@@ -35,7 +34,7 @@
 		}
 
 		#messengerWindow[hcp_platformPlus="windows"] #tabcontainer {
-		  -moz-margin-start:-12px !important;
+		  -moz-margin-start: -12px !important;
 		}
 
 		#messengerWindow[hcp_platformPlus="windows"] #mail-toolbar-menubar2 {
@@ -70,7 +69,7 @@
 	}
 
 	#messengerWindow[hcp_platformPlus="windows"] #tabcontainer {
-	  -moz-margin-start:-12px !important;
+	  -moz-margin-start: -12px !important;
 	}
 
 	#messengerWindow[hcp_platformPlus="windows"] #mail-toolbar-menubar2 {

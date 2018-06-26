@@ -286,10 +286,9 @@ var TabHeight = Object.create(StylesheetManager, {
         get: function() {
 			try{
 			  if(tbdefaulttheme){
-				var tabheight = Services.prefs.getIntPref(PrefsObserver.branch + "tabheight");
-				var xheight = 32-tabheight;
-				var xheight2 = 9-xheight;
-				if(xheight2 > 9) xheight2=9;
+				var tabheight = Services.prefs.getIntPref(PrefsObserver.branch + "tabheight");		
+				var titlebarbuttonheight = Math.min(9-(32-tabheight), 9);
+				var titlebarbuttonheight2 = Math.min(11-(32-tabheight), 8);
 				
 				return "data:text/css;charset=utf-8," + encodeURIComponent('\
 					:root {\
@@ -302,8 +301,15 @@ var TabHeight = Object.create(StylesheetManager, {
 					@media (-moz-os-version:windows-win10) {\
 					  #titlebar-buttonbox toolbarbutton,\
 					  #titlebar-buttonbox[style="height: '+tabheight+'px;"] toolbarbutton {\
-						padding-top: '+xheight2+'px !important;\
-						padding-bottom: '+xheight2+'px !important;\
+						padding-top: '+titlebarbuttonheight+'px !important;\
+						padding-bottom: '+titlebarbuttonheight+'px !important;\
+					  }\
+					  #titlebar-buttonbox[style=""] toolbarbutton {\
+						padding-top: '+titlebarbuttonheight2+'px !important;\
+						padding-bottom: '+titlebarbuttonheight2+'px !important;\
+					  }\
+					  #titlebar-buttonbox-container {\
+						margin-bottom: 2px !important;\
 					  }\
 					}\
 				');
