@@ -99,3 +99,9 @@
 #messengerWindow:not([style*='--lwt-header-image']):-moz-lwtheme:-moz-lwtheme-brighttext #folderPane-toolbar {
   border: 0 !important;
 }
+
+
+/* fix maximized mode */
+#messengerWindow[sizemode=maximized] {
+  margin-top: -1px !important;
+}

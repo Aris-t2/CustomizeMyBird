@@ -173,12 +173,17 @@
 		  <hbox align="center" class="cmb_win">
 			<description>&Windowheaderbg;</description>
 			<colorpicker id="customizemybird_cb_winheaderbg" type="button" onselect="customizemybird.options.winheaderbg();"/>
-			<textbox id="customizemybird_cb_winheaderbgt" size="9" onkeyup="customizemybird.options.winheaderbgt();"/>
+			<textbox id="customizemybird_cb_winheaderbgt" size="15" onkeyup="customizemybird.options.winheaderbgt();"/>
 		  </hbox>
 		  <hbox align="center" class="cmb_win">
 			<description>&Appmenubuttontxtc;</description>
 			<colorpicker id="customizemybird_cb_winheadertc" type="button" onselect="customizemybird.options.winheadertc();"/>
-			<textbox id="customizemybird_cb_winheadertct" size="9" onkeyup="customizemybird.options.winheadertct();"/>
+			<textbox id="customizemybird_cb_winheadertct" size="15" onkeyup="customizemybird.options.winheadertct();"/>
+		  </hbox>
+		  <hbox align="center" class="cmb_win">
+			<description>&Windowheadercapc;</description>
+			<colorpicker id="customizemybird_cb_winheadercc" type="button" onselect="customizemybird.options.winheadercc();"/>
+			<textbox id="customizemybird_cb_winheadercct" size="15" onkeyup="customizemybird.options.winheadercct();"/>
 		  </hbox>
 	  
 		</vbox>
@@ -198,40 +203,13 @@
 		  <hbox align="center">
 			<description>&Appmenubuttonc1;</description>
 			<colorpicker id="customizemybird_cb_appmenubuttonc1" type="button" onselect="customizemybird.options.appmenubuttonc1();"/>
-			<textbox id="customizemybird_cb_appmenubuttonc1t" size="9" onkeyup="customizemybird.options.appmenubuttonc1t();"/>
+			<textbox id="customizemybird_cb_appmenubuttonc1t" size="15" onkeyup="customizemybird.options.appmenubuttonc1t();"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttonc2;</description>
 			<colorpicker id="customizemybird_cb_appmenubuttonc2" type="button" onselect="customizemybird.options.appmenubuttonc2();"/>
-			<textbox id="customizemybird_cb_appmenubuttonc2t" size="9" onkeyup="customizemybird.options.appmenubuttonc2t();"/>
-		  </hbox>
-		  
-		  <hbox align="center">
-			<description>&Appmenubuttontxt;</description>
-			<textbox id="customizemybird_cb_appmenubuttontxt" size="20" onkeyup="customizemybird.options.appmenubuttontxt();"/>
-		  </hbox>
-		  
-		  <hbox align="center">
-			<description>&Appmenubuttontxtc;</description>
-			<colorpicker id="customizemybird_cb_appmenubuttontxtc" type="button" onselect="customizemybird.options.appmenubuttontxtc();"/>
-			<textbox id="customizemybird_cb_appmenubuttontxtct" size="9" onkeyup="customizemybird.options.appmenubuttontxtct();"/>
-		  </hbox>
-		  
-		  <hbox align="center">
-			<description>&Appmenubuttontxtcs;</description>
-			<colorpicker id="customizemybird_cb_appmenubuttontxtcs" type="button" onselect="customizemybird.options.appmenubuttontxtcs();"/>
-			<textbox id="customizemybird_cb_appmenubuttontxtcst" size="9" onkeyup="customizemybird.options.appmenubuttontxtcst();"/>
-		  </hbox>
-		  
-		  <hbox align="center">
-			<description>&Appmenubuttonhp;</description>
-			<checkbox id="customizemybird_cb_appmenubuttonhp" label="" oncommand="customizemybird.options.appmenubuttonhp();"/>
-		  </hbox>
-		  
-		  <hbox align="center">
-			<description>&Appmenubuttondm;</description>
-			<checkbox id="customizemybird_cb_appmenubuttondm" label="" oncommand="customizemybird.options.appmenubuttondm();"/>
+			<textbox id="customizemybird_cb_appmenubuttonc2t" size="15" onkeyup="customizemybird.options.appmenubuttonc2t();"/>
 		  </hbox>
 		  
 		  <hbox align="center">
@@ -246,7 +224,34 @@
 			  <radio label=" " value="tb_icon_flat" id="tb_icon_flat" onmousedown="customizemybird.options.appmenubuttonicon('tb_icon_flat');"/>
 			</radiogroup>
 		  </hbox>
-	  
+		  
+		  <hbox align="center">
+			<description>&Appmenubuttontxt;</description>
+			<textbox id="customizemybird_cb_appmenubuttontxt" size="20" onkeyup="customizemybird.options.appmenubuttontxt();"/>
+		  </hbox>
+		  
+		  <hbox align="center">
+			<description>&Appmenubuttontxtc;</description>
+			<colorpicker id="customizemybird_cb_appmenubuttontxtc" type="button" onselect="customizemybird.options.appmenubuttontxtc();"/>
+			<textbox id="customizemybird_cb_appmenubuttontxtct" size="15" onkeyup="customizemybird.options.appmenubuttontxtct();"/>
+		  </hbox>
+		  
+		  <hbox align="center">
+			<description>&Appmenubuttontxtcs;</description>
+			<colorpicker id="customizemybird_cb_appmenubuttontxtcs" type="button" onselect="customizemybird.options.appmenubuttontxtcs();"/>
+			<textbox id="customizemybird_cb_appmenubuttontxtcst" size="15" onkeyup="customizemybird.options.appmenubuttontxtcst();"/>
+		  </hbox>
+		  
+		  <hbox align="center">
+			<description>&Appmenubuttonhp;</description>
+			<checkbox id="customizemybird_cb_appmenubuttonhp" label="" oncommand="customizemybird.options.appmenubuttonhp();"/>
+		  </hbox>
+		  
+		  <hbox align="center">
+			<description>&Appmenubuttondm;</description>
+			<checkbox id="customizemybird_cb_appmenubuttondm" label="" oncommand="customizemybird.options.appmenubuttondm();"/>
+		  </hbox>
+
 		</vbox>
 		
 		<vbox class="cmb_groupbox">
@@ -336,7 +341,7 @@
 		
 		<vbox class="cmb_groupbox">
 
-		  <description class="customizemybird_headline">&Addonsmanager;</description>
+		  <description class="customizemybird_headline">&Addonsmanager; (about:addons)</description>
 
 		  <hbox align="center">
 			<description>&Altaddonsmanager;</description>
@@ -356,6 +361,22 @@
 		  <hbox align="center">
 			<description>&Addonsm_version;</description>
 			<checkbox id="customizemybird_cb_addonsmanager_version" label="" oncommand="customizemybird.options.addonsmanager_version();"/>
+		  </hbox>
+		
+		</vbox>
+		
+		<vbox class="cmb_groupbox" id="aboutprefs_gb">
+
+		  <description class="customizemybird_headline">&Aboutprefs; (about:preferences)</description>
+
+		  <hbox align="center">
+			<description>&Altaddonsmanager;</description>
+			<checkbox id="customizemybird_cb_altaboutprefs" label="" oncommand="customizemybird.options.altaboutprefs();"/>
+		  </hbox>
+		  
+		  <hbox align="center" class="cmb_winlin">
+			<description>&BlueAerocolors;</description>
+			<checkbox id="customizemybird_cb_aerocolors_aap" label="" oncommand="customizemybird.options.aerocolors_aap();"/>
 		  </hbox>
 		
 		</vbox>
@@ -400,7 +421,7 @@
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_background_color;</description>
 			<colorpicker id="customizemybird_cb_scrollbars_cappearance_background_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_background_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_background_colort" size="9" onkeyup="customizemybird.options.scrollbars_cappearance_background_colort();"/>
+			<textbox id="customizemybird_cb_scrollbars_cappearance_background_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_background_colort();"/>
 		  </hbox>
 		  
 		  <hbox align="center">
@@ -411,7 +432,7 @@
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_color;</description>
 			<colorpicker id="customizemybird_cb_scrollbars_cappearance_thumb_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_thumb_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_colort" size="9" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_colort();"/>
+			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_colort();"/>
 		  </hbox>
 		  
 		  <hbox align="center">
@@ -422,7 +443,7 @@
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_hover_color;</description>
 			<colorpicker id="customizemybird_cb_scrollbars_cappearance_thumb_hover_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_thumb_hover_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_hover_colort" size="9" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_hover_colort();"/>
+			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_hover_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_hover_colort();"/>
 		  </hbox>
 		  
 		  <hbox align="center">
@@ -443,13 +464,13 @@
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_border_color;</description>
 			<colorpicker id="customizemybird_cb_scrollbars_cappearance_thumb_border_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_thumb_border_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_border_colort" size="9" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_border_colort();"/>
+			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_border_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_border_colort();"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbars_cappearance_buttons_color;</description>
 			<colorpicker id="customizemybird_cb_scrollbars_cappearance_buttons_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_buttons_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_colort" size="9" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_colort();"/>
+			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_colort();"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
@@ -460,7 +481,7 @@
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbars_cappearance_buttons_hover_color;</description>
 			<colorpicker id="customizemybird_cb_scrollbars_cappearance_buttons_hover_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_buttons_hover_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_hover_colort" size="9" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_hover_colort();"/>
+			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_hover_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_hover_colort();"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">

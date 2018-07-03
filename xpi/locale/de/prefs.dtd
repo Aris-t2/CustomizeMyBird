@@ -21,6 +21,7 @@
 
 <!ENTITY Windowheader		"Oberer Fensterbereich">
 <!ENTITY Windowheaderbg		"- benutzerdefinierte Hintergrundfarbe">
+<!ENTITY Windowheadercapc	"- benutzerdefinierte Fensterschaltfächenfarbe">
 
 <!ENTITY Appmenubutton0		"Hauptmenüschaltfläche">
 <!ENTITY Appmenubutton		"Alternative Darstellung">
@@ -57,6 +58,8 @@
 <!ENTITY Addonsm_compact	"Kompakte Erweiterungseinträge">
 <!ENTITY Addonsm_version	"Versionsnummern von Erweiterungen anzeigen">
 
+<!ENTITY Aboutprefs			"Einstellungen">
+
 <!ENTITY Scrollbars									"Bildlaufleisten">
 <!ENTITY Scrollbars_hidden							"Bildlaufleisten ausblenden">
 <!ENTITY Scrollbar_buttons_hidden					"Bildlaufleistenschaltflächen ausblenden">
@@ -79,7 +82,7 @@
 <!ENTITY Scrollbars_vertical						"vertikal">
 <!ENTITY Scrollbar_horizontal						"horizontal">
 
-<!ENTITY Nondefault_theme	"Die Erweiterung 'CustomizeMyBird' ist nicht mit 'vollständigen Themes' kompatibel!">
+<!ENTITY Nondefault_theme	"'CustomizeMyBird' ist mit 'vollständigen Themes' nicht kompatibel!">
 
 <!ENTITY Supportsite		"Support-Seite">
 <!ENTITY Latestversion		"Aktuellste Version herunterladen">

@@ -78,10 +78,13 @@ init: function() {
 	document.getElementById("customizemybird_cb_winheaderbgt").value = this.prefs.getCharPref("winheaderbg");
 	document.getElementById("customizemybird_cb_winheadertc").color = this.prefs.getCharPref("winheadertc");
 	document.getElementById("customizemybird_cb_winheadertct").value = this.prefs.getCharPref("winheadertc");
+	document.getElementById("customizemybird_cb_winheadercc").color = this.prefs.getCharPref("winheadercc");
+	document.getElementById("customizemybird_cb_winheadercct").value = this.prefs.getCharPref("winheadercc");
 	
 	document.getElementById("customizemybird_cb_aerocolors").checked = this.prefs.getBoolPref("aerocolors");
 	document.getElementById("customizemybird_cb_aerocolors_mb").checked = this.prefs.getBoolPref("aerocolors_mb");
 	document.getElementById("customizemybird_cb_aerocolors_aam").checked = this.prefs.getBoolPref("aerocolors_aam");
+	document.getElementById("customizemybird_cb_aerocolors_aap").checked = this.prefs.getBoolPref("aerocolors_aap");
 	
 	document.getElementById("customizemybird_cb_ctb_maintoolbar").checked = this.prefs.getBoolPref("ctb_maintoolbar");
 	document.getElementById("customizemybird_cb_ctb_menubar").checked = this.prefs.getBoolPref("ctb_menubar");
@@ -97,10 +100,15 @@ init: function() {
 	document.getElementById("customizemybird_cb_nb_tbmailicons_hr").checked = this.prefs.getBoolPref("nb_tbmailicons_hr");
 	
 	document.getElementById("customizemybird_cb_altaddonsmanager").checked = this.prefs.getBoolPref("altaddonsmanager");
+	document.getElementById("customizemybird_cb_altaboutprefs").checked = this.prefs.getBoolPref("altaboutprefs");
 	
 	if(this.prefs.getBoolPref("altaddonsmanager"))
 	  document.getElementById("customizemybird_cb_aerocolors_aam").disabled = false;
 	else document.getElementById("customizemybird_cb_aerocolors_aam").disabled = true;
+	
+	if(this.prefs.getBoolPref("altaboutprefs"))
+	  document.getElementById("customizemybird_cb_aerocolors_aap").disabled = false;
+	else document.getElementById("customizemybird_cb_aerocolors_aap").disabled = true;
 	
 	document.getElementById("customizemybird_cb_addonsmanager_compact").checked = this.prefs.getBoolPref("addonsmanager_compact");
 	document.getElementById("customizemybird_cb_addonsmanager_version").checked = this.prefs.getBoolPref("addonsmanager_version");
@@ -140,6 +148,8 @@ init: function() {
 	document.getElementById("customizemybird_cb_scrollbars_cappearance_buttons_hover_colort").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_hover_color");
 	document.getElementById("customizemybird_cb_scrollbars_cappearance_buttons_hover_gradient").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_hover_gradient");
 	document.getElementById("customizemybird_cb_scrollbars_cappearance_buttons_roundness").value = this.prefs.getIntPref("scrollbars_cappearance_buttons_roundness");
+	
+	if (this.appversion < 60) document.getElementById("aboutprefs_gb").style.visibility = 'collapse';
 
 },
 
@@ -208,6 +218,22 @@ addonsmanager_compact: function() {
 
 addonsmanager_version: function() {
   if(this.prefs.getBoolPref("addonsmanager_version")) this.prefs.setBoolPref("addonsmanager_version",false); else this.prefs.setBoolPref("addonsmanager_version",true);
+},
+
+altaboutprefs: function() {
+  if(this.prefs.getBoolPref("altaboutprefs")) {
+    this.prefs.setBoolPref("altaboutprefs",false);
+	this.prefs.setBoolPref("aerocolors_aap",false);
+  } else {
+    this.prefs.setBoolPref("altaboutprefs",true);
+  }
+  
+  document.getElementById("customizemybird_cb_aerocolors_aap").checked = this.prefs.getBoolPref("aerocolors_aap");
+  document.getElementById("customizemybird_cb_altaboutprefs").checked = this.prefs.getBoolPref("altaboutprefs");
+  
+  if(this.prefs.getBoolPref("altaboutprefs"))
+	document.getElementById("customizemybird_cb_aerocolors_aap").disabled = false;
+  else document.getElementById("customizemybird_cb_aerocolors_aap").disabled = true;
 },
 
 menubarposition: function(which) {
@@ -293,6 +319,16 @@ winheadertc: function() {
 winheadertct: function() {
   this.prefs.setCharPref("winheadertc",document.getElementById("customizemybird_cb_winheadertct").value);
   document.getElementById("customizemybird_cb_winheadertc").color = this.prefs.getCharPref("winheadertc");
+},
+
+winheadercc: function() {
+  this.prefs.setCharPref("winheadercc",document.getElementById("customizemybird_cb_winheadercc").color);
+  document.getElementById("customizemybird_cb_winheadercct").value = this.prefs.getCharPref("winheadercc");
+},
+
+winheadercct: function() {
+  this.prefs.setCharPref("winheadercc",document.getElementById("customizemybird_cb_winheadercct").value);
+  document.getElementById("customizemybird_cb_winheadercc").color = this.prefs.getCharPref("winheadercc");
 },
 
 appmenubutton: function() {
@@ -383,6 +419,17 @@ aerocolors_aam: function() {
   
   document.getElementById("customizemybird_cb_aerocolors_aam").checked = this.prefs.getBoolPref("aerocolors_aam");
   document.getElementById("customizemybird_cb_altaddonsmanager").checked = this.prefs.getBoolPref("altaddonsmanager");
+},
+
+aerocolors_aap: function() {
+  if(this.prefs.getBoolPref("aerocolors_aap")) {
+   this.prefs.setBoolPref("aerocolors_aap",false);
+  } else {
+    if(this.prefs.getBoolPref("altaboutprefs")) this.prefs.setBoolPref("aerocolors_aap",true);
+  }
+  
+  document.getElementById("customizemybird_cb_aerocolors_aap").checked = this.prefs.getBoolPref("aerocolors_aap");
+  document.getElementById("customizemybird_cb_altaboutprefs").checked = this.prefs.getBoolPref("altaboutprefs");
 },
 
 ctb_maintoolbar: function() {

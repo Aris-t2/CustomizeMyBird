@@ -1,0 +1,7 @@
+@-moz-document  url-prefix(about:preferences) {
+
+	#MailPreferences {
+	  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;
+	}
+
+}

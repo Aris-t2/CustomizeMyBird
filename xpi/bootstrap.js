@@ -33,6 +33,7 @@ function startup(params, reason){
   defaultbranch.setBoolPref("altaddonsmanager",true);
   defaultbranch.setBoolPref("addonsmanager_compact",false);
   defaultbranch.setBoolPref("addonsmanager_version",false);
+  defaultbranch.setBoolPref("altaboutprefs",true);
   defaultbranch.setCharPref("menubarposition","menubar_below_tabs");
   defaultbranch.setBoolPref("menubar_compact",false);
   defaultbranch.setBoolPref("main_tb_compact",false);
@@ -53,9 +54,11 @@ function startup(params, reason){
   defaultbranch.setBoolPref("aerocolors",false);
   defaultbranch.setBoolPref("aerocolors_mb",false);
   defaultbranch.setBoolPref("aerocolors_aam",false);
+  defaultbranch.setBoolPref("aerocolors_aap",false);
   defaultbranch.setBoolPref("winheader",false);
   defaultbranch.setCharPref("winheaderbg","#eaf2fb");
   defaultbranch.setCharPref("winheadertc","#000000");
+  defaultbranch.setCharPref("winheadercc","rgba(211,211,211,0.5)");
   defaultbranch.setBoolPref("treecol",false);
   defaultbranch.setBoolPref("treecol_aero",false);
   
@@ -134,6 +137,7 @@ var PrefsObserver = {
 				|| customizemybirdoption == "menubarposition"
 				|| customizemybirdoption == "winheaderbg"
 				|| customizemybirdoption == "winheadertc"
+				|| customizemybirdoption == "winheadercc"
 				|| customizemybirdoption == "appmenubuttondm"
 				|| customizemybirdoption == "appmenubuttonct"
 				|| customizemybirdoption == "appmenubuttonc1"
@@ -369,6 +373,16 @@ var AltAddonsManager = Object.create(StylesheetManager, {
 		  if(tbdefaulttheme)
 			if(app_version>=57) return "chrome://customizemybirdextension/content/css/addons_manager_tb57.css";
 		    else return "chrome://customizemybirdextension/content/css/addons_manager.css";
+		}
+    }
+});
+
+var AltAboutPrefs = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {
+		  if(tbdefaulttheme)
+			if(app_version>=60) return "chrome://customizemybirdextension/content/css/aboutpreferences.css";
 		}
     }
 });
@@ -699,6 +713,16 @@ var AeroColorsAltAddonManager = Object.create(StylesheetManager, {
     }
 });
 
+var AeroColorsAltAboutPrefs = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {	
+		  if(tbdefaulttheme && os_platform != "Darwin" && app_version>=60)
+			return "chrome://customizemybirdextension/content/css/aero_ui_aap.css";
+		}
+    }
+});
+
 var WindowHeaderColor = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
@@ -708,6 +732,7 @@ var WindowHeaderColor = Object.create(StylesheetManager, {
 				
 				var header_background_color = Services.prefs.getCharPref(PrefsObserver.branch + "winheaderbg");
 				var header_text_color = Services.prefs.getCharPref(PrefsObserver.branch + "winheadertc");
+				var header_caption_button_color = Services.prefs.getCharPref(PrefsObserver.branch + "winheadercc");
 				
 				var menubar_tb52 = '';
 
@@ -733,12 +758,19 @@ var WindowHeaderColor = Object.create(StylesheetManager, {
 					  color: '+header_text_color+' !important;\
 					}\
 					@media (-moz-os-version:windows-win8),(-moz-os-version:windows-win10) {\
+					  #messengerWindow:not(:-moz-lwtheme) {\
+						background: '+header_background_color+' !important;\
+					  }\
 					  #titlebar-min .toolbarbutton-icon,\
 					  #titlebar-max .toolbarbutton-icon,\
 					  #titlebar-close:not(:hover) .toolbarbutton-icon {\
 						fill: '+header_text_color+' !important;\
 						color: '+header_text_color+' !important;\
 						stroke: '+header_text_color+' !important;\
+					  }\
+					  #titlebar-min:hover,\
+					  #titlebar-max:hover {\
+						background: '+header_caption_button_color+' !important;\
 					  }\
 					}\
 				  }\
@@ -1210,6 +1242,7 @@ var customizemybirdsettings = {
 	"altaddonsmanager": AltAddonsManager,
 	"addonsmanager_compact": AddonsManagerCompact,
 	"addonsmanager_version": AddonsManagerVersion,
+	"altaboutprefs": AltAboutPrefs,
 	"menubarposition": MenubarPosition,
 	"menubar_compact": MenubarCompact,
 	"main_tb_compact": MainToolbarCompact,
@@ -1232,9 +1265,11 @@ var customizemybirdsettings = {
 	"aerocolors": AeroColors,
 	"aerocolors_mb": AeroColorsMenubar,
 	"aerocolors_aam": AeroColorsAltAddonManager,
+	"aerocolors_aap": AeroColorsAltAboutPrefs,
 	"winheader": WindowHeaderColor,
 	"winheaderbg": WindowHeaderColor,
 	"winheadertc": WindowHeaderColor,
+	"winheadercc": WindowHeaderColor,
 	"ctb_maintoolbar": CTBMainToolbar,
 	"ctb_menubar": CTBMenubar,
 	"ctb_tabstoolbar": CTBTabstoolbar,
