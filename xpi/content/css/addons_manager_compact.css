@@ -1,5 +1,3 @@
-@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
-
 	/* dimensions / positioning */
 	#addons-page .main-content{
 	  padding: 0 !important;
@@ -205,5 +203,3 @@
 	  -moz-padding-start: 0px !important;
 	  -moz-padding-end: 2px !important;
 	}
-
-}

@@ -82,7 +82,7 @@
 <!ENTITY Scrollbar_horizontal						"horizontal">
 
 
-<!ENTITY Nondefault_theme	"'CustomizeMyBird' is incompatible with 'full themes'!">
+<!ENTITY Nondefault_theme	"Some options are not available for 'full themes'!">
 
 <!ENTITY Supportsite		"Support site">
 <!ENTITY Latestversion		"Download latest version here">

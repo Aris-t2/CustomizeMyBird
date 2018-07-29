@@ -45,7 +45,8 @@
 	#MailPreferences radio[pane="paneCompose"] image {
 	  fill: #8aa8cc !important;
 	}
-
+	
+	#MailPreferences radio[pane="paneLightning"] image,
 	#MailPreferences radio[pane="paneGeneral"] image {
 	  fill: #8b8b8b !important;
 	}

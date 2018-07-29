@@ -350,7 +350,7 @@ var TabToolbarButtonsBeforeTabs = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme && os_platform != "Darwin")
+		  if(os_platform != "Darwin")
 			return "chrome://customizemybirdextension/content/css/tab_tb_buttons_before_tabs.css";
 		}
     }
@@ -360,8 +360,7 @@ var TabToolbarHideLightningButtons = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/tab_tb_lightning_hide.css";
+		  return "chrome://customizemybirdextension/content/css/tab_tb_lightning_hide.css";
 		}
     }
 });
@@ -451,8 +450,7 @@ var StatusbarHidden = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/statusbar_hidden.css";
+		  return "chrome://customizemybirdextension/content/css/statusbar_hidden.css";
 		}
     }
 });
@@ -461,8 +459,7 @@ var AttachmentboxHigherPosition = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/attachmentbox_hp.css";
+		  return "chrome://customizemybirdextension/content/css/attachmentbox_hp.css";
 		}
     }
 });
@@ -471,8 +468,7 @@ var AttachmentboxButtonPosition = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/attachmentbox_bp.css";
+		  return "chrome://customizemybirdextension/content/css/attachmentbox_bp.css";
 		}
     }
 });
@@ -481,8 +477,7 @@ var QuickFilterBarLowerPosition = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/quickfilterbar_lp.css";
+		  return "chrome://customizemybirdextension/content/css/quickfilterbar_lp.css";
 		}
     }
 });
@@ -676,8 +671,7 @@ var AppmenuButton = Object.create(StylesheetManager, {
 				'+appmenubuttonicon+'\
 			');
 			
-			if(tbdefaulttheme)
-			  return customappbutton;
+			return customappbutton;
 		  }
 		}
     }
@@ -929,8 +923,7 @@ var ThunderbirdMailIconsHoverReduce = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {	
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/tb_icons_hover_reduce.css";
+		  return "chrome://customizemybirdextension/content/css/tb_icons_hover_reduce.css";
 		}
     }
 });
@@ -1054,8 +1047,7 @@ var ScrollbarsHidden = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {	
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/scrollbars_hidden.css";
+		  return "chrome://customizemybirdextension/content/css/scrollbars_hidden.css";
 		}
     }
 });
@@ -1064,8 +1056,7 @@ var ScrollbarButtonsHidden = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {	
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/scrollbars_buttons_hidden.css";
+		  return "chrome://customizemybirdextension/content/css/scrollbars_buttons_hidden.css";
 		}
     }
 });
@@ -1075,7 +1066,7 @@ var ScrollbarCustomSize = Object.create(StylesheetManager, {
 		configurable: false,
         get: function() {
 			try{
-			  if(tbdefaulttheme && Services.prefs.getBoolPref(PrefsObserver.branch + "scrollbar_csize")) {
+			  if(Services.prefs.getBoolPref(PrefsObserver.branch + "scrollbar_csize")) {
 				var scrollbar_csize_value = Services.prefs.getIntPref(PrefsObserver.branch + "scrollbar_csize_value");
 				
 				return "data:text/css;charset=utf-8," + encodeURIComponent('\
@@ -1112,7 +1103,7 @@ var ScrollbarCustomOpacity = Object.create(StylesheetManager, {
 		configurable: false,
         get: function() {
 			try{
-			  if(tbdefaulttheme && Services.prefs.getBoolPref(PrefsObserver.branch + "scrollbar_copacity")) {
+			  if(Services.prefs.getBoolPref(PrefsObserver.branch + "scrollbar_copacity")) {
 				var scrollbar_copacity_value = Services.prefs.getIntPref(PrefsObserver.branch + "scrollbar_copacity_value");
 				
 				var scrollbar_copacity_value_0 = "";
@@ -1140,7 +1131,7 @@ var ScrollbarsCustomAppearance = Object.create(StylesheetManager, {
 		configurable: false,
         get: function() {
 			try{
-			  if(tbdefaulttheme && Services.prefs.getBoolPref(PrefsObserver.branch + "scrollbars_cappearance")) {
+			  if(Services.prefs.getBoolPref(PrefsObserver.branch + "scrollbars_cappearance")) {
 				
 				var scrollbars_cappearance_background_color = Services.prefs.getCharPref(PrefsObserver.branch + "scrollbars_cappearance_background_color");
 				var scrollbars_cappearance_background_gradient = Services.prefs.getCharPref(PrefsObserver.branch + "scrollbars_cappearance_background_gradient");

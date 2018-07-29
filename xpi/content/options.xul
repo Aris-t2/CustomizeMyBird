@@ -19,41 +19,6 @@
   
   <prefpane align="center" flex="1">
   
-	<vbox id="customizemybird_notcompatible_box" orient="vertical">
-	
-		<hbox>
-		  <description id="customizemybird_title">&CMB_title;</description>
-		  <spacer flex="1"/>
-		</hbox>
-		
-		<hbox>
-		  <label value="Github &Supportsite;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
-		  <label value="&Latestversion;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/releases/"/>
-		  <label value=" "/>
-		</hbox>
-		<hbox>
-		  <label value="Mozillazine" class="text-link" href="http://forums.mozillazine.org/viewtopic.php?t=3024866"/>
-		  <label value="CustomizeMyBird @ addons.mozilla.org" class="text-link" href="https://addons.mozilla.org/addon/customizemybird/"/>
-		</hbox>
-		
-		<hbox>
-		  <description>[!] &Nondefault_theme;</description>
-		  <description> </description>
-		</hbox>
-		
-		<vbox class="cmb_groupbox">
-
-		  <description class="customizemybird_headline">&Addonsmanager;</description>
-	  
-		  <hbox align="center">
-			<description>&Addonsm_version;</description>
-			<checkbox id="customizemybird_cb_addonsmanager_version2" label="" oncommand="customizemybird.options.addonsmanager_version();"/>
-		  </hbox>
-		
-		</vbox>
-
-	</vbox>
-
 	<vbox id="customizemybird_content_box" orient="vertical">
 	
 		<hbox>
@@ -68,47 +33,52 @@
 		</hbox>
 		<hbox>
 		  <label value="Mozillazine" class="text-link" href="http://forums.mozillazine.org/viewtopic.php?t=3024866"/>
-		  <label value="CustomizeMyBird @ addons.mozilla.org" class="text-link" href="https://addons.mozilla.org/addon/customizemybird/"/>
+		  <label value="CustomizeMyBird @ addons.thunderbird.net" class="text-link" href="https://addons.thunderbird.net/addon/customizemybird/"/>
 		</hbox>
 		
-		<hbox>
+		<hbox class="cmb_nondefault_theme">
+		  <description> </description>
+		  <description> </description>
+		</hbox>
+		
+		<hbox class="cmb_nondefault_theme">
 		  <description>[!] &Nondefault_theme;</description>
 		  <description> </description>
 		</hbox>
 		
 		<vbox class="cmb_groupbox">
 		  <description class="customizemybird_headline">&Generalui;</description>
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Classictabs;</description>
 			<checkbox id="customizemybird_cb_classictabs" label="" oncommand="customizemybird.options.classictabs();"/>
 		  </hbox>
 		  
-		  <hbox align="center" class="cmb_winlin">
+		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
 			<description>&BlueAerocolors;</description>
 			<checkbox id="customizemybird_cb_classictabsaero" label="" oncommand="customizemybird.options.classictabsaero();"/>
 		  </hbox>
 		  
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Tabborderradius;</description>
 			<textbox id="customizemybird_cb_tabborderradius" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.tabborderradius();" onchange="customizemybird.options.tabborderradius();"/>
 		  </hbox>
 		  
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Tabheight;</description>
 			<textbox id="customizemybird_cb_tabheight" maxlength="3" size="6" min="24" type="number" onkeyup="customizemybird.options.tabheight();" onchange="customizemybird.options.tabheight();"/>
 		  </hbox>
 		  
-		  <hbox align="center" class="cmb_winlin">
+		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
 			<description>&Tabtbbuttons_bt;</description>
 			<checkbox id="customizemybird_cb_tabtbbuttons_bt" label="" oncommand="customizemybird.options.tabtbbuttons_bt();"/>
 		  </hbox>
 		  
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Tabtb_lightning;</description>
 			<checkbox id="customizemybird_cb_tabtb_lightning" label="" oncommand="customizemybird.options.tabtb_lightning();"/>
 		  </hbox>
 	  
-		  <hbox align="center" class="cmb_winlin">
+		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
 			<description>&Menubarposition;</description>
 			<radiogroup id="customizemybird_rg_menubarposition" orient="horizontal">
 			  <radio label="&Menubarposition_at;" value="menubar_above_tabs" id="menubar_above_tabs" onmousedown="customizemybird.options.menubarposition('menubar_above_tabs');"/>
@@ -116,22 +86,22 @@
 			</radiogroup>
 		  </hbox>
 		  
-		  <hbox align="center" class="cmb_winlin">
+		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
 			<description>&BlueAerocolors;</description>
 			<checkbox id="customizemybird_cb_aerocolors_mb" label="" oncommand="customizemybird.options.aerocolors_mb();"/>
 		  </hbox>
 		 
-		  <hbox align="center" class="cmb_winlin">
+		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
 			<description>&Menubar_compact;</description>
 			<checkbox id="customizemybird_cb_menubar_compact" label="" oncommand="customizemybird.options.menubar_compact();"/>
 		  </hbox>
 		  
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Main_tb_compact;</description>
 			<checkbox id="customizemybird_cb_main_tb_compact" label="" oncommand="customizemybird.options.main_tb_compact();"/>
 		  </hbox>
 		  
-		  <hbox align="center" class="cmb_winlin">
+		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
 			<description>&Aerocolorstoolbar;</description>
 			<checkbox id="customizemybird_cb_aerocolors" label="" oncommand="customizemybird.options.aerocolors();"/>
 		  </hbox>
@@ -156,31 +126,31 @@
 			<checkbox id="customizemybird_cb_quickfilterbar_lp" label="" oncommand="customizemybird.options.quickfilterbar_lp();"/>
 		  </hbox>
 	 
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Treecol;</description>
 			<checkbox id="customizemybird_cb_treecol" label="" oncommand="customizemybird.options.treecol();"/>
 		  </hbox>
 		  
-		  <hbox align="center" class="cmb_winlin">
+		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
 			<description>&BlueAerocolors;</description>
 			<checkbox id="customizemybird_cb_treecol_aero" label="" oncommand="customizemybird.options.treecol_aero();"/>
 		  </hbox>
 		  
-		  <hbox align="center" class="cmb_win">
+		  <hbox align="center" class="cmb_win cmb_defaulttheme">
 			<description>&Windowheader;</description>
 			<checkbox id="customizemybird_cb_winheader" label="" oncommand="customizemybird.options.winheader();"/>
 		  </hbox>
-		  <hbox align="center" class="cmb_win">
+		  <hbox align="center" class="cmb_win cmb_defaulttheme">
 			<description>&Windowheaderbg;</description>
 			<colorpicker id="customizemybird_cb_winheaderbg" type="button" onselect="customizemybird.options.winheaderbg();"/>
 			<textbox id="customizemybird_cb_winheaderbgt" size="15" onkeyup="customizemybird.options.winheaderbgt();"/>
 		  </hbox>
-		  <hbox align="center" class="cmb_win">
+		  <hbox align="center" class="cmb_win cmb_defaulttheme">
 			<description>&Appmenubuttontxtc;</description>
 			<colorpicker id="customizemybird_cb_winheadertc" type="button" onselect="customizemybird.options.winheadertc();"/>
 			<textbox id="customizemybird_cb_winheadertct" size="15" onkeyup="customizemybird.options.winheadertct();"/>
 		  </hbox>
-		  <hbox align="center" class="cmb_win">
+		  <hbox align="center" class="cmb_win cmb_defaulttheme">
 			<description>&Windowheadercapc;</description>
 			<colorpicker id="customizemybird_cb_winheadercc" type="button" onselect="customizemybird.options.winheadercc();"/>
 			<textbox id="customizemybird_cb_winheadercct" size="15" onkeyup="customizemybird.options.winheadercct();"/>
@@ -254,7 +224,7 @@
 
 		</vbox>
 		
-		<vbox class="cmb_groupbox">
+		<vbox class="cmb_groupbox cmb_defaulttheme">
 
 		  <description class="customizemybird_headline">&Ctb_settings; (CTB)</description>
 		  <hbox align="center">
@@ -312,7 +282,7 @@
 		<vbox class="cmb_groupbox">
 		  
 		  <description class="customizemybird_headline">&Ctb_icons_main; (CTB / NB)</description>
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_defaulttheme">
 		    <description>&Ctb_icons_main;</description>
 		  	<menulist id="customizemybird_ml_ctb_tbmailicons">
 				<menupopup>				
@@ -343,17 +313,17 @@
 
 		  <description class="customizemybird_headline">&Addonsmanager; (about:addons)</description>
 
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Altaddonsmanager;</description>
 			<checkbox id="customizemybird_cb_altaddonsmanager" label="" oncommand="customizemybird.options.altaddonsmanager();"/>
 		  </hbox>
 		  
-		  <hbox align="center" class="cmb_winlin">
+		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
 			<description>&BlueAerocolors;</description>
 			<checkbox id="customizemybird_cb_aerocolors_aam" label="" oncommand="customizemybird.options.aerocolors_aam();"/>
 		  </hbox>
 		  
-		  <hbox align="center">
+		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Addonsm_compact;</description>
 			<checkbox id="customizemybird_cb_addonsmanager_compact" label="" oncommand="customizemybird.options.addonsmanager_compact();"/>
 		  </hbox>
@@ -365,7 +335,7 @@
 		
 		</vbox>
 		
-		<vbox class="cmb_groupbox" id="aboutprefs_gb">
+		<vbox class="cmb_groupbox cmb_defaulttheme" id="aboutprefs_gb">
 
 		  <description class="customizemybird_headline">&Aboutprefs; (about:preferences)</description>
 

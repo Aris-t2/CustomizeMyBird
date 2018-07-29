@@ -81,7 +81,7 @@
 <!ENTITY Scrollbars_vertical						"vertical">
 <!ENTITY Scrollbar_horizontal						"horizontal">
 
-<!ENTITY Nondefault_theme	"¡El complemento 'CustomizeMyBird' no es compatible con 'temas completos'!">
+<!ENTITY Nondefault_theme	"Some options are not available for 'full themes'!">
 
 <!ENTITY Supportsite		"Sitio de soporte">
 <!ENTITY Latestversion		"Descargue la versión más reciente aquí">

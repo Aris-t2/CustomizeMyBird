@@ -15,11 +15,11 @@ tbdefaulttheme: Services.prefs.getBranch("general.skins.").getCharPref("selected
 
 init: function() {
 	
-	if (!this.tbdefaulttheme) { 
+	/*if (!this.tbdefaulttheme) { 
 	  document.getElementById('customizemybird_content_box').style.visibility = 'collapse';
 	} else {
 	  document.getElementById('customizemybird_notcompatible_box').style.visibility = 'collapse';
-	}
+	}*/
 	
 	if (this.appversion < 57 && !this.tbdefaulttheme) { 
 	  document.getElementById('CustomizeMyBird_prefwindow').style.minWidth = '800px';
@@ -112,7 +112,6 @@ init: function() {
 	
 	document.getElementById("customizemybird_cb_addonsmanager_compact").checked = this.prefs.getBoolPref("addonsmanager_compact");
 	document.getElementById("customizemybird_cb_addonsmanager_version").checked = this.prefs.getBoolPref("addonsmanager_version");
-	document.getElementById("customizemybird_cb_addonsmanager_version2").checked = this.prefs.getBoolPref("addonsmanager_version");
 	
 	document.getElementById("customizemybird_cb_scrollbars_hidden").checked = this.prefs.getBoolPref("scrollbars_hidden");
 	document.getElementById("customizemybird_cb_scrollbar_buttons_hidden").checked = this.prefs.getBoolPref("scrollbar_buttons_hidden");

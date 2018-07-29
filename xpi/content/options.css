@@ -80,3 +80,12 @@
 #customizemybird_ml_ctb_tbmailicons {
   min-width: 200px;
 }
+
+input[type=number] {
+    -moz-appearance: textfield !important;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}

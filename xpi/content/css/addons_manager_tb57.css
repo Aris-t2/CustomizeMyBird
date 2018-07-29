@@ -1,7 +1,5 @@
-@-moz-document  url-prefix(chrome://mozapps/content/extensions/extensions.xul),
-				url-prefix(about:addons) {
 
-	.category {
+	#addons-page .category {
 	  margin-inline-start: 0px !important;
 	}
 
@@ -182,15 +180,15 @@
 
 
 	/* detail view */
-	#detail-view button:not(.button-link):not(.text-link),
-	#detail-view menulist{
+	#addons-page #detail-view button:not(.button-link):not(.text-link),
+	#addons-page #detail-view menulist{
 	  padding: 2px !important;
 	  min-height: unset !important;
 	  height: unset !important;
 	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
 	}
 	
-	#detail-view colorpicker[type="button"]{
+	#addons-page #detail-view colorpicker[type="button"]{
 	  padding: 2px !important;
 	  min-height: 26px !important;
 	  min-width: 40px !important;
@@ -198,7 +196,7 @@
 	  width: auto !important;
 	}
 
-	#detail-view .box-inherit.scrollbox-innerbox {
+	#addons-page #detail-view .box-inherit.scrollbox-innerbox {
 	  margin: 0px !important;
 	}
 	
@@ -211,20 +209,20 @@
 	}
 	
 	/* remove navigation buttons */
-	#nav-header #back-btn,
-	#nav-header #forward-btn {
+	#addons-page #nav-header #back-btn,
+	#addons-page #nav-header #forward-btn {
 	  visibility: hidden !important;
 	}
 	
 	/* tweaks for small windows */
 	@media (max-width: 830px) {
 	  
-	  .category {
+	  #addons-page .category {
 		padding-inline-start: 10px !important;
 		margin-inline-end: 0px !important;
 	  }
 
-	  .main-content {
+	  #addons-page .main-content {
 		padding-left: 28px !important;
 		padding-right: 28px !important;
 	  }
@@ -232,56 +230,55 @@
 	}
 	
 	/* colorize category icons */
-	#category-search .category-icon {
+	#addons-page #category-search .category-icon {
 	  fill: #8aa8cc !important;
 	}
 
-	#category-discover .category-icon {
+	#addons-page #category-discover .category-icon {
 	  fill: #8b8b8b !important;
 	}
 
-	#category-extension .category-icon {
+	#addons-page #category-extension .category-icon {
 	  fill: #63c54f !important;
 	}
 
-	#category-theme .category-icon {
+	#addons-page #category-theme .category-icon {
 	  fill: #ffba2f !important;
 	}
 
-	#category-plugin .category-icon {
+	#addons-page #category-plugin .category-icon {
 	  fill: #2b63c1 !important;
 	}
 
-	#category-dictionary .category-icon {
+	#addons-page #category-dictionary .category-icon {
 	  fill: purple !important;
 	}
 
-	#category-legacy .category-icon {
+	#addons-page #category-legacy .category-icon {
 	  fill: red !important;
 	}
 
-	#category-availableUpdates .category-icon {
+	#addons-page #category-availableUpdates .category-icon {
 	  fill: orange !important;
 	}
 
-	#category-recentUpdates .category-icon {
+	#addons-page #category-recentUpdates .category-icon {
 	  fill: #b99c16 !important;
 	}
 
-	.category:not([selected="true"]):hover .category-icon {
+	#addons-page .category:not([selected="true"]):hover .category-icon {
 	  filter: brightness(2.00) !important;
 	}
 	
-	#category-discover:not([selected="true"]):hover .category-icon,
-	#category-theme:not([selected="true"]):hover .category-icon{
+	#addons-page #category-discover:not([selected="true"]):hover .category-icon,
+	#addons-page #category-theme:not([selected="true"]):hover .category-icon{
 	  filter: brightness(1.5) !important;
 	}
 	
-	#category-plugin:not([selected="true"]):hover .category-icon{
+	#addons-page #category-plugin:not([selected="true"]):hover .category-icon{
 	  filter: brightness(2.25) !important;
 	}
 
-}
 
 /* get add-ons discovery page */
 html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
