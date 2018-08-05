@@ -1,19 +1,19 @@
 ## Download
 
-**[CustomizeMyBird for Thunderbird 52-61+](https://github.com/Aris-t2/CustomizeMyBird/releases)**  
+**[CustomizeMyBird for Thunderbird 52-63+](https://github.com/Aris-t2/CustomizeMyBird/releases)**  
 
 ## Want to support this project?
 
 **[[ Paypal Me ]](https://www.paypal.me/tkpay)**  
 
 ## CustomizeMyBird 2.0 offers Thunderbird features known from
-- previous CustomizeMyBird versions 1.0-1.2
-- <a href=https://addons.mozilla.org/addon/noiascrollbars/>NewScrollbar add-on</a> (most already present in v1.2)
-- <a href=https://addons.mozilla.org/addon/cstbb/>Classic Toolbar Buttons add-on</a> 
-- <a href=https://addons.mozilla.org/addon/noiabuttons/>NoiaButtons add-on</a> 
-- <a href=https://addons.mozilla.org/addon/amversionnumber/>Add-ons Manager - Version Number add-on</a>
+- previous CustomizeMyBird versions
+- <a href=https://addons.thunderbird.net/addon/noiascrollbars/>NewScrollbar add-on</a> 
+- <a href=https://addons.thunderbird.net/addon/cstbb/>Classic Toolbar Buttons add-on</a> 
+- <a href=https://addons.thunderbird.net/addon/noiabuttons/>NoiaButtons add-on</a> 
+- <a href=https://addons.thunderbird.net/addon/amversionnumber/>Add-ons Manager - Version Number add-on</a>
 
-## Features (2.0+)
+## Features
 - Tabs: switch between default tabs and classic squared tabs (+ Aero blue colors)
 - Tabs: custom height
 - Tabs: custom border roundness
@@ -21,8 +21,9 @@
 - Tabs and tab toolbar buttons: switch positions (Windows/Linux)
 - Main menubar: above/below tabs toolbar (Windows/Linux)
 - Main menubar: compact view (Windows/Linux)
-- Mein menubar: Aero blue colors
+- Main menubar: Aero blue colors
 - Main toolbar: compact view
+- Window header: custom colors
 - Toolbars: default colors / Aero blue colors
 - Statusbar: hide status bar
 - Quick-filter-bar: move below mail list (if visible)
@@ -50,13 +51,5 @@
 - compatible to Lightning
 - compatible to Windows, Linux, macOS
 - compatible to light and dark lw-themes (aka Personas)
-- <b>not compatible to complete themes</b> (add-ons options page only shows a note in that case, but nothing to select)
+- <b>partly</b> compatible to complete/full themes (only a few options are available on preferences window btw. preferences tab)
 
-## AMO (addons.mozilla.org)
-AMO stopped being a reliable source to distribute new versions of add-ons. Reviewers stopped looking into "legacy" add-ons and bootstrapped/restartless add-ons, which are still valid in Thunderbird.
-AMOs focus shifted to crappy and powerless WebExtensions, which do not even have to be reviewed by humans. [The shitty add-on validator is "enough" allowing everybody to install tons of spam and malicious WebExtensions.](https://www.ghacks.net/2017/12/13/mozillas-extensions-store-has-a-spam-infestation/)
-Good thing Thunderbird add-ons do not require the idiotic add-on signing likie Firefox, so users can just install files downloaded from Github. Additionally looking through add-on code on Github is easily possible compared to AMO and building own installation packages only requires a few steps (release page always offers the latest build too):
-- download the whole repository or the content of xpi folder
-- zip the content of xpi folder
-- optionally rename ".zip" to ".xpi"
-- install the file through Thunderbirds add-on manager
