@@ -250,13 +250,12 @@ var CMB_Main_UI = Object.create(StylesheetManager, {
     }
 });
 
+// style options window on Tb 52-58
 var Options52 = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme) {
-			if(app_version<59) return "chrome://customizemybirdextension/content/css/options52.css";
-		  }
+		  if(app_version<59) return "chrome://customizemybirdextension/content/css/options52.css";
 		}
     }
 });
@@ -289,7 +288,7 @@ var TabHeight = Object.create(StylesheetManager, {
 		configurable: false,
         get: function() {
 			try{
-			  if(tbdefaulttheme){
+			  if(tbdefaulttheme) {
 				var tabheight = Services.prefs.getIntPref(PrefsObserver.branch + "tabheight");		
 				var titlebarbuttonheight = Math.min(9-(32-tabheight), 9);
 				var titlebarbuttonheight2 = Math.min(11-(32-tabheight), 8);
@@ -518,7 +517,7 @@ var AppmenuButton = Object.create(StylesheetManager, {
 			var appmenubuttondmi = "url('chrome://customizemybirdextension/content/images/toolbarbutton-arrow-inverted.png')";
 			  
 			if(Services.prefs.getBoolPref(PrefsObserver.branch + "appmenubuttondm"))
-			  if(app_version>=61) appmenubuttondm = "block";
+			  if(app_version>=61) appmenubuttondm = "inline-block";
 				else appmenubuttondm = "inline";
 		  
 			if (os_platform != "WINNT" && os_platform != "Darwin" && app_version>=59)
@@ -655,7 +654,8 @@ var AppmenuButton = Object.create(StylesheetManager, {
 				#button-appmenu > hbox::before {\
 				  content: "'+appmenubuttontxt+'" !important;\
 				}\
-				#button-appmenu dropmarker {\
+				#button-appmenu dropmarker, \
+				#button-appmenu:-moz-any(:hover,:hover:active,[open]) dropmarker {\
 				  display: '+appmenubuttondm+' !important;\
 				  list-style-image: '+appmenubuttondmi+' !important;\
 				}\
