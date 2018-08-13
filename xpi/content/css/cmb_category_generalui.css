@@ -1,0 +1,10 @@
+
+#customizemybird_appbutton,
+#customizemybird_ctb_settings,
+#customizemybird_icon_settings,
+#customizemybird_aboutaddons,
+#customizemybird_aboutpreferences,
+#customizemybird_newscrollbars {
+  visibility: collapse !important;
+  transition-duration: 0.1s !important;
+}

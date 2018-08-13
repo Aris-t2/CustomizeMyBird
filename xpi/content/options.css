@@ -1,6 +1,5 @@
 
 #CustomizeMyBird_prefwindow {
-  /*background: #fbfbfb;*/
   font-size: 16px;
 }
 
@@ -24,8 +23,6 @@
   border: 1px solid lightgrey;
   margin-top: 1px;
   margin-bottom: 1px;
-  /*background: white;
-  color: black;*/
 }
 
 #CustomizeMyBird_prefwindow #customizemybird_content_box {
@@ -82,10 +79,43 @@
 }
 
 input[type=number] {
-    -moz-appearance: textfield !important;
+  -moz-appearance: textfield !important;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none !important;
   margin: 0 !important;
+}
+
+#customizemybird_categories radio:hover {
+  cursor: pointer !important;
+}
+
+#customizemybird_categories radio .radio-label {
+  padding: 0 4px !important;
+}
+
+#customizemybird_categories radio:not([selected="true"]) :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
+  visibility: hidden !important;
+}
+
+#customizemybird_categories radio:not([selected="true"]):hover :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
+  visibility: visible !important;
+  opacity: 0.2 !important;
+}
+
+#customizemybird_categories radio:not([selected="true"]) :-moz-any(.radio-label-center-box,.radio-label-box) {
+  -moz-appearance: none !important;
+}
+#customizemybird_categories radio:-moz-any([selected="true"],:hover) :-moz-any(.radio-label-center-box,.radio-label-box) {
+  -moz-appearance: none !important;
+  background: Highlight !important;
+  color: Highlighttext !important;
+  transition-duration: 0.1s !important;
+}
+
+#customizemybird_categories radio[selected="true"] :-moz-any(.radio-label-center-box,.radio-label-box),
+.text-link,
+.cmb_nondefault_theme {
+  font-weight: bold;
 }

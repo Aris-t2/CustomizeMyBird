@@ -17,7 +17,7 @@
 
   <script type="application/x-javascript" src="options.js"/>
   
-  <prefpane align="center" flex="1">
+  <prefpane flex="1">
   
 	<vbox id="customizemybird_content_box" orient="vertical">
 	
@@ -26,27 +26,41 @@
 		  <spacer flex="1"/>
 		</hbox>
 		
-		<hbox>
-		  <label value="Github &Supportsite;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
-		  <label value="&Latestversion;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/releases/"/>
-		  <label value=" "/>
-		</hbox>
-		<hbox>
-		  <label value="Mozillazine" class="text-link" href="http://forums.mozillazine.org/viewtopic.php?t=3024866"/>
-		  <label value="CustomizeMyBird @ addons.thunderbird.net" class="text-link" href="https://addons.thunderbird.net/addon/customizemybird/"/>
-		</hbox>
-		
-		<hbox class="cmb_nondefault_theme">
-		  <description> </description>
-		  <description> </description>
-		</hbox>
-		
-		<hbox class="cmb_nondefault_theme">
+		<vbox class="cmb_nondefault_theme">
 		  <description>[!] &Nondefault_theme;</description>
 		  <description> </description>
+		</vbox>
+		
+		<hbox>
+
+		  <vbox>
+			<label value=" "/>
+			<label value="Github &Supportsite;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
+			<label value=" "/>
+			<label value="&Latestversion;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/releases/"/>
+			<label value=" "/>
+			<label value="Mozillazine" class="text-link" href="http://forums.mozillazine.org/viewtopic.php?t=3024866"/>
+			<label value=" "/>
+			<label value="addons.thunderbird.net" class="text-link" href="https://addons.thunderbird.net/addon/customizemybird/"/>
+			<label value=" "/>
+		  </vbox>
+		  
+		  <vbox>
+			<radiogroup id="customizemybird_categories" orient="vertical">
+			  <radio label="&Allsettings;" value="cmb_cat_all" id="cmb_cat_all" onmousedown="customizemybird.options.cmbcategories('cmb_cat_all');"/>
+			  <radio label="&Generalui;" value="cmb_cat_generalui" id="cmb_cat_generalui" onmousedown="customizemybird.options.cmbcategories('cmb_cat_generalui');"/>
+			  <radio label="&Appmenubutton0;" value="cmb_cat_appbutton" id="cmb_cat_appbutton" onmousedown="customizemybird.options.cmbcategories('cmb_cat_appbutton');"/>
+			  <radio label="&Ctb_settings; (CTB)" value="cmb_cat_ctb_settings" id="cmb_cat_ctb_settings" onmousedown="customizemybird.options.cmbcategories('cmb_cat_ctb_settings');"/>
+			  <radio label="&Ctb_icons_main; (CTB / NB)" value="cmb_cat_icon_settings" id="cmb_cat_icon_settings" onmousedown="customizemybird.options.cmbcategories('cmb_cat_icon_settings');"/>
+			  <radio label="&Addonsmanager; (about:addons)" value="cmb_cat_aboutaddons" id="cmb_cat_aboutaddons" onmousedown="customizemybird.options.cmbcategories('cmb_cat_aboutaddons');"/>
+			  <radio label="&Aboutprefs; (about:preferences)" value="cmb_cat_aboutpreferences" id="cmb_cat_aboutpreferences" onmousedown="customizemybird.options.cmbcategories('cmb_cat_aboutpreferences');"/>
+			  <radio label="&Scrollbars; (NewScrollbars)" value="cmb_cat_newscrollbars" id="cmb_cat_newscrollbars" onmousedown="customizemybird.options.cmbcategories('cmb_cat_newscrollbars');"/>
+			</radiogroup>
+		  </vbox>
+
 		</hbox>
 		
-		<vbox class="cmb_groupbox">
+		<vbox id="customizemybird_generaului" class="cmb_groupbox">
 		  <description class="customizemybird_headline">&Generalui;</description>
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Classictabs;</description>
@@ -158,7 +172,7 @@
 	  
 		</vbox>
 	
-		<vbox class="cmb_groupbox">
+		<vbox id="customizemybird_appbutton" class="cmb_groupbox">
 		  <description class="customizemybird_headline">&Appmenubutton0;</description>
 		  <hbox align="center">
 			<description>&Appmenubutton;</description>
@@ -224,7 +238,7 @@
 
 		</vbox>
 		
-		<vbox class="cmb_groupbox cmb_defaulttheme">
+		<vbox id="customizemybird_ctb_settings" class="cmb_groupbox cmb_defaulttheme">
 
 		  <description class="customizemybird_headline">&Ctb_settings; (CTB)</description>
 		  <hbox align="center">
@@ -279,7 +293,7 @@
 		
 		</vbox>
 	
-		<vbox class="cmb_groupbox">
+		<vbox id="customizemybird_icon_settings" class="cmb_groupbox">
 		  
 		  <description class="customizemybird_headline">&Ctb_icons_main; (CTB / NB)</description>
 		  <hbox align="center" class="cmb_defaulttheme">
@@ -306,10 +320,15 @@
 			<description>&Nb_tbmailicons_hr;</description>
 			<checkbox id="customizemybird_cb_nb_tbmailicons_hr" label="" oncommand="customizemybird.options.nb_tbmailicons_hr();"/>
 		  </hbox>
+		  
+		  <hbox align="center">
+			<description>&Tb_nofoldericons;</description>
+			<checkbox id="customizemybird_cb_tb_nofoldericons" label="" oncommand="customizemybird.options.tb_nofoldericons();"/>
+		  </hbox>
 
 		</vbox>
 		
-		<vbox class="cmb_groupbox">
+		<vbox id="customizemybird_aboutaddons" class="cmb_groupbox">
 
 		  <description class="customizemybird_headline">&Addonsmanager; (about:addons)</description>
 
@@ -335,7 +354,7 @@
 		
 		</vbox>
 		
-		<vbox class="cmb_groupbox cmb_defaulttheme" id="aboutprefs_gb">
+		<vbox id="customizemybird_aboutpreferences" class="cmb_groupbox cmb_defaulttheme">
 
 		  <description class="customizemybird_headline">&Aboutprefs; (about:preferences)</description>
 
@@ -351,7 +370,7 @@
 		
 		</vbox>
 	
-		<vbox class="cmb_groupbox">
+		<vbox id="customizemybird_newscrollbars" class="cmb_groupbox">
 		  <description class="customizemybird_headline">&Scrollbars; (NewScrollbars)</description>
 		  <hbox align="center">
 			<description>&Scrollbars_hidden;</description>

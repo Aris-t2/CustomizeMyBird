@@ -58,6 +58,8 @@ init: function() {
 	  document.getElementById("customizemybird_cb_treecol_aero").disabled = false;
 	else document.getElementById("customizemybird_cb_treecol_aero").disabled = true;
 	
+	document.getElementById("customizemybird_categories").value = this.prefs.getCharPref("cmbcategories");
+	
 	document.getElementById("customizemybird_cb_appmenubutton").checked = this.prefs.getBoolPref("appmenubutton");
 	document.getElementById("customizemybird_cb_appmenubuttonct").checked = this.prefs.getBoolPref("appmenubuttonct");
 	document.getElementById("customizemybird_cb_appmenubuttonc1").color = this.prefs.getCharPref("appmenubuttonc1");
@@ -98,6 +100,7 @@ init: function() {
 	document.getElementById("customizemybird_cb_ctb_menubar_bw").value = this.prefs.getIntPref("ctb_menubar_bw");
 	document.getElementById("customizemybird_ml_ctb_tbmailicons").value = this.prefs.getCharPref("ctb_tbmailicons");
 	document.getElementById("customizemybird_cb_nb_tbmailicons_hr").checked = this.prefs.getBoolPref("nb_tbmailicons_hr");
+	document.getElementById("customizemybird_cb_tb_nofoldericons").checked = this.prefs.getBoolPref("tb_nofoldericons");
 	
 	document.getElementById("customizemybird_cb_altaddonsmanager").checked = this.prefs.getBoolPref("altaddonsmanager");
 	document.getElementById("customizemybird_cb_altaboutprefs").checked = this.prefs.getBoolPref("altaboutprefs");
@@ -148,7 +151,7 @@ init: function() {
 	document.getElementById("customizemybird_cb_scrollbars_cappearance_buttons_hover_gradient").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_hover_gradient");
 	document.getElementById("customizemybird_cb_scrollbars_cappearance_buttons_roundness").value = this.prefs.getIntPref("scrollbars_cappearance_buttons_roundness");
 	
-	if (this.appversion < 60) document.getElementById("aboutprefs_gb").style.visibility = 'collapse';
+	if (this.appversion < 60) document.getElementById("customizemybird_aboutpreferences").style.visibility = 'collapse';
 
 },
 
@@ -392,6 +395,12 @@ appmenubuttondm: function() {
 
 appmenubuttonicon: function(which) {
   this.prefs.setCharPref("appmenubuttonicon",which);
+  document.getElementById("customizemybird_rg_appbutton_icons").value = this.prefs.getCharPref("appmenubuttonicon");
+},
+
+cmbcategories: function(which) {
+  this.prefs.setCharPref("cmbcategories",which);
+  document.getElementById("customizemybird_categories").value = this.prefs.getCharPref("cmbcategories");
 },
 
 aerocolors: function() {
@@ -478,6 +487,11 @@ ctb_tbmailicons: function(which) {
 nb_tbmailicons_hr: function() {
   if(this.prefs.getBoolPref("nb_tbmailicons_hr")) this.prefs.setBoolPref("nb_tbmailicons_hr",false); else this.prefs.setBoolPref("nb_tbmailicons_hr",true);
 },
+
+tb_nofoldericons: function() {
+  if(this.prefs.getBoolPref("tb_nofoldericons")) this.prefs.setBoolPref("tb_nofoldericons",false); else this.prefs.setBoolPref("tb_nofoldericons",true);
+},
+
 
 scrollbars_hidden: function() {
   if(this.prefs.getBoolPref("scrollbars_hidden")) this.prefs.setBoolPref("scrollbars_hidden",false); else this.prefs.setBoolPref("scrollbars_hidden",true);

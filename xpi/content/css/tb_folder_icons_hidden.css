@@ -1,0 +1,5 @@
+
+treechildren::-moz-tree-image(folderNameCol) {
+  opacity: 0 !important;
+  -moz-margin-end: -16px !important;
+}

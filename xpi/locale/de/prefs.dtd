@@ -1,4 +1,5 @@
 <!ENTITY CMB_title			"CustomizeMyBird">
+<!ENTITY Allsettings		"Alle Einstellungen">
 <!ENTITY Generalui			"Oberfläche">
 <!ENTITY Classictabs		"Tabs: klassische quadratische Tabs">
 <!ENTITY BlueAerocolors		"- blaue Aero-Farben">
@@ -52,6 +53,7 @@
 <!ENTITY Small				"klein">
 <!ENTITY Tiny				"winzig">
 <!ENTITY Nb_tbmailicons_hr	"Symbolgröße reduzieren (hover/über)">
+<!ENTITY Tb_nofoldericons	"Ordnersymbole entfernen">
 
 <!ENTITY Addonsmanager		"Add-ons-Verwaltung">
 <!ENTITY Altaddonsmanager	"Alternative Darstellung">

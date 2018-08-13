@@ -206,8 +206,7 @@
 	
 	/* folder icons */
 	.tabmail-tab[type="folder"][SpecialFolder="Inbox"] .tab-icon-image, treechildren::-moz-tree-image(folderNameCol, specialFolder-Inbox),
-	.tabmail-tab[type="folder"][SpecialFolder="Sent"] .tab-icon-image,
-	treechildren::-moz-tree-image(folderNameCol, specialFolder-Sent),
+	.tabmail-tab[type="folder"][SpecialFolder="Sent"] .tab-icon-image,	treechildren::-moz-tree-image(folderNameCol, specialFolder-Sent),
 	.tabmail-tab[type="folder"][SpecialFolder="Outbox"] .tab-icon-image, treechildren::-moz-tree-image(folderNameCol, specialFolder-Outbox),
 	.tabmail-tab[type="folder"][SpecialFolder="Drafts"] .tab-icon-image, treechildren::-moz-tree-image(folderNameCol, specialFolder-Drafts),
 	.tabmail-tab[type="folder"][SpecialFolder="Templates"] .tab-icon-image, treechildren::-moz-tree-image(folderNameCol, specialFolder-Templates),

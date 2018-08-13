@@ -1,4 +1,5 @@
 <!ENTITY CMB_title			"CustomizeMyBird">
+<!ENTITY Allsettings		"All settings">
 <!ENTITY Generalui			"General UI">
 <!ENTITY Classictabs		"Tabs: classic squared tabs">
 <!ENTITY BlueAerocolors		"- blue Aero colors">
@@ -23,7 +24,7 @@
 <!ENTITY Windowheaderbg		"- custom background color">
 <!ENTITY Windowheadercapc	"- custom caption background color">
 
-<!ENTITY Appmenubutton0		"Appmenu button">
+<!ENTITY Appmenubutton0		"Application menu button">
 <!ENTITY Appmenubutton		"Alternative appearance">
 <!ENTITY Appmenubuttonct	"- transparent background (overrides custom background)">
 <!ENTITY Appmenubuttonc1	"- custom top background color">
@@ -36,7 +37,7 @@
 <!ENTITY Appmenubuttonicon	"- icon (instead of text)">
 <!ENTITY Appmenubuttonicont	"&apos;Text&apos;">
 
-<!ENTITY Ctb_settings		"Classic toolbar button appearance">
+<!ENTITY Ctb_settings		"Old toolbar button appearance">
 <!ENTITY Ctb_maintoolbar	"Main toolbar">
 <!ENTITY Ctb_menubar		"Menubar">
 <!ENTITY Ctb_tabstoolbar	"Tabs toolbar">
@@ -52,6 +53,7 @@
 <!ENTITY Small				"small">
 <!ENTITY Tiny				"tiny">
 <!ENTITY Nb_tbmailicons_hr	"Reduce icon size on hover">
+<!ENTITY Tb_nofoldericons	"Remove folder icons">
 
 <!ENTITY Addonsmanager		"Add-on manager">
 <!ENTITY Altaddonsmanager	"Alternative appearance">
@@ -82,7 +84,7 @@
 <!ENTITY Scrollbar_horizontal						"horizontal">
 
 
-<!ENTITY Nondefault_theme	"Some options are not available for 'full themes'!">
+<!ENTITY Nondefault_theme	"Some preferences are not available for 'full themes'!">
 
-<!ENTITY Supportsite		"Support site">
-<!ENTITY Latestversion		"Download latest version here">
+<!ENTITY Supportsite		"support site">
+<!ENTITY Latestversion		"Get latest version">

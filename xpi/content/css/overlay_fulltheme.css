@@ -2,3 +2,9 @@
 .cmb_defaulttheme{
   display: none !important;
 }
+
+#CustomizeMyBird_prefwindow #cmb_cat_ctb_settings,
+#CustomizeMyBird_prefwindow #cmb_cat_aboutpreferences {
+  visibility: collapse !important;
+  display: none !important;
+}

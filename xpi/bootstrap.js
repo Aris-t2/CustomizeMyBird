@@ -24,6 +24,7 @@ function startup(params, reason){
 	
   var defaultbranch = Services.prefs.getDefaultBranch("extensions.customizemybirdextension.");
 
+  defaultbranch.setCharPref("cmbcategories","cmb_cat_all");
   defaultbranch.setBoolPref("classictabs",true);
   defaultbranch.setBoolPref("classictabsaero",false);
   defaultbranch.setIntPref("tabheight",26);
@@ -74,6 +75,7 @@ function startup(params, reason){
   defaultbranch.setIntPref("ctb_tabstoolbar_br",0);
   defaultbranch.setCharPref("ctb_tbmailicons","ico_default");
   defaultbranch.setBoolPref("nb_tbmailicons_hr",false);
+  defaultbranch.setBoolPref("tb_nofoldericons",false);
   
   defaultbranch.setBoolPref("scrollbars_hidden",false);
   defaultbranch.setBoolPref("scrollbar_buttons_hidden",false);
@@ -131,6 +133,7 @@ var PrefsObserver = {
 			var enabled;
 			if (   customizemybirdoption == "cmb_overlay"
 				|| customizemybirdoption == "main_ui"
+				|| customizemybirdoption == "cmbcategories"
 				|| customizemybirdoption == "options52"
 				|| customizemybirdoption == "tabheight"
 				|| customizemybirdoption == "tabborderradius"
@@ -256,6 +259,27 @@ var Options52 = Object.create(StylesheetManager, {
 		configurable: false,
         get: function() {
 		  if(app_version<59) return "chrome://customizemybirdextension/content/css/options52.css";
+		}
+    }
+});
+
+var CMBCategories = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {
+		  var ctb_cat = Services.prefs.getCharPref(PrefsObserver.branch + "cmbcategories");
+		  
+		  switch (ctb_cat) {
+			
+			case "cmb_cat_generalui":			return "chrome://customizemybirdextension/content/css/cmb_category_generalui.css"; break;
+			case "cmb_cat_appbutton":			return "chrome://customizemybirdextension/content/css/cmb_category_appbutton.css"; break;
+			case "cmb_cat_ctb_settings":		return "chrome://customizemybirdextension/content/css/cmb_category_ctb_settings.css"; break;
+			case "cmb_cat_icon_settings":		return "chrome://customizemybirdextension/content/css/cmb_category_icon_settings.css"; break;
+			case "cmb_cat_aboutaddons":			return "chrome://customizemybirdextension/content/css/cmb_category_aboutaddons.css"; break;
+			case "cmb_cat_aboutpreferences":	return "chrome://customizemybirdextension/content/css/cmb_category_aboutpreferences.css"; break;
+			case "cmb_cat_newscrollbars":		return "chrome://customizemybirdextension/content/css/cmb_category_newscrollbars.css"; break;
+		
+		  }
 		}
     }
 });
@@ -928,6 +952,15 @@ var ThunderbirdMailIconsHoverReduce = Object.create(StylesheetManager, {
     }
 });
 
+var ThunderbirdNoFolderIcons = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {	
+		  return "chrome://customizemybirdextension/content/css/tb_folder_icons_hidden.css";
+		}
+    }
+});
+
 var CtbMaintoolbarButtonHeight = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
@@ -1222,6 +1255,7 @@ var ScrollbarsCustomAppearance = Object.create(StylesheetManager, {
 var customizemybirdsettings = {
 
 	"cmb_overlay": CMB_Overlay,
+	"cmbcategories": CMBCategories,
 	"main_ui": CMB_Main_UI,
 	"options52": Options52,
 	"classictabs": ClassicTabs,
@@ -1273,6 +1307,7 @@ var customizemybirdsettings = {
 	"ctb_tabstoolbar_br": CtbTabsToolbarButtonRadius,
 	"ctb_tbmailicons": ThunderbirdMailIcons,
 	"nb_tbmailicons_hr": ThunderbirdMailIconsHoverReduce,
+	"tb_nofoldericons": ThunderbirdNoFolderIcons,
 	"scrollbars_hidden": ScrollbarsHidden,
 	"scrollbar_buttons_hidden": ScrollbarButtonsHidden,
 	"scrollbar_csize": ScrollbarCustomSize,
