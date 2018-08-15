@@ -4,6 +4,7 @@
 #customizemybird_ctb_settings,
 #customizemybird_icon_settings,
 #customizemybird_aboutpreferences,
-#customizemybird_newscrollbars {
+#customizemybird_newscrollbars,
+#customizemybird_customcss {
   visibility: collapse !important;
 }

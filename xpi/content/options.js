@@ -51,6 +51,7 @@ init: function() {
 	document.getElementById("customizemybird_cb_attachmentbox_hp").checked = this.prefs.getBoolPref("attachmentbox_hp");
 	document.getElementById("customizemybird_cb_attachmentbox_bp").checked = this.prefs.getBoolPref("attachmentbox_bp");
 	document.getElementById("customizemybird_cb_quickfilterbar_lp").checked = this.prefs.getBoolPref("quickfilterbar_lp");
+	document.getElementById("customizemybird_rg_quickfilterbar").value = this.prefs.getCharPref("quickfilterbar");
 	document.getElementById("customizemybird_cb_treecol").checked = this.prefs.getBoolPref("treecol");
 	document.getElementById("customizemybird_cb_treecol_aero").checked = this.prefs.getBoolPref("treecol_aero");
 	
@@ -150,8 +151,12 @@ init: function() {
 	document.getElementById("customizemybird_cb_scrollbars_cappearance_buttons_hover_colort").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_hover_color");
 	document.getElementById("customizemybird_cb_scrollbars_cappearance_buttons_hover_gradient").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_hover_gradient");
 	document.getElementById("customizemybird_cb_scrollbars_cappearance_buttons_roundness").value = this.prefs.getIntPref("scrollbars_cappearance_buttons_roundness");
+
+	document.getElementById("customizemybird_cb_customcss").checked = this.prefs.getBoolPref("customcss");
+	document.getElementById("customizemybird_tb_customcss").value = this.prefs.getCharPref("customcsstb");
 	
 	if (this.appversion < 60) document.getElementById("customizemybird_aboutpreferences").style.visibility = 'collapse';
+
 
 },
 
@@ -272,6 +277,11 @@ attachmentbox_bp: function() {
 
 quickfilterbar_lp: function() {
   if(this.prefs.getBoolPref("quickfilterbar_lp")) this.prefs.setBoolPref("quickfilterbar_lp",false); else this.prefs.setBoolPref("quickfilterbar_lp",true);
+},
+
+quickfilterbar: function(which) {
+  this.prefs.setCharPref("quickfilterbar",which);
+  document.getElementById("customizemybird_rg_menubarposition").value = this.prefs.getCharPref("quickfilterbar");
 },
 
 treecol: function() {
@@ -611,6 +621,14 @@ scrollbars_cappearance_buttons_hover_gradient: function() {
 
 scrollbars_cappearance_buttons_roundness: function() {
   this.prefs.setIntPref("scrollbars_cappearance_buttons_roundness",document.getElementById("customizemybird_cb_scrollbars_cappearance_buttons_roundness").value);
+},
+
+customcss: function() {
+  if(this.prefs.getBoolPref("customcss")) this.prefs.setBoolPref("customcss",false); else this.prefs.setBoolPref("customcss",true);
+},
+
+customcsstb: function() {
+  this.prefs.setCharPref("customcsstb",document.getElementById("customizemybird_tb_customcss").value);
 }
 
 }

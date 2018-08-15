@@ -17,6 +17,11 @@
 <!ENTITY Attachmentbox_hp	"Attachments: move above mail content">
 <!ENTITY Attachmentbox_bp	"Attachments: move button to start position">
 <!ENTITY Quickfilterbar_lp	"Quick-filter-bar: move below mail list">
+<!ENTITY Quickfilterbar		"- mode:">
+<!ENTITY Quickfilterbar_def "default">
+<!ENTITY Quickfilterbar_ico "icons only">
+<!ENTITY Quickfilterbar_txt "text only">
+<!ENTITY Quickfilterbar_it	"icons + text">
 <!ENTITY Treecol			"Column headers: alternative appearance">
 <!ENTITY Aerocolorstoolbar	"Toolbars: blue Aero colors">
 
@@ -83,8 +88,10 @@
 <!ENTITY Scrollbars_vertical						"vertical">
 <!ENTITY Scrollbar_horizontal						"horizontal">
 
+<!ENTITY Customcss			"Custom CSS Code">
 
 <!ENTITY Nondefault_theme	"Some preferences are not available for 'full themes'!">
 
 <!ENTITY Supportsite		"support site">
+<!ENTITY Reportissue		"Report an issue">
 <!ENTITY Latestversion		"Get latest version">

@@ -42,6 +42,7 @@ function startup(params, reason){
   defaultbranch.setBoolPref("attachmentbox_hp",false);
   defaultbranch.setBoolPref("attachmentbox_bp",false);
   defaultbranch.setBoolPref("quickfilterbar_lp",false);
+  defaultbranch.setCharPref("quickfilterbar","quickfilterbar_def");
   defaultbranch.setBoolPref("appmenubutton",false);
   defaultbranch.setBoolPref("appmenubuttonct",false);
   defaultbranch.setCharPref("appmenubuttonc1","#33CCFF");
@@ -101,6 +102,9 @@ function startup(params, reason){
   defaultbranch.setCharPref("scrollbars_cappearance_buttons_hover_gradient","transparent,rgba(255,255,255,0.5),transparent");
   defaultbranch.setIntPref("scrollbars_cappearance_buttons_roundness",0);
   
+  defaultbranch.setBoolPref("customcss",false);
+  defaultbranch.setCharPref("customcsstb"," ");
+  
   PrefsObserver.init();
 }
 
@@ -150,6 +154,7 @@ var PrefsObserver = {
 				|| customizemybirdoption == "appmenubuttontxtcs"
 				|| customizemybirdoption == "appmenubuttonhp"
 				|| customizemybirdoption == "appmenubuttonicon"
+				|| customizemybirdoption == "quickfilterbar"
 				|| customizemybirdoption == "ctb_maintoolbar_br"
 				|| customizemybirdoption == "ctb_menubar_br"
 				|| customizemybirdoption == "ctb_tabstoolbar_br"
@@ -174,6 +179,7 @@ var PrefsObserver = {
 				|| customizemybirdoption == "scrollbars_cappearance_buttons_hover_color"
 				|| customizemybirdoption == "scrollbars_cappearance_buttons_hover_gradient"
 				|| customizemybirdoption == "scrollbars_cappearance_buttons_roundness"
+				|| customizemybirdoption == "customcsstb"
 			   )
 				enabled = true;
 			else
@@ -278,6 +284,7 @@ var CMBCategories = Object.create(StylesheetManager, {
 			case "cmb_cat_aboutaddons":			return "chrome://customizemybirdextension/content/css/cmb_category_aboutaddons.css"; break;
 			case "cmb_cat_aboutpreferences":	return "chrome://customizemybirdextension/content/css/cmb_category_aboutpreferences.css"; break;
 			case "cmb_cat_newscrollbars":		return "chrome://customizemybirdextension/content/css/cmb_category_newscrollbars.css"; break;
+			case "cmb_cat_customcss":			return "chrome://customizemybirdextension/content/css/cmb_category_customcss.css"; break;
 		
 		  }
 		}
@@ -501,6 +508,25 @@ var QuickFilterBarLowerPosition = Object.create(StylesheetManager, {
 		configurable: false,
         get: function() {
 		  return "chrome://customizemybirdextension/content/css/quickfilterbar_lp.css";
+		}
+    }
+});
+
+var QuickFilterBar = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {
+				
+		  var quickfilterbar = Services.prefs.getCharPref(PrefsObserver.branch + "quickfilterbar");
+		  
+		  switch (quickfilterbar) {
+			
+			case "quickfilterbar_ico":	return "chrome://customizemybirdextension/content/css/quickfilterbar_icon_only.css"; break;
+			case "quickfilterbar_txt":	return "chrome://customizemybirdextension/content/css/quickfilterbar_text_only.css"; break;
+			case "quickfilterbar_it":	return "chrome://customizemybirdextension/content/css/quickfilterbar_icon_text.css"; break;
+		
+		  }
+
 		}
     }
 });
@@ -1251,6 +1277,24 @@ var ScrollbarsCustomAppearance = Object.create(StylesheetManager, {
     }
 });
 
+var CustomCSS = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {	
+			try{
+			  if(Services.prefs.getBoolPref(PrefsObserver.branch + "customcss")) {
+				
+				var customcsscode = Services.prefs.getCharPref(PrefsObserver.branch + "customcsstb");
+	
+				return "data:text/css;charset=utf-8," + encodeURIComponent('\
+				  '+customcsscode+'\
+				');
+			  }
+			}catch(e) {Cu.reportError(e)}
+		}
+    }
+});
+
 
 var customizemybirdsettings = {
 
@@ -1275,6 +1319,7 @@ var customizemybirdsettings = {
 	"attachmentbox_hp": AttachmentboxHigherPosition,
 	"attachmentbox_bp": AttachmentboxButtonPosition,
 	"quickfilterbar_lp": QuickFilterBarLowerPosition,
+	"quickfilterbar": QuickFilterBar,
 	"treecol": TreeColumns,
 	"treecol_aero": TreeColumnsAero,
 	"appmenubutton": AppmenuButton,
@@ -1328,5 +1373,7 @@ var customizemybirdsettings = {
 	"scrollbars_cappearance_buttons_gradient": ScrollbarsCustomAppearance,
 	"scrollbars_cappearance_buttons_hover_color": ScrollbarsCustomAppearance,
 	"scrollbars_cappearance_buttons_hover_gradient": ScrollbarsCustomAppearance,
-	"scrollbars_cappearance_buttons_roundness": ScrollbarsCustomAppearance
+	"scrollbars_cappearance_buttons_roundness": ScrollbarsCustomAppearance,
+	"customcss": CustomCSS,
+	"customcsstb": CustomCSS
 };

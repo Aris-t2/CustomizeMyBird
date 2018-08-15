@@ -17,6 +17,11 @@
 <!ENTITY Attachmentbox_hp	"Mailanhänge: über dem Mailinhalt anzeigen">
 <!ENTITY Attachmentbox_bp	"Mailanhänge: Schaltfläche nach links verschieben">
 <!ENTITY Quickfilterbar_lp	"Schnellfilterleiste: unter der Mailliste anzeigen">
+<!ENTITY Quickfilterbar		"- Modus:">
+<!ENTITY Quickfilterbar_def "Standard">
+<!ENTITY Quickfilterbar_ico "Symbole">
+<!ENTITY Quickfilterbar_txt "Text">
+<!ENTITY Quickfilterbar_it	"Symbole + Text">
 <!ENTITY Treecol			"Spaltenbezeichnungen: alternative Darstellung">
 <!ENTITY Aerocolorstoolbar	"Leisten: blaue Aero-Farben">
 
@@ -84,7 +89,10 @@
 <!ENTITY Scrollbars_vertical						"vertikal">
 <!ENTITY Scrollbar_horizontal						"horizontal">
 
+<!ENTITY Customcss			"Benutzerdefinierter CSS-Code">
+
 <!ENTITY Nondefault_theme	"Einige Einstellungen sind für 'vollständige Themes' nicht vorhanden!">
 
 <!ENTITY Supportsite		"Support-Seite">
+<!ENTITY Reportissue		"Fehler melden">
 <!ENTITY Latestversion		"Aktuellste Version herunterladen">

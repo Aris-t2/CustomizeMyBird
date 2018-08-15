@@ -119,3 +119,8 @@ input[type=number]::-webkit-outer-spin-button {
 .cmb_nondefault_theme {
   font-weight: bold;
 }
+
+#customizemybird_tb_customcss {
+  min-width: 480px;
+  width: calc( 100vw - 330px );
+}

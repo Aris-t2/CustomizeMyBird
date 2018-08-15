@@ -31,11 +31,14 @@
 		  <description> </description>
 		</vbox>
 		
+		<description> </description>
+		
 		<hbox>
 
 		  <vbox>
-			<label value=" "/>
 			<label value="Github &Supportsite;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
+			<label value=" "/>
+			<label value="&Reportissue;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/issues"/>
 			<label value=" "/>
 			<label value="&Latestversion;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/releases/"/>
 			<label value=" "/>
@@ -55,6 +58,7 @@
 			  <radio label="&Addonsmanager; (about:addons)" value="cmb_cat_aboutaddons" id="cmb_cat_aboutaddons" onmousedown="customizemybird.options.cmbcategories('cmb_cat_aboutaddons');"/>
 			  <radio label="&Aboutprefs; (about:preferences)" value="cmb_cat_aboutpreferences" id="cmb_cat_aboutpreferences" onmousedown="customizemybird.options.cmbcategories('cmb_cat_aboutpreferences');"/>
 			  <radio label="&Scrollbars; (NewScrollbars)" value="cmb_cat_newscrollbars" id="cmb_cat_newscrollbars" onmousedown="customizemybird.options.cmbcategories('cmb_cat_newscrollbars');"/>
+			  <radio label="&Customcss;" value="cmb_cat_customcss" id="cmb_cat_customcss" onmousedown="customizemybird.options.cmbcategories('cmb_cat_customcss');"/>
 			</radiogroup>
 		  </vbox>
 
@@ -138,6 +142,16 @@
 		  <hbox align="center">
 			<description>&Quickfilterbar_lp;</description>
 			<checkbox id="customizemybird_cb_quickfilterbar_lp" label="" oncommand="customizemybird.options.quickfilterbar_lp();"/>
+		  </hbox>
+		  
+		  <hbox align="center">
+			<description>&Quickfilterbar;</description>
+			<radiogroup id="customizemybird_rg_quickfilterbar" orient="horizontal">
+			  <radio label="&Quickfilterbar_def;" value="quickfilterbar_def" id="quickfilterbar_def" onmousedown="customizemybird.options.quickfilterbar('quickfilterbar_def');"/>
+			  <radio label="&Quickfilterbar_ico;" value="quickfilterbar_ico" id="quickfilterbar_ico" onmousedown="customizemybird.options.quickfilterbar('quickfilterbar_ico');"/>
+			  <radio label="&Quickfilterbar_txt;" value="quickfilterbar_txt" id="quickfilterbar_txt" onmousedown="customizemybird.options.quickfilterbar('quickfilterbar_txt');"/>
+			  <radio label="&Quickfilterbar_it;"  value="quickfilterbar_it"  id="quickfilterbar_it" onmousedown="customizemybird.options.quickfilterbar('quickfilterbar_it');"/>
+			</radiogroup>
 		  </hbox>
 	 
 		  <hbox align="center" class="cmb_defaulttheme">
@@ -483,7 +497,19 @@
 			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_roundness" maxlength="3" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_roundness();" onchange="customizemybird.options.scrollbars_cappearance_buttons_roundness();"/>
 		  </hbox>
 
-		</vbox>	
+		</vbox>
+		
+		<vbox id="customizemybird_customcss" class="cmb_groupbox">
+
+		  <description class="customizemybird_headline">&Customcss;</description>
+		  <hbox align="center">
+			<description>&Customcss;</description>
+			<checkbox id="customizemybird_cb_customcss" label="" oncommand="customizemybird.options.customcss();"/>
+		  </hbox>
+
+		  <textbox align="center" id="customizemybird_tb_customcss" rows="15" multiline="true" onkeyup="customizemybird.options.customcsstb();"/>
+
+		</vbox>
 		
 	</vbox>
 
