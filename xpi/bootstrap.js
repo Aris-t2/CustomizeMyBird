@@ -380,8 +380,12 @@ var TabToolbarButtonsBeforeTabs = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(os_platform != "Darwin")
-			return "chrome://customizemybirdextension/content/css/tab_tb_buttons_before_tabs.css";
+		  if(os_platform != "Darwin") {
+			if(app_version<63) 
+			  return "chrome://customizemybirdextension/content/css/tab_tb_buttons_before_tabs.css";
+			else if(app_version>=63) 
+			  return "chrome://customizemybirdextension/content/css/tab_tb_buttons_before_tabs63.css";
+		  }
 		}
     }
 });

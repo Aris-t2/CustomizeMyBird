@@ -1,0 +1,5 @@
+@import url(tab_tb_buttons_before_tabs.css);
+
+#tabbar-toolbar {
+  -moz-padding-start: 2px !important;
+}

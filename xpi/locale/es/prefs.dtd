@@ -6,7 +6,7 @@
 <!ENTITY Tabheight			"Pestañas: Altura personalizada (en píxeles)">
 <!ENTITY Tabborderradius	"- Redondeado personalizado del borde (en píxeles)">
 <!ENTITY Tabtbbuttons_bt	"Pestañas y botones de la barra de pestañas: Intercambiar posiciones">
-<!ENTITY Tabtb_lightning	"Barra de pestañas: Ocultar botones de Lightning">
+<!ENTITY Tabtb_lightning	"Barra de pestañas: Ocultar botones (de Lightning)">
 
 <!ENTITY Menubarposition	"Barra de menú principal">
 <!ENTITY Menubarposition_at	"encima de la barra de pestañas">

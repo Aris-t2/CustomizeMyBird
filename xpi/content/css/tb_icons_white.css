@@ -190,7 +190,7 @@
 	  -moz-image-region: rect(0px 180px 18px 162px) !important;
 	}
 
-	.toolbarbutton-1 .toolbarbutton-icon{
+	toolbar .toolbarbutton-1 .toolbarbutton-icon{
 	  height: 18px !important;
 	  width: 18px !important;
 	  padding: 0 !important;

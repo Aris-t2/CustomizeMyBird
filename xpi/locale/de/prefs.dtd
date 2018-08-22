@@ -6,7 +6,7 @@
 <!ENTITY Tabheight			"Tabs: benutzerdefinierte Höhe (in px)">
 <!ENTITY Tabborderradius	"- obere Randrundung (in px)">
 <!ENTITY Tabtbbuttons_bt	"Tabs und Tableistenschaltflächen: Positionen tauschen">
-<!ENTITY Tabtb_lightning	"Tableiste: Lightning-Schaltflächen verstecken">
+<!ENTITY Tabtb_lightning	"Tableiste: (Lightning-)Schaltflächen verstecken">
 
 <!ENTITY Menubarposition	"Menüleiste">
 <!ENTITY Menubarposition_at	"über der Tableiste anzeigen">

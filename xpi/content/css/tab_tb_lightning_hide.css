@@ -1,5 +1,3 @@
-
-#tabbar-toolbar #calendar-tab-button,
-#tabbar-toolbar #task-tab-button {
+#tabbar-toolbar toolbarbutton:not(#button-appmenu) {
   visibility: collapse !important;
 }

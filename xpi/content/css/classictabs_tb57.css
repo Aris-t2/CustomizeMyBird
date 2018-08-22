@@ -352,3 +352,9 @@
   width: 16px !important;
   height: 16px !important;
 }
+
+
+#messengerWindow[sizemode="maximized"] #tabbar-toolbar {
+  min-height: 1px !important;
+  height: 1px !important;
+}

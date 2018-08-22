@@ -6,7 +6,7 @@
 <!ENTITY Tabheight			"Tabs: custom height (in px)">
 <!ENTITY Tabborderradius	"- top border roundness (in px)">
 <!ENTITY Tabtbbuttons_bt	"Tabs and tab toolbar buttons: switch positions">
-<!ENTITY Tabtb_lightning	"Tabs toolbar: hide Lightning buttons">
+<!ENTITY Tabtb_lightning	"Tabs toolbar: hide (Lightning) buttons">
 
 <!ENTITY Menubarposition	"Main menu bar">
 <!ENTITY Menubarposition_at	"above tabs">
