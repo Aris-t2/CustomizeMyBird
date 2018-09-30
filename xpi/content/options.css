@@ -114,10 +114,37 @@ input[type=number]::-webkit-outer-spin-button {
   transition-duration: 0.1s !important;
 }
 
+#cmb_tb63plus_compatibility,
 #customizemybird_categories radio[selected="true"] :-moz-any(.radio-label-center-box,.radio-label-box),
 .text-link,
 .cmb_nondefault_theme {
   font-weight: bold;
+}
+
+#customizemybird_cb_tabheight_down,
+#customizemybird_cb_tabheight_up {
+  list-style-image: url("chrome://customizemybirdextension/content/images/tb_mail_tb3.png");
+  -moz-appearance: none;
+  background: unset;
+  border: unset;
+  padding: unset;
+  margin: unset;
+  min-width: unset;
+  width: unset;
+}
+
+#customizemybird_cb_tabheight_down:hover,
+#customizemybird_cb_tabheight_up:hover {
+  transform: scale(0.75);
+  transition-duration: 0.1s;
+}
+
+#customizemybird_cb_tabheight_down {
+  -moz-image-region: rect(0px, 414px, 18px, 396px);
+}
+
+#customizemybird_cb_tabheight_up {
+  -moz-image-region: rect(0px, 432px, 18px, 414px);
 }
 
 #customizemybird_tb_customcss {

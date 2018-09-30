@@ -41,3 +41,7 @@
 	#customizemybirdextension_pref_appmenubuttonicon_tb_icon_none .radio-label {
 	  -moz-padding-start: 2px !important;
 	}
+	
+	#customizemybird_windowheader_caption_bgc {
+	  visibility: collapse;
+	}

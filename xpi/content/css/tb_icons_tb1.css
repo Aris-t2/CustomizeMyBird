@@ -47,8 +47,8 @@
 	#quoteButton,
 	#cut-button,
 	#copy-button,
-	#paste-button,
-	#attachmentNotificationBox > notification .messageImage {
+	#paste-button/*,
+	#attachmentNotificationBox > notification .messageImage*/ {
 	  list-style-image: url("chrome://customizemybirdextension/content/images/tb_compose_tb1.png") !important;
 	}
 
@@ -197,11 +197,11 @@
 	  margin: 0 !important;
 	}
 
-	#attachmentNotificationBox > notification .messageImage {
+	/*#attachmentNotificationBox > notification .messageImage {
 	  width: 18px !important;
 	  height: 18px !important;
 	  background-position: -54px top !important;
-	}
+	}*/
 	
 	/* folder icons */
 	.tabmail-tab[type="folder"][SpecialFolder="Inbox"] .tab-icon-image, treechildren::-moz-tree-image(folderNameCol, specialFolder-Inbox),

@@ -155,7 +155,11 @@ init: function() {
 	document.getElementById("customizemybird_cb_customcss").checked = this.prefs.getBoolPref("customcss");
 	document.getElementById("customizemybird_tb_customcss").value = this.prefs.getCharPref("customcsstb");
 	
-	if (this.appversion < 60) document.getElementById("customizemybird_aboutpreferences").style.visibility = 'collapse';
+	if (this.appversion < 60) {
+	  document.getElementById("customizemybird_aboutpreferences").style.visibility = 'collapse';
+	  document.getElementById("cmb_cat_aboutpreferences").style.visibility = 'collapse';
+	}
+	if (this.appversion < 63) document.getElementById("cmb_tb63plus_compatibility").style.visibility = 'collapse';
 
 
 },
@@ -187,8 +191,14 @@ classictabsaero: function() {
   document.getElementById("customizemybird_cb_classictabsaero").checked = this.prefs.getBoolPref("classictabsaero");
 },
 
-tabheight: function() {
-  this.prefs.setIntPref("tabheight",document.getElementById("customizemybird_cb_tabheight").value);
+tabheight: function(decinc) {
+  if (decinc=="increase") {
+	this.prefs.setIntPref("tabheight",this.prefs.getIntPref("tabheight")+1);
+  } else {
+	if (this.prefs.getIntPref("tabheight")<=24) return;
+	else this.prefs.setIntPref("tabheight",this.prefs.getIntPref("tabheight")-1);
+  }
+  document.getElementById("customizemybird_cb_tabheight").value=this.prefs.getIntPref("tabheight");
 },
 
 tabborderradius: function() {

@@ -26,6 +26,11 @@
 		  <spacer flex="1"/>
 		</hbox>
 		
+		<vbox id="cmb_tb63plus_compatibility">
+		  <description>[!] &Tb63plus_compat;</description>
+		  <description> </description>
+		</vbox>
+		
 		<vbox class="cmb_nondefault_theme">
 		  <description>[!] &Nondefault_theme;</description>
 		  <description> </description>
@@ -83,7 +88,9 @@
 		  
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Tabheight;</description>
-			<textbox id="customizemybird_cb_tabheight" maxlength="3" size="6" min="24" type="number" onkeyup="customizemybird.options.tabheight();" onchange="customizemybird.options.tabheight();"/>
+			<textbox id="customizemybird_cb_tabheight" maxlength="3" size="6" disabled="1"/>
+			<button id="customizemybird_cb_tabheight_down" oncommand="customizemybird.options.tabheight('decrease');"/>
+			<button id="customizemybird_cb_tabheight_up" oncommand="customizemybird.options.tabheight('increase');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
@@ -178,7 +185,7 @@
 			<colorpicker id="customizemybird_cb_winheadertc" type="button" onselect="customizemybird.options.winheadertc();"/>
 			<textbox id="customizemybird_cb_winheadertct" size="15" onkeyup="customizemybird.options.winheadertct();"/>
 		  </hbox>
-		  <hbox align="center" class="cmb_win cmb_defaulttheme">
+		  <hbox align="center" class="cmb_win cmb_defaulttheme" id="customizemybird_windowheader_caption_bgc">
 			<description>&Windowheadercapc;</description>
 			<colorpicker id="customizemybird_cb_winheadercc" type="button" onselect="customizemybird.options.winheadercc();"/>
 			<textbox id="customizemybird_cb_winheadercct" size="15" onkeyup="customizemybird.options.winheadercct();"/>

@@ -92,6 +92,7 @@
 <!ENTITY Customcss			"Benutzerdefinierter CSS-Code">
 
 <!ENTITY Nondefault_theme	"Einige Einstellungen sind für 'vollständige Themes' nicht vorhanden!">
+<!ENTITY Tb63plus_compat	"Dieses Add-on is nicht kompatibel mit Thunderbird 63+!">
 
 <!ENTITY Supportsite		"Support-Seite">
 <!ENTITY Reportissue		"Fehler melden">

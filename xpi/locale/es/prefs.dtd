@@ -91,6 +91,7 @@
 <!ENTITY Customcss			"Custom CSS Code">
 
 <!ENTITY Nondefault_theme	"Some options are not available for 'full themes'!">
+<!ENTITY Tb63plus_compat	"This add-on is not compatible to Thunderbird 63+!">
 
 <!ENTITY Supportsite		"Sitio de soporte">
 <!ENTITY Reportissue		"Report an issue">
