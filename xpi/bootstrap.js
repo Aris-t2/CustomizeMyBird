@@ -9,6 +9,8 @@ var os_platform = Services.appinfo.OS;
 var app_version = parseInt(Services.appinfo.version);
 var tbdefaulttheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0';
 
+if(app_version>=63) ChromeUtils.import("resource://gre/modules/XPCOMUtils.jsm"); // for Thunderbird 63+
+
 function install(params, reason) { }
 
 function uninstall(params, reason) {
@@ -109,10 +111,60 @@ function startup(params, reason){
 }
 
 function shutdown(params, reason){
-	PrefsObserver.shutdown();
+  PrefsObserver.shutdown();
 }
 
-var PrefsObserver = {
+function isFEOption(customizemybirdoption){
+	if (   customizemybirdoption == "cmb_overlay"
+		|| customizemybirdoption == "main_ui"
+		|| customizemybirdoption == "cmbcategories"
+		|| customizemybirdoption == "options52"
+		|| customizemybirdoption == "tabheight"
+		|| customizemybirdoption == "tabborderradius"
+		|| customizemybirdoption == "menubarposition"
+		|| customizemybirdoption == "winheaderbg"
+		|| customizemybirdoption == "winheadertc"
+		|| customizemybirdoption == "winheadercc"
+		|| customizemybirdoption == "appmenubuttondm"
+		|| customizemybirdoption == "appmenubuttonct"
+		|| customizemybirdoption == "appmenubuttonc1"
+		|| customizemybirdoption == "appmenubuttonc2"
+		|| customizemybirdoption == "appmenubuttontxt"
+		|| customizemybirdoption == "appmenubuttontxtc"
+		|| customizemybirdoption == "appmenubuttontxtcs"
+		|| customizemybirdoption == "appmenubuttonhp"
+		|| customizemybirdoption == "appmenubuttonicon"
+		|| customizemybirdoption == "quickfilterbar"
+		|| customizemybirdoption == "ctb_maintoolbar_br"
+		|| customizemybirdoption == "ctb_menubar_br"
+		|| customizemybirdoption == "ctb_tabstoolbar_br"
+		|| customizemybirdoption == "ctb_tbmailicons"
+		|| customizemybirdoption == "ctb_maintoolbar_bh"
+		|| customizemybirdoption == "ctb_maintoolbar_bw"
+		|| customizemybirdoption == "ctb_menubar_bh"
+		|| customizemybirdoption == "ctb_menubar_bw"
+		|| customizemybirdoption == "scrollbar_csize_value"
+		|| customizemybirdoption == "scrollbar_copacity_value"
+		|| customizemybirdoption == "scrollbars_cappearance_background_color"
+		|| customizemybirdoption == "scrollbars_cappearance_background_gradient"
+		|| customizemybirdoption == "scrollbars_cappearance_thumb_color"
+		|| customizemybirdoption == "scrollbars_cappearance_thumb_gradient"
+		|| customizemybirdoption == "scrollbars_cappearance_thumb_hover_color"
+		|| customizemybirdoption == "scrollbars_cappearance_thumb_hover_gradient"
+		|| customizemybirdoption == "scrollbars_cappearance_thumb_roundness"
+		|| customizemybirdoption == "scrollbars_cappearance_thumb_border"
+		|| customizemybirdoption == "scrollbars_cappearance_thumb_border_color"
+		|| customizemybirdoption == "scrollbars_cappearance_buttons_color"
+		|| customizemybirdoption == "scrollbars_cappearance_buttons_gradient"
+		|| customizemybirdoption == "scrollbars_cappearance_buttons_hover_color"
+		|| customizemybirdoption == "scrollbars_cappearance_buttons_hover_gradient"
+		|| customizemybirdoption == "scrollbars_cappearance_buttons_roundness"
+		|| customizemybirdoption == "customcsstb"
+	  ) return true;
+	else return false;
+}
+
+if(app_version<63) var PrefsObserver = {
 	branch: "extensions.customizemybirdextension.",
 
 	init: function() {
@@ -135,52 +187,7 @@ var PrefsObserver = {
 
 		try	{
 			var enabled;
-			if (   customizemybirdoption == "cmb_overlay"
-				|| customizemybirdoption == "main_ui"
-				|| customizemybirdoption == "cmbcategories"
-				|| customizemybirdoption == "options52"
-				|| customizemybirdoption == "tabheight"
-				|| customizemybirdoption == "tabborderradius"
-				|| customizemybirdoption == "menubarposition"
-				|| customizemybirdoption == "winheaderbg"
-				|| customizemybirdoption == "winheadertc"
-				|| customizemybirdoption == "winheadercc"
-				|| customizemybirdoption == "appmenubuttondm"
-				|| customizemybirdoption == "appmenubuttonct"
-				|| customizemybirdoption == "appmenubuttonc1"
-				|| customizemybirdoption == "appmenubuttonc2"
-				|| customizemybirdoption == "appmenubuttontxt"
-				|| customizemybirdoption == "appmenubuttontxtc"
-				|| customizemybirdoption == "appmenubuttontxtcs"
-				|| customizemybirdoption == "appmenubuttonhp"
-				|| customizemybirdoption == "appmenubuttonicon"
-				|| customizemybirdoption == "quickfilterbar"
-				|| customizemybirdoption == "ctb_maintoolbar_br"
-				|| customizemybirdoption == "ctb_menubar_br"
-				|| customizemybirdoption == "ctb_tabstoolbar_br"
-				|| customizemybirdoption == "ctb_tbmailicons"
-				|| customizemybirdoption == "ctb_maintoolbar_bh"
-				|| customizemybirdoption == "ctb_maintoolbar_bw"
-				|| customizemybirdoption == "ctb_menubar_bh"
-				|| customizemybirdoption == "ctb_menubar_bw"
-				|| customizemybirdoption == "scrollbar_csize_value"
-				|| customizemybirdoption == "scrollbar_copacity_value"
-				|| customizemybirdoption == "scrollbars_cappearance_background_color"
-				|| customizemybirdoption == "scrollbars_cappearance_background_gradient"
-				|| customizemybirdoption == "scrollbars_cappearance_thumb_color"
-				|| customizemybirdoption == "scrollbars_cappearance_thumb_gradient"
-				|| customizemybirdoption == "scrollbars_cappearance_thumb_hover_color"
-				|| customizemybirdoption == "scrollbars_cappearance_thumb_hover_gradient"
-				|| customizemybirdoption == "scrollbars_cappearance_thumb_roundness"
-				|| customizemybirdoption == "scrollbars_cappearance_thumb_border"
-				|| customizemybirdoption == "scrollbars_cappearance_thumb_border_color"
-				|| customizemybirdoption == "scrollbars_cappearance_buttons_color"
-				|| customizemybirdoption == "scrollbars_cappearance_buttons_gradient"
-				|| customizemybirdoption == "scrollbars_cappearance_buttons_hover_color"
-				|| customizemybirdoption == "scrollbars_cappearance_buttons_hover_gradient"
-				|| customizemybirdoption == "scrollbars_cappearance_buttons_roundness"
-				|| customizemybirdoption == "customcsstb"
-			   )
+			if (isFEOption(customizemybirdoption))
 				enabled = true;
 			else
 				enabled = Services.prefs.getBoolPref(this.branch + customizemybirdoption);
@@ -202,6 +209,56 @@ var PrefsObserver = {
 	},
 
 	QueryInterface: XPCOMUtils.generateQI([Ci.nsISupportsWeakReference, Ci.nsIObserver])
+};
+
+if(app_version>=63) var PrefsObserver = {
+
+	branch: "extensions.customizemybirdextension.",
+
+	init: function() {
+		
+		for (var customizemybirdoption in customizemybirdsettings)
+			this.updateOption(customizemybirdoption);
+
+		Services.prefs.addObserver(this.branch, this, true);
+	},
+
+	shutdown: function() {
+		for (var customizemybirdoption in customizemybirdsettings)
+			customizemybirdsettings[customizemybirdoption].shutdown();
+
+		Services.prefs.removeObserver(this.branch, this);
+	},
+
+	updateOption: function(customizemybirdoption) {
+		if (!(customizemybirdoption in customizemybirdsettings))
+			return;
+
+		try	{
+			var enabled;
+			if (isFEOption(customizemybirdoption))
+				enabled = true;
+			else
+				enabled = Services.prefs.getBoolPref(this.branch + customizemybirdoption);
+
+			if (enabled)
+				customizemybirdsettings[customizemybirdoption].init();
+			else
+				customizemybirdsettings[customizemybirdoption].shutdown();
+		}
+		catch (e) {}
+
+	},
+
+	observe: function(subject, topic, data) {
+		if (topic != "nsPref:changed" || data.indexOf(this.branch) != 0)
+			return;
+
+		this.updateOption(data.substr(this.branch.length));
+	},
+	
+	QueryInterface: ChromeUtils.generateQI([Components.interfaces.nsISupportsWeakReference, Components.interfaces.nsIObserver])
+
 };
 
 var StylesheetManager = {
