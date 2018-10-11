@@ -9,6 +9,10 @@
   font-weight: bold;
 }
 
+#CustomizeMyBird_prefwindow menulist {
+  min-width: 500px;
+}
+
 .customizemybird_headline{
   font-size: 20px;
   font-weight: bold;
@@ -37,40 +41,40 @@
   -moz-margin-end: 150px;
 }
 
-#customizemybird_rg_appbutton_icons #tb_icon_white .radio-icon {
+#customizemybird_rg_appmenubuttonicon #tb_icon_white .radio-icon {
   list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_white.png") !important;
 }
-#customizemybird_rg_appbutton_icons #tb_icon_white2 .radio-icon {
+#customizemybird_rg_appmenubuttonicon #tb_icon_white2 .radio-icon {
   list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_white2.png") !important;
 }
-#customizemybird_rg_appbutton_icons #tb_icon_def .radio-icon {
+#customizemybird_rg_appmenubuttonicon #tb_icon_def .radio-icon {
   list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_def.png") !important;
 }
-#customizemybird_rg_appbutton_icons #tb_icon_def2 .radio-icon {
+#customizemybird_rg_appmenubuttonicon #tb_icon_def2 .radio-icon {
   list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_def2.png") !important;
 }
-#customizemybird_rg_appbutton_icons #tb_icon_def3 .radio-icon {
+#customizemybird_rg_appmenubuttonicon #tb_icon_def3 .radio-icon {
   list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_def3.png") !important;
 }
-#customizemybird_rg_appbutton_icons #tb_icon_flat .radio-icon {
+#customizemybird_rg_appmenubuttonicon #tb_icon_flat .radio-icon {
   list-style-image: url("chrome://customizemybirdextension/content/images/tb_icon_flat.png") !important;
 }
 
-#customizemybird_rg_appbutton_icons .radio-icon {
+#customizemybird_rg_appmenubuttonicon .radio-icon {
   width: 16px !important;
   height: 16px !important;
 }
 
-#customizemybird_rg_appbutton_icons radio {
+#customizemybird_rg_appmenubuttonicon radio {
   -moz-margin-start: 0 !important;
   -moz-margin-end: 0 !important;
 }
 
-#customizemybird_rg_appbutton_icons #tb_icon_none .radio-icon {
+#customizemybird_rg_appmenubuttonicon #tb_icon_none .radio-icon {
   display: none !important;
 }
 
-#customizemybird_rg_appbutton_icons #tb_icon_none .radio-label {
+#customizemybird_rg_appmenubuttonicon #tb_icon_none .radio-label {
   -moz-padding-start: 2px !important;
 }
 
@@ -87,27 +91,27 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 !important;
 }
 
-#customizemybird_categories radio:hover {
+#customizemybird_rg_categories radio:hover {
   cursor: pointer !important;
 }
 
-#customizemybird_categories radio .radio-label {
+#customizemybird_rg_categories radio .radio-label {
   padding: 0 4px !important;
 }
 
-#customizemybird_categories radio:not([selected="true"]) :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
+#customizemybird_rg_categories radio:not([selected="true"]) :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
   visibility: hidden !important;
 }
 
-#customizemybird_categories radio:not([selected="true"]):hover :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
+#customizemybird_rg_categories radio:not([selected="true"]):hover :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
   visibility: visible !important;
   opacity: 0.2 !important;
 }
 
-#customizemybird_categories radio:not([selected="true"]) :-moz-any(.radio-label-center-box,.radio-label-box) {
+#customizemybird_rg_categories radio:not([selected="true"]) :-moz-any(.radio-label-center-box,.radio-label-box) {
   -moz-appearance: none !important;
 }
-#customizemybird_categories radio:-moz-any([selected="true"],:hover) :-moz-any(.radio-label-center-box,.radio-label-box) {
+#customizemybird_rg_categories radio:-moz-any([selected="true"],:hover) :-moz-any(.radio-label-center-box,.radio-label-box) {
   -moz-appearance: none !important;
   background: Highlight !important;
   color: Highlighttext !important;
@@ -115,7 +119,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #cmb_tb63plus_compatibility,
-#customizemybird_categories radio[selected="true"] :-moz-any(.radio-label-center-box,.radio-label-box),
+#customizemybird_rg_categories radio[selected="true"] :-moz-any(.radio-label-center-box,.radio-label-box),
 .text-link,
 .cmb_nondefault_theme {
   font-weight: bold;

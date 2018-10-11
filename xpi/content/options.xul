@@ -26,11 +26,6 @@
 		  <spacer flex="1"/>
 		</hbox>
 		
-		<vbox id="cmb_tb63plus_compatibility">
-		  <description>[!] &Tb63plus_compat;</description>
-		  <description> </description>
-		</vbox>
-		
 		<vbox class="cmb_nondefault_theme">
 		  <description>[!] &Nondefault_theme;</description>
 		  <description> </description>
@@ -41,154 +36,163 @@
 		<hbox>
 
 		  <vbox>
-			<label value="Github &Supportsite;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
+			<label value="&Supportsite;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/"/>
 			<label value=" "/>
 			<label value="&Reportissue;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/issues"/>
-			<label value=" "/>
 			<label value="&Latestversion;" class="text-link" href="https://github.com/Aris-t2/CustomizeMyBird/releases/"/>
 			<label value=" "/>
 			<label value="Mozillazine" class="text-link" href="http://forums.mozillazine.org/viewtopic.php?t=3024866"/>
-			<label value=" "/>
 			<label value="addons.thunderbird.net" class="text-link" href="https://addons.thunderbird.net/addon/customizemybird/"/>
+			<label value=" "/>
+			<label value="AeroGlass (Windows 8&amp;10)" class="text-link" href="http://glass8.eu/"/>
 			<label value=" "/>
 		  </vbox>
 		  
 		  <vbox>
-			<radiogroup id="customizemybird_categories" orient="vertical">
-			  <radio label="&Allsettings;" value="cmb_cat_all" id="cmb_cat_all" onmousedown="customizemybird.options.cmbcategories('cmb_cat_all');"/>
-			  <radio label="&Generalui;" value="cmb_cat_generalui" id="cmb_cat_generalui" onmousedown="customizemybird.options.cmbcategories('cmb_cat_generalui');"/>
-			  <radio label="&Appmenubutton0;" value="cmb_cat_appbutton" id="cmb_cat_appbutton" onmousedown="customizemybird.options.cmbcategories('cmb_cat_appbutton');"/>
-			  <radio label="&Ctb_settings; (CTB)" value="cmb_cat_ctb_settings" id="cmb_cat_ctb_settings" onmousedown="customizemybird.options.cmbcategories('cmb_cat_ctb_settings');"/>
-			  <radio label="&Ctb_icons_main; (CTB / NB)" value="cmb_cat_icon_settings" id="cmb_cat_icon_settings" onmousedown="customizemybird.options.cmbcategories('cmb_cat_icon_settings');"/>
-			  <radio label="&Addonsmanager; (about:addons)" value="cmb_cat_aboutaddons" id="cmb_cat_aboutaddons" onmousedown="customizemybird.options.cmbcategories('cmb_cat_aboutaddons');"/>
-			  <radio label="&Aboutprefs; (about:preferences)" value="cmb_cat_aboutpreferences" id="cmb_cat_aboutpreferences" onmousedown="customizemybird.options.cmbcategories('cmb_cat_aboutpreferences');"/>
-			  <radio label="&Scrollbars; (NewScrollbars)" value="cmb_cat_newscrollbars" id="cmb_cat_newscrollbars" onmousedown="customizemybird.options.cmbcategories('cmb_cat_newscrollbars');"/>
-			  <radio label="&Customcss;" value="cmb_cat_customcss" id="cmb_cat_customcss" onmousedown="customizemybird.options.cmbcategories('cmb_cat_customcss');"/>
+			<radiogroup id="customizemybird_rg_categories" orient="vertical">
+			  <radio label="&Allsettings;" value="cmb_cat_all" id="cmb_cat_all" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_all');"/>
+			  <radio label="&Generalui;" value="cmb_cat_generalui" id="cmb_cat_generalui" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_generalui');"/>
+			  <radio label="&Appmenubutton0;" value="cmb_cat_appbutton" id="cmb_cat_appbutton" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_appbutton');"/>
+			  <radio label="&Ctb_settings; (CTB)" value="cmb_cat_ctb_settings" id="cmb_cat_ctb_settings" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_ctb_settings');"/>
+			  <radio label="&Ctb_icons_main; (CTB / NB)" value="cmb_cat_icon_settings" id="cmb_cat_icon_settings" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_icon_settings');"/>
+			  <radio label="&Addonsmanager; (about:addons)" value="cmb_cat_aboutaddons" id="cmb_cat_aboutaddons" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_aboutaddons');"/>
+			  <radio label="&Aboutprefs; (about:preferences)" value="cmb_cat_aboutpreferences" id="cmb_cat_aboutpreferences" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_aboutpreferences');"/>
+			  <radio label="&Scrollbars; (NewScrollbars)" value="cmb_cat_newscrollbars" id="cmb_cat_newscrollbars" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_newscrollbars');"/>
+			  <radio label="&Customcss;" value="cmb_cat_customcss" id="cmb_cat_customcss" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_customcss');"/>
 			</radiogroup>
 		  </vbox>
 
 		</hbox>
 		
-		<vbox id="customizemybird_generaului" class="cmb_groupbox">
-		  <description class="customizemybird_headline">&Generalui;</description>
+		<vbox id="customizemybird_generalui" class="cmb_groupbox">
+		  <description class="customizemybird_headline">&Generalui; (CMB / GMF)</description>
+	  
 		  <hbox align="center" class="cmb_defaulttheme">
-			<description>&Classictabs;</description>
-			<checkbox id="customizemybird_cb_classictabs" label="" oncommand="customizemybird.options.classictabs();"/>
-		  </hbox>
-		  
-		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
-			<description>&BlueAerocolors;</description>
-			<checkbox id="customizemybird_cb_classictabsaero" label="" oncommand="customizemybird.options.classictabsaero();"/>
+			<menulist id="customizemybird_rg_classictabsui">
+			  <menupopup>
+				<menuitem label="&UI_tabs; &UI_tabs_default;" value="classictabsui_off" id="classictabsui_off" oncommand="customizemybird.options.manageCharPref('classictabsui','classictabsui_off');"/>
+				<menuitem label="&UI_tabs; &Classictabs; (&UI_default_col;)" value="classictabsui_def" id="classictabsui_def" oncommand="customizemybird.options.manageCharPref('classictabsui','classictabsui_def');"/>
+				<menuitem label="&UI_tabs; &Classictabs; (&UI_aero;)" value="classictabsui_aero" id="classictabsui_aero" oncommand="customizemybird.options.manageCharPref('classictabsui','classictabsui_aero');"/>
+				<menuitem label="&UI_tabs; &Classictabs; (&UI_glass; - 1 - GMF)" value="classictabsui_glass1" id="classictabsui_glass1" oncommand="customizemybird.options.manageCharPref('classictabsui','classictabsui_glass1');" class="cmb_win"/>
+				<menuitem label="&UI_tabs; &Classictabs; (&UI_glass; - 2 - GMF)" value="classictabsui_glass2" id="classictabsui_glass2" oncommand="customizemybird.options.manageCharPref('classictabsui','classictabsui_glass2');" class="cmb_win"/>
+				<menuitem label="&UI_tabs; &Classictabs; (&UI_glass; - 3 - GMF)" value="classictabsui_glass3" id="classictabsui_glass3" oncommand="customizemybird.options.manageCharPref('classictabsui','classictabsui_glass3');" class="cmb_win"/>
+			  </menupopup>
+			</menulist>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Tabborderradius;</description>
-			<textbox id="customizemybird_cb_tabborderradius" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.tabborderradius();" onchange="customizemybird.options.tabborderradius();"/>
+			<textbox id="customizemybird_num_tabborderradius" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.manageIntPref('tabborderradius',this.value);" onchange="customizemybird.options.manageIntPref('tabborderradius',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Tabheight;</description>
-			<textbox id="customizemybird_cb_tabheight" maxlength="3" size="6" disabled="1"/>
+			<textbox id="customizemybird_num_tabheight" maxlength="3" size="6" disabled="1"/>
 			<button id="customizemybird_cb_tabheight_down" oncommand="customizemybird.options.tabheight('decrease');"/>
 			<button id="customizemybird_cb_tabheight_up" oncommand="customizemybird.options.tabheight('increase');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
 			<description>&Tabtbbuttons_bt;</description>
-			<checkbox id="customizemybird_cb_tabtbbuttons_bt" label="" oncommand="customizemybird.options.tabtbbuttons_bt();"/>
+			<checkbox id="customizemybird_cb_tabtbbuttons_bt" label="" oncommand="customizemybird.options.manageBoolPref('tabtbbuttons_bt');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Tabtb_lightning;</description>
-			<checkbox id="customizemybird_cb_tabtb_lightning" label="" oncommand="customizemybird.options.tabtb_lightning();"/>
-		  </hbox>
-	  
-		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
-			<description>&Menubarposition;</description>
-			<radiogroup id="customizemybird_rg_menubarposition" orient="horizontal">
-			  <radio label="&Menubarposition_at;" value="menubar_above_tabs" id="menubar_above_tabs" onmousedown="customizemybird.options.menubarposition('menubar_above_tabs');"/>
-			  <radio label="&Menubarposition_bt;" value="menubar_below_tabs" id="menubar_below_tabs" onmousedown="customizemybird.options.menubarposition('menubar_below_tabs');"/>
-			</radiogroup>
-		  </hbox>
-		  
-		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
-			<description>&BlueAerocolors;</description>
-			<checkbox id="customizemybird_cb_aerocolors_mb" label="" oncommand="customizemybird.options.aerocolors_mb();"/>
-		  </hbox>
-		 
-		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
-			<description>&Menubar_compact;</description>
-			<checkbox id="customizemybird_cb_menubar_compact" label="" oncommand="customizemybird.options.menubar_compact();"/>
+			<checkbox id="customizemybird_cb_tabtb_lightning" label="" oncommand="customizemybird.options.manageBoolPref('tabtb_lightning');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_defaulttheme">
-			<description>&Main_tb_compact;</description>
-			<checkbox id="customizemybird_cb_main_tb_compact" label="" oncommand="customizemybird.options.main_tb_compact();"/>
+			<menulist id="customizemybird_rg_toolbarsui">
+			  <menupopup>
+				<menuitem label="&Toolbarui; &UI_default;" value="toolbarsui_def" id="toolbarsui_def" oncommand="customizemybird.options.manageCharPref('toolbarsui','toolbarsui_def');"/>
+				<menuitem label="&Toolbarui; &UI_aero;" value="toolbarsui_aero" id="toolbarsui_aero" oncommand="customizemybird.options.manageCharPref('toolbarsui','toolbarsui_aero');"/>
+				<menuitem label="&Toolbarui; &UI_glass; - 1 - GMF" value="toolbarsui_glass1" id="toolbarsui_glass1" oncommand="customizemybird.options.manageCharPref('toolbarsui','toolbarsui_glass1');" class="cmb_win"/>
+				<menuitem label="&Toolbarui; &UI_glass; - 2 - GMF" value="toolbarsui_glass2" id="toolbarsui_glass2" oncommand="customizemybird.options.manageCharPref('toolbarsui','toolbarsui_glass2');" class="cmb_win"/>
+				<menuitem label="&Toolbarui; &UI_glass; - 3 - GMF" value="toolbarsui_glass3" id="toolbarsui_glass3" oncommand="customizemybird.options.manageCharPref('toolbarsui','toolbarsui_glass3');" class="cmb_win"/>
+			  </menupopup>
+			</menulist>
 		  </hbox>
-		  
+
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Main_tb_compact;</description>
+			<checkbox id="customizemybird_cb_main_tb_compact" label="" oncommand="customizemybird.options.manageBoolPref('main_tb_compact');"/>
+		  </hbox>
+	  
 		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
-			<description>&Aerocolorstoolbar;</description>
-			<checkbox id="customizemybird_cb_aerocolors" label="" oncommand="customizemybird.options.aerocolors();"/>
+			<menulist id="customizemybird_rg_menubarposition">
+			  <menupopup>
+				<menuitem label="&Menubarposition; &Menubarposition_at;" value="menubar_above_tabs" id="menubar_above_tabs" oncommand="customizemybird.options.manageCharPref('menubarposition','menubar_above_tabs');"/>
+				<menuitem label="&Menubarposition; &Menubarposition_bt;" value="menubar_below_tabs" id="menubar_below_tabs" oncommand="customizemybird.options.manageCharPref('menubarposition','menubar_below_tabs');"/>
+				<menuitem label="&Menubarposition; &Menubarposition_bt; (&UI_aero;)" value="menubar_below_tabs_aero" id="menubar_below_tabs_aero" oncommand="customizemybird.options.manageCharPref('menubarposition','menubar_below_tabs_aero');"/>
+			  </menupopup>
+			</menulist>
+		  </hbox>
+	 
+		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
+			<description>&Menubar_compact;</description>
+			<checkbox id="customizemybird_cb_menubar_compact" label="" oncommand="customizemybird.options.manageBoolPref('menubar_compact');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Statusbar_hidden;</description>
-			<checkbox id="customizemybird_cb_status_hidden" label="" oncommand="customizemybird.options.status_hidden();"/>
+			<checkbox id="customizemybird_cb_status_hidden" label="" oncommand="customizemybird.options.manageBoolPref('status_hidden');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Attachmentbox_hp;</description>
-			<checkbox id="customizemybird_cb_attachmentbox_hp" label="" oncommand="customizemybird.options.attachmentbox_hp();"/>
+			<checkbox id="customizemybird_cb_attachmentbox_hp" label="" oncommand="customizemybird.options.manageBoolPref('attachmentbox_hp');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Attachmentbox_bp;</description>
-			<checkbox id="customizemybird_cb_attachmentbox_bp" label="" oncommand="customizemybird.options.attachmentbox_bp();"/>
+			<checkbox id="customizemybird_cb_attachmentbox_bp" label="" oncommand="customizemybird.options.manageBoolPref('attachmentbox_bp');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Quickfilterbar_lp;</description>
-			<checkbox id="customizemybird_cb_quickfilterbar_lp" label="" oncommand="customizemybird.options.quickfilterbar_lp();"/>
+			<checkbox id="customizemybird_cb_quickfilterbar_lp" label="" oncommand="customizemybird.options.manageBoolPref('quickfilterbar_lp');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
-			<description>&Quickfilterbar;</description>
-			<radiogroup id="customizemybird_rg_quickfilterbar" orient="horizontal">
-			  <radio label="&Quickfilterbar_def;" value="quickfilterbar_def" id="quickfilterbar_def" onmousedown="customizemybird.options.quickfilterbar('quickfilterbar_def');"/>
-			  <radio label="&Quickfilterbar_ico;" value="quickfilterbar_ico" id="quickfilterbar_ico" onmousedown="customizemybird.options.quickfilterbar('quickfilterbar_ico');"/>
-			  <radio label="&Quickfilterbar_txt;" value="quickfilterbar_txt" id="quickfilterbar_txt" onmousedown="customizemybird.options.quickfilterbar('quickfilterbar_txt');"/>
-			  <radio label="&Quickfilterbar_it;"  value="quickfilterbar_it"  id="quickfilterbar_it" onmousedown="customizemybird.options.quickfilterbar('quickfilterbar_it');"/>
-			</radiogroup>
+			<menulist id="customizemybird_rg_quickfilterbar" orient="horizontal">
+			  <menupopup>
+				<menuitem label="&Quickfilterbar; &UI_default;" value="quickfilterbar_def" id="quickfilterbar_def" oncommand="customizemybird.options.manageCharPref('quickfilterbar','quickfilterbar_def');"/>
+				<menuitem label="&Quickfilterbar; &Quickfilterbar_ico;" value="quickfilterbar_ico" id="quickfilterbar_ico" oncommand="customizemybird.options.manageCharPref('quickfilterbar','quickfilterbar_ico');"/>
+				<menuitem label="&Quickfilterbar; &Quickfilterbar_txt;" value="quickfilterbar_txt" id="quickfilterbar_txt" oncommand="customizemybird.options.manageCharPref('quickfilterbar','quickfilterbar_txt');"/>
+				<menuitem label="&Quickfilterbar; &Quickfilterbar_it;"  value="quickfilterbar_it"  id="quickfilterbar_it" oncommand="customizemybird.options.manageCharPref('quickfilterbar','quickfilterbar_it');"/>
+			  </menupopup>
+			</menulist>
 		  </hbox>
-	 
-		  <hbox align="center" class="cmb_defaulttheme">
-			<description>&Treecol;</description>
-			<checkbox id="customizemybird_cb_treecol" label="" oncommand="customizemybird.options.treecol();"/>
+	  
+		  <hbox align="center">
+			<menulist id="customizemybird_rg_treecolumnsui" orient="horizontal">
+			  <menupopup>
+				<menuitem label="&Treecol; &UI_default;" value="treecolumnsui_def" id="treecolumnsui_def" oncommand="customizemybird.options.manageCharPref('treecolumnsui','treecolumnsui_def');"/>
+				<menuitem label="&Treecol; &UI_alternative; (&UI_default_col;)" value="treecolumnsui_alt" id="treecolumnsui_alt" oncommand="customizemybird.options.manageCharPref('treecolumnsui','treecolumnsui_alt');"/>
+				<menuitem label="&Treecol; &UI_alternative; (&UI_aero;)" value="treecolumnsui_aero" id="treecolumnsui_aero" oncommand="customizemybird.options.manageCharPref('treecolumnsui','treecolumnsui_aero');"/>
+			  </menupopup>
+			</menulist>
 		  </hbox>
-		  
-		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
-			<description>&BlueAerocolors;</description>
-			<checkbox id="customizemybird_cb_treecol_aero" label="" oncommand="customizemybird.options.treecol_aero();"/>
-		  </hbox>
-		  
+	  
 		  <hbox align="center" class="cmb_win cmb_defaulttheme">
 			<description>&Windowheader;</description>
-			<checkbox id="customizemybird_cb_winheader" label="" oncommand="customizemybird.options.winheader();"/>
+			<checkbox id="customizemybird_cb_winheader" label="" oncommand="customizemybird.options.manageBoolPref('winheader');"/>
 		  </hbox>
 		  <hbox align="center" class="cmb_win cmb_defaulttheme">
 			<description>&Windowheaderbg;</description>
-			<colorpicker id="customizemybird_cb_winheaderbg" type="button" onselect="customizemybird.options.winheaderbg();"/>
-			<textbox id="customizemybird_cb_winheaderbgt" size="15" onkeyup="customizemybird.options.winheaderbgt();"/>
+			<colorpicker id="customizemybird_cp_winheaderbg" type="button" onselect="customizemybird.options.manageColorPref('cp','winheaderbg');"/>
+			<textbox id="customizemybird_tb_winheaderbgt" size="15" onkeyup="customizemybird.options.manageColorPref('tb','winheaderbg');"/>
 		  </hbox>
 		  <hbox align="center" class="cmb_win cmb_defaulttheme">
 			<description>&Appmenubuttontxtc;</description>
-			<colorpicker id="customizemybird_cb_winheadertc" type="button" onselect="customizemybird.options.winheadertc();"/>
-			<textbox id="customizemybird_cb_winheadertct" size="15" onkeyup="customizemybird.options.winheadertct();"/>
+			<colorpicker id="customizemybird_cp_winheadertc" type="button" onselect="customizemybird.options.manageColorPref('cp','winheadertc');"/>
+			<textbox id="customizemybird_tb_winheadertct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','winheadertc');"/>
 		  </hbox>
 		  <hbox align="center" class="cmb_win cmb_defaulttheme" id="customizemybird_windowheader_caption_bgc">
 			<description>&Windowheadercapc;</description>
-			<colorpicker id="customizemybird_cb_winheadercc" type="button" onselect="customizemybird.options.winheadercc();"/>
-			<textbox id="customizemybird_cb_winheadercct" size="15" onkeyup="customizemybird.options.winheadercct();"/>
+			<colorpicker id="customizemybird_cp_winheadercc" type="button" onselect="customizemybird.options.manageColorPref('cp','winheadercc');"/>
+			<textbox id="customizemybird_tb_winheadercct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','winheadercc');"/>
 		  </hbox>
 	  
 		</vbox>
@@ -197,64 +201,64 @@
 		  <description class="customizemybird_headline">&Appmenubutton0;</description>
 		  <hbox align="center">
 			<description>&Appmenubutton;</description>
-			<checkbox id="customizemybird_cb_appmenubutton" label="" oncommand="customizemybird.options.appmenubutton();"/>
+			<checkbox id="customizemybird_cb_appmenubutton" label="" oncommand="customizemybird.options.manageBoolPref('appmenubutton');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttonct;</description>
-			<checkbox id="customizemybird_cb_appmenubuttonct" label="" oncommand="customizemybird.options.appmenubuttonct();"/>
+			<checkbox id="customizemybird_cb_appmenubuttonct" label="" oncommand="customizemybird.options.manageBoolPref('appmenubuttonct');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttonc1;</description>
-			<colorpicker id="customizemybird_cb_appmenubuttonc1" type="button" onselect="customizemybird.options.appmenubuttonc1();"/>
-			<textbox id="customizemybird_cb_appmenubuttonc1t" size="15" onkeyup="customizemybird.options.appmenubuttonc1t();"/>
+			<colorpicker id="customizemybird_cp_appmenubuttonc1" type="button" onselect="customizemybird.options.manageColorPref('cp','appmenubuttonc1');"/>
+			<textbox id="customizemybird_tb_appmenubuttonc1t" size="15" onkeyup="customizemybird.options.manageColorPref('tb','appmenubuttonc1');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttonc2;</description>
-			<colorpicker id="customizemybird_cb_appmenubuttonc2" type="button" onselect="customizemybird.options.appmenubuttonc2();"/>
-			<textbox id="customizemybird_cb_appmenubuttonc2t" size="15" onkeyup="customizemybird.options.appmenubuttonc2t();"/>
+			<colorpicker id="customizemybird_cp_appmenubuttonc2" type="button" onselect="customizemybird.options.manageColorPref('cp','appmenubuttonc2');"/>
+			<textbox id="customizemybird_tb_appmenubuttonc2t" size="15" onkeyup="customizemybird.options.manageColorPref('tb','appmenubuttonc2');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttonicon;</description>
-			<radiogroup id="customizemybird_rg_appbutton_icons" orient="horizontal">
-			  <radio label="&Appmenubuttonicont;" value="tb_icon_none" id="tb_icon_none" onmousedown="customizemybird.options.appmenubuttonicon('tb_icon_none');"/>
-			  <radio label=" " value="tb_icon_white" id="tb_icon_white" onmousedown="customizemybird.options.appmenubuttonicon('tb_icon_white');"/>
-			  <radio label=" " value="tb_icon_white2" id="tb_icon_white2" onmousedown="customizemybird.options.appmenubuttonicon('tb_icon_white2');"/>
-			  <radio label=" " value="tb_icon_def" id="tb_icon_def" onmousedown="customizemybird.options.appmenubuttonicon('tb_icon_def');"/>
-			  <radio label=" " value="tb_icon_def2" id="tb_icon_def2" onmousedown="customizemybird.options.appmenubuttonicon('tb_icon_def2');"/>
-			  <radio label=" " value="tb_icon_def3" id="tb_icon_def3" onmousedown="customizemybird.options.appmenubuttonicon('tb_icon_def3');"/>
-			  <radio label=" " value="tb_icon_flat" id="tb_icon_flat" onmousedown="customizemybird.options.appmenubuttonicon('tb_icon_flat');"/>
+			<radiogroup id="customizemybird_rg_appmenubuttonicon" orient="horizontal">
+			  <radio label="&Appmenubuttonicont;" value="tb_icon_none" id="tb_icon_none" onmousedown="customizemybird.options.manageCharPref('appmenubuttonicon','tb_icon_none');"/>
+			  <radio label=" " value="tb_icon_white" id="tb_icon_white" onmousedown="customizemybird.options.manageCharPref('appmenubuttonicon','tb_icon_white');"/>
+			  <radio label=" " value="tb_icon_white2" id="tb_icon_white2" onmousedown="customizemybird.options.manageCharPref('appmenubuttonicon','tb_icon_white2');"/>
+			  <radio label=" " value="tb_icon_def" id="tb_icon_def" onmousedown="customizemybird.options.manageCharPref('appmenubuttonicon','tb_icon_def');"/>
+			  <radio label=" " value="tb_icon_def2" id="tb_icon_def2" onmousedown="customizemybird.options.manageCharPref('appmenubuttonicon','tb_icon_def2');"/>
+			  <radio label=" " value="tb_icon_def3" id="tb_icon_def3" onmousedown="customizemybird.options.manageCharPref('appmenubuttonicon','tb_icon_def3');"/>
+			  <radio label=" " value="tb_icon_flat" id="tb_icon_flat" onmousedown="customizemybird.options.manageCharPref('appmenubuttonicon','tb_icon_flat');"/>
 			</radiogroup>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttontxt;</description>
-			<textbox id="customizemybird_cb_appmenubuttontxt" size="20" onkeyup="customizemybird.options.appmenubuttontxt();"/>
+			<textbox id="customizemybird_tb_appmenubuttontxt" size="20" onkeyup="customizemybird.options.manageCharPref('appmenubuttontxt',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttontxtc;</description>
-			<colorpicker id="customizemybird_cb_appmenubuttontxtc" type="button" onselect="customizemybird.options.appmenubuttontxtc();"/>
-			<textbox id="customizemybird_cb_appmenubuttontxtct" size="15" onkeyup="customizemybird.options.appmenubuttontxtct();"/>
+			<colorpicker id="customizemybird_cp_appmenubuttontxtc" type="button" onselect="customizemybird.options.manageColorPref('cp','appmenubuttontxtc');"/>
+			<textbox id="customizemybird_tb_appmenubuttontxtct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','appmenubuttontxtc');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttontxtcs;</description>
-			<colorpicker id="customizemybird_cb_appmenubuttontxtcs" type="button" onselect="customizemybird.options.appmenubuttontxtcs();"/>
-			<textbox id="customizemybird_cb_appmenubuttontxtcst" size="15" onkeyup="customizemybird.options.appmenubuttontxtcst();"/>
+			<colorpicker id="customizemybird_cp_appmenubuttontxtcs" type="button" onselect="customizemybird.options.manageColorPref('cp','appmenubuttontxtcs');"/>
+			<textbox id="customizemybird_tb_appmenubuttontxtcst" size="15" onkeyup="customizemybird.options.manageColorPref('tb','appmenubuttontxtcs');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttonhp;</description>
-			<checkbox id="customizemybird_cb_appmenubuttonhp" label="" oncommand="customizemybird.options.appmenubuttonhp();"/>
+			<checkbox id="customizemybird_cb_appmenubuttonhp" label="" oncommand="customizemybird.options.manageBoolPref('appmenubuttonhp');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttondm;</description>
-			<checkbox id="customizemybird_cb_appmenubuttondm" label="" oncommand="customizemybird.options.appmenubuttondm();"/>
+			<checkbox id="customizemybird_cb_appmenubuttondm" label="" oncommand="customizemybird.options.manageBoolPref('appmenubuttondm');"/>
 		  </hbox>
 
 		</vbox>
@@ -264,52 +268,52 @@
 		  <description class="customizemybird_headline">&Ctb_settings; (CTB)</description>
 		  <hbox align="center">
 			<description>&Ctb_maintoolbar;</description>
-			<checkbox id="customizemybird_cb_ctb_maintoolbar" label="" oncommand="customizemybird.options.ctb_maintoolbar();"/>
+			<checkbox id="customizemybird_cb_ctb_maintoolbar" label="" oncommand="customizemybird.options.manageBoolPref('ctb_maintoolbar');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Ctb_borderradius;</description>
-			<textbox id="customizemybird_cb_ctb_maintoolbar_br" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.ctb_maintoolbar_br();" onchange="customizemybird.options.ctb_maintoolbar_br();"/>
+			<textbox id="customizemybird_num_ctb_maintoolbar_br" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.manageIntPref('ctb_maintoolbar_br',this.value);" onchange="customizemybird.options.manageIntPref('ctb_maintoolbar_br',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Ctb_buttonheight;</description>
-			<textbox id="customizemybird_cb_ctb_maintoolbar_bh" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.ctb_maintoolbar_bh();" onchange="customizemybird.options.ctb_maintoolbar_bh();"/>
+			<textbox id="customizemybird_num_ctb_maintoolbar_bh" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.manageIntPref('ctb_maintoolbar_bh',this.value);" onchange="customizemybird.options.manageIntPref('ctb_maintoolbar_bh',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Ctb_buttonwidth;</description>
-			<textbox id="customizemybird_cb_ctb_maintoolbar_bw" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.ctb_maintoolbar_bw();" onchange="customizemybird.options.ctb_maintoolbar_bw();"/>
+			<textbox id="customizemybird_num_ctb_maintoolbar_bw" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.manageIntPref('ctb_maintoolbar_bw',this.value);" onchange="customizemybird.options.manageIntPref('ctb_maintoolbar_bw',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Ctb_menubar;</description>
-			<checkbox id="customizemybird_cb_ctb_menubar" label="" oncommand="customizemybird.options.ctb_menubar();"/>
+			<checkbox id="customizemybird_cb_ctb_menubar" label="" oncommand="customizemybird.options.manageBoolPref('ctb_menubar');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Ctb_borderradius;</description>
-			<textbox id="customizemybird_cb_ctb_menubar_br" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.ctb_menubar_br();" onchange="customizemybird.options.ctb_menubar_br();"/>
+			<textbox id="customizemybird_num_ctb_menubar_br" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.manageIntPref('ctb_menubar_br',this.value);" onchange="customizemybird.options.customizemybird.options.manageIntPref('ctb_menubar_br',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Ctb_buttonheight;</description>
-			<textbox id="customizemybird_cb_ctb_menubar_bh" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.ctb_menubar_bh();" onchange="customizemybird.options.ctb_menubar_bh();"/>
+			<textbox id="customizemybird_num_ctb_menubar_bh" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.customizemybird.options.manageIntPref('ctb_menubar_bh',this.value);" onchange="customizemybird.options.customizemybird.options.manageIntPref('ctb_menubar_bh',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Ctb_buttonwidth;</description>
-			<textbox id="customizemybird_cb_ctb_menubar_bw" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.ctb_menubar_bw();" onchange="customizemybird.options.ctb_menubar_bw();"/>
+			<textbox id="customizemybird_num_ctb_menubar_bw" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.customizemybird.options.manageIntPref('ctb_menubar_bw',this.value);" onchange="customizemybird.options.customizemybird.options.manageIntPref('ctb_menubar_bw',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Ctb_tabstoolbar;</description>
-			<checkbox id="customizemybird_cb_ctb_tabstoolbar" label="" oncommand="customizemybird.options.ctb_tabstoolbar();"/>
+			<checkbox id="customizemybird_cb_ctb_tabstoolbar" label="" oncommand="customizemybird.options.manageBoolPref('ctb_tabstoolbar');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Ctb_borderradius;</description>
-			<textbox id="customizemybird_cb_ctb_tabstoolbar_br" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.ctb_tabstoolbar_br();" onchange="customizemybird.options.ctb_tabstoolbar_br();"/>
+			<textbox id="customizemybird_num_ctb_tabstoolbar_br" maxlength="3" size="6" min="0" type="number" onkeyup="customizemybird.options.manageIntPref('ctb_tabstoolbar_br',this.value);" onchange="customizemybird.options.manageIntPref('ctb_tabstoolbar_br',this.value);"/>
 		  </hbox>
 		
 		</vbox>
@@ -318,33 +322,32 @@
 		  
 		  <description class="customizemybird_headline">&Ctb_icons_main; (CTB / NB)</description>
 		  <hbox align="center" class="cmb_defaulttheme">
-		    <description>&Ctb_icons_main;</description>
-		  	<menulist id="customizemybird_ml_ctb_tbmailicons">
+		  	<menulist id="customizemybird_rg_ctb_tbmailicons">
 				<menupopup>				
-					<menuitem label="&Ctb_icons_default;" value="ico_default" oncommand="customizemybird.options.ctb_tbmailicons('ico_default');"/>
-					<menuitem label="Thunderbird (&Ctb_icons_dark;)" value="ico_tb17d" oncommand="customizemybird.options.ctb_tbmailicons('ico_tb17d');"/>
-					<menuitem label="Thunderbird (&Ctb_icons_white;)" value="ico_tb17w" oncommand="customizemybird.options.ctb_tbmailicons('ico_tb17w');"/>
-					<menuitem label="Thunderbird 1" value="ico_tb1" oncommand="customizemybird.options.ctb_tbmailicons('ico_tb1');"/>
-					<menuitem label="Thunderbird 2" value="ico_tb2" oncommand="customizemybird.options.ctb_tbmailicons('ico_tb2');"/>
-					<menuitem label="Thunderbird 3" value="ico_tb3v1" oncommand="customizemybird.options.ctb_tbmailicons('ico_tb3v1');"/>
-					<menuitem label="Thunderbird 3 (Strata)" value="ico_tb3v2" oncommand="customizemybird.options.ctb_tbmailicons('ico_tb3v2');"/>
-					<menuitem label="Thunderbird (MacOSX)" value="ico_tbmac" oncommand="customizemybird.options.ctb_tbmailicons('ico_tbmac');"/>
-					<menuitem label="Noia (&Large;)" value="ico_noia_l" oncommand="customizemybird.options.ctb_tbmailicons('ico_noia_l');"/>
-					<menuitem label="Noia (&Medium;)" value="ico_noia_m" oncommand="customizemybird.options.ctb_tbmailicons('ico_noia_m');"/>
-					<menuitem label="Noia (&Small;)" value="ico_noia_s" oncommand="customizemybird.options.ctb_tbmailicons('ico_noia_s');"/>
-					<menuitem label="Noia (&Tiny;)" value="ico_noia_t" oncommand="customizemybird.options.ctb_tbmailicons('ico_noia_t');"/>
+					<menuitem label="&Ctb_icons_def;" value="ico_default" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_default');"/>
+					<menuitem label="Thunderbird (&Ctb_icons_dark;)" value="ico_tb17d" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_tb17d');"/>
+					<menuitem label="Thunderbird (&Ctb_icons_white;)" value="ico_tb17w" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_tb17w');"/>
+					<menuitem label="Thunderbird 1" value="ico_tb1" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_tb1');"/>
+					<menuitem label="Thunderbird 2" value="ico_tb2" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_tb2');"/>
+					<menuitem label="Thunderbird 3" value="ico_tb3v1" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_tb3v1');"/>
+					<menuitem label="Thunderbird 3 (Strata)" value="ico_tb3v2" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_tb3v2');"/>
+					<menuitem label="Thunderbird (macOS)" value="ico_tbmac" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_tbmac');"/>
+					<menuitem label="Noia (&Large;)" value="ico_noia_l" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_noia_l');"/>
+					<menuitem label="Noia (&Medium;)" value="ico_noia_m" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_noia_m');"/>
+					<menuitem label="Noia (&Small;)" value="ico_noia_s" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_noia_s');"/>
+					<menuitem label="Noia (&Tiny;)" value="ico_noia_t" oncommand="customizemybird.options.manageCharPref('ctb_tbmailicons','ico_noia_t');"/>
 				</menupopup>
 			</menulist>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Nb_tbmailicons_hr;</description>
-			<checkbox id="customizemybird_cb_nb_tbmailicons_hr" label="" oncommand="customizemybird.options.nb_tbmailicons_hr();"/>
+			<checkbox id="customizemybird_cb_nb_tbmailicons_hr" label="" oncommand="customizemybird.options.manageBoolPref('nb_tbmailicons_hr');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Tb_nofoldericons;</description>
-			<checkbox id="customizemybird_cb_tb_nofoldericons" label="" oncommand="customizemybird.options.tb_nofoldericons();"/>
+			<checkbox id="customizemybird_cb_tb_nofoldericons" label="" oncommand="customizemybird.options.manageBoolPref('tb_nofoldericons');"/>
 		  </hbox>
 
 		</vbox>
@@ -352,25 +355,30 @@
 		<vbox id="customizemybird_aboutaddons" class="cmb_groupbox">
 
 		  <description class="customizemybird_headline">&Addonsmanager; (about:addons)</description>
-
-		  <hbox align="center" class="cmb_defaulttheme">
-			<description>&Altaddonsmanager;</description>
-			<checkbox id="customizemybird_cb_altaddonsmanager" label="" oncommand="customizemybird.options.altaddonsmanager();"/>
+	  
+		  <hbox align="center">
+			<menulist id="customizemybird_rg_aboutaddonsui" orient="horizontal">
+			  <menupopup>
+				<menuitem label="&UI_appearance; &UI_default;" value="aboutaddonsui_def" id="aboutaddonsui_def" oncommand="customizemybird.options.manageCharPref('aboutaddonsui','aboutaddonsui_def');"/>
+				<menuitem label="&UI_appearance; &UI_alternative; (&UI_default_col;)" value="aboutaddonsui_alt" id="aboutaddonsui_alt" oncommand="customizemybird.options.manageCharPref('aboutaddonsui','aboutaddonsui_alt');"/>
+				<menuitem label="&UI_appearance; &UI_alternative; (&UI_aero;)" value="aboutaddonsui_aero" id="aboutaddonsui_aero" oncommand="customizemybird.options.manageCharPref('aboutaddonsui','aboutaddonsui_aero');"/>
+			  </menupopup>
+			</menulist>
 		  </hbox>
-		  
-		  <hbox align="center" class="cmb_winlin cmb_defaulttheme">
-			<description>&BlueAerocolors;</description>
-			<checkbox id="customizemybird_cb_aerocolors_aam" label="" oncommand="customizemybird.options.aerocolors_aam();"/>
-		  </hbox>
-		  
+ 
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Addonsm_compact;</description>
-			<checkbox id="customizemybird_cb_addonsmanager_compact" label="" oncommand="customizemybird.options.addonsmanager_compact();"/>
+			<checkbox id="customizemybird_cb_addonsmanager_compact" label="" oncommand="customizemybird.options.manageBoolPref('addonsmanager_compact');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Addonsm_version;</description>
-			<checkbox id="customizemybird_cb_addonsmanager_version" label="" oncommand="customizemybird.options.addonsmanager_version();"/>
+			<checkbox id="customizemybird_cb_addonsmanager_version" label="" oncommand="customizemybird.options.manageBoolPref('addonsmanager_version');"/>
+		  </hbox>
+		  
+		  <hbox align="center">
+			<description>&Addon_lastupdated;</description>
+			<checkbox id="customizemybird_cb_addon_lastupdateddate" label="" oncommand="customizemybird.options.manageBoolPref('addon_lastupdateddate');"/>
 		  </hbox>
 		
 		</vbox>
@@ -378,130 +386,130 @@
 		<vbox id="customizemybird_aboutpreferences" class="cmb_groupbox cmb_defaulttheme">
 
 		  <description class="customizemybird_headline">&Aboutprefs; (about:preferences)</description>
-
-		  <hbox align="center">
-			<description>&Altaddonsmanager;</description>
-			<checkbox id="customizemybird_cb_altaboutprefs" label="" oncommand="customizemybird.options.altaboutprefs();"/>
-		  </hbox>
 		  
-		  <hbox align="center" class="cmb_winlin">
-			<description>&BlueAerocolors;</description>
-			<checkbox id="customizemybird_cb_aerocolors_aap" label="" oncommand="customizemybird.options.aerocolors_aap();"/>
+		  <hbox align="center">
+			<menulist id="customizemybird_rg_aboutprefsui" orient="horizontal">
+			  <menupopup>
+				<menuitem label="&UI_appearance; &UI_default;" value="aboutprefsui_def" id="aboutprefsui_def" oncommand="customizemybird.options.manageCharPref('aboutprefsui','aboutprefsui_def');"/>
+				<menuitem label="&UI_appearance; &UI_alternative; (&UI_default_col;)" value="aboutprefsui_alt" id="aboutprefsui_alt" oncommand="customizemybird.options.manageCharPref('aboutprefsui','aboutprefsui_alt');"/>
+				<menuitem label="&UI_appearance; &UI_alternative; (&UI_aero;)" value="aboutprefsui_aero" id="aboutprefsui_aero" oncommand="customizemybird.options.manageCharPref('aboutprefsui','aboutprefsui_aero');"/>
+			  </menupopup>
+			</menulist>
 		  </hbox>
-		
+		  	
 		</vbox>
 	
 		<vbox id="customizemybird_newscrollbars" class="cmb_groupbox">
 		  <description class="customizemybird_headline">&Scrollbars; (NewScrollbars)</description>
 		  <hbox align="center">
 			<description>&Scrollbars_hidden;</description>
-			<checkbox id="customizemybird_cb_scrollbars_hidden" label="" oncommand="customizemybird.options.scrollbars_hidden();"/>
+			<checkbox id="customizemybird_cb_scrollbars_hidden" label="" oncommand="customizemybird.options.manageBoolPref('scrollbars_hidden');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbar_buttons_hidden;</description>
-			<checkbox id="customizemybird_cb_scrollbar_buttons_hidden" label="" oncommand="customizemybird.options.scrollbar_buttons_hidden();"/>
+			<checkbox id="customizemybird_cb_scrollbar_buttons_hidden" label="" oncommand="customizemybird.options.manageBoolPref('scrollbar_buttons_hidden');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbar_csize;</description>
-			<checkbox id="customizemybird_cb_scrollbar_csize" label="" oncommand="customizemybird.options.scrollbar_csize();"/>
+			<checkbox id="customizemybird_cb_scrollbar_csize" label="" oncommand="customizemybird.options.manageBoolPref('scrollbar_csize');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbar_csize_value;</description>
-			<textbox id="customizemybird_cb_scrollbar_csize_value" maxlength="2" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.scrollbar_csize_value();" onchange="customizemybird.options.scrollbar_csize_value();"/>
+			<textbox id="customizemybird_num_scrollbar_csize_value" maxlength="2" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.manageIntPref('scrollbar_csize_value',this.value);" onchange="customizemybird.options.manageIntPref('scrollbar_csize_value',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbar_copacity;</description>
-			<checkbox id="customizemybird_cb_scrollbar_copacity" label="" oncommand="customizemybird.options.scrollbar_copacity();"/>
+			<checkbox id="customizemybird_cb_scrollbar_copacity" label="" oncommand="customizemybird.options.manageBoolPref('scrollbar_copacity');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbar_copacity_value;</description>
-			<textbox id="customizemybird_cb_scrollbar_copacity_value" maxlength="2" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.scrollbar_copacity_value();" onchange="customizemybird.options.scrollbar_copacity_value();"/>
+			<textbox id="customizemybird_num_scrollbar_copacity_value" maxlength="2" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.manageIntPref('scrollbar_copacity_value',this.value);" onchange="customizemybird.options.manageIntPref('scrollbar_copacity_value',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance;</description>
-			<checkbox id="customizemybird_cb_scrollbars_cappearance" label="" oncommand="customizemybird.options.scrollbars_cappearance();"/>
+			<checkbox id="customizemybird_cb_scrollbars_cappearance" label="" oncommand="customizemybird.options.manageBoolPref('scrollbars_cappearance');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_background_color;</description>
-			<colorpicker id="customizemybird_cb_scrollbars_cappearance_background_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_background_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_background_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_background_colort();"/>
+			<colorpicker id="customizemybird_cp_scrollbars_cappearance_background_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_background_color');"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_background_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_background_color');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_gradient;</description>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_background_gradient" size="50" onkeyup="customizemybird.options.scrollbars_cappearance_background_gradient();"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_background_gradient" size="50" onkeyup="customizemybird.options.manageCharPref('scrollbars_cappearance_background_gradient',this.value);"/>
 		  </hbox>
 				  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_color;</description>
-			<colorpicker id="customizemybird_cb_scrollbars_cappearance_thumb_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_thumb_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_colort();"/>
+			<colorpicker id="customizemybird_cp_scrollbars_cappearance_thumb_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_thumb_color');"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_thumb_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_thumb_color');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_gradient;</description>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_gradient" size="50" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_gradient();"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_thumb_gradient" size="50" onkeyup="customizemybird.options.manageCharPref('scrollbars_cappearance_thumb_gradient',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_hover_color;</description>
-			<colorpicker id="customizemybird_cb_scrollbars_cappearance_thumb_hover_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_thumb_hover_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_hover_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_hover_colort();"/>
+			<colorpicker id="customizemybird_cp_scrollbars_cappearance_thumb_hover_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_thumb_hover_color');"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_thumb_hover_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_thumb_hover_color');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_gradient;</description>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_hover_gradient" size="50" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_hover_gradient();"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_thumb_hover_gradient" size="50" onkeyup="customizemybird.options.manageCharPref('scrollbars_cappearance_thumb_hover_gradient',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_roundness;</description>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_roundness" maxlength="3" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_roundness();" onchange="customizemybird.options.scrollbars_cappearance_thumb_roundness();"/>
+			<textbox id="customizemybird_num_scrollbars_cappearance_thumb_roundness" maxlength="3" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.manageIntPref('scrollbars_cappearance_thumb_roundness',this.value);" onchange="customizemybird.options.manageIntPref('scrollbars_cappearance_thumb_roundness',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_border;</description>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_border" maxlength="3" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_border();" onchange="customizemybird.options.scrollbars_cappearance_thumb_border();"/>
+			<textbox id="customizemybird_num_scrollbars_cappearance_thumb_border" maxlength="3" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.manageIntPref('scrollbars_cappearance_thumb_border',this.value);" onchange="customizemybird.options.manageIntPref('scrollbars_cappearance_thumb_border',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_border_color;</description>
-			<colorpicker id="customizemybird_cb_scrollbars_cappearance_thumb_border_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_thumb_border_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_thumb_border_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_thumb_border_colort();"/>
+			<colorpicker id="customizemybird_cp_scrollbars_cappearance_thumb_border_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_thumb_border_color');"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_thumb_border_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_thumb_border_color');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbars_cappearance_buttons_color;</description>
-			<colorpicker id="customizemybird_cb_scrollbars_cappearance_buttons_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_buttons_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_colort();"/>
+			<colorpicker id="customizemybird_cp_scrollbars_cappearance_buttons_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_buttons_color');"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_buttons_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_buttons_color');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbars_cappearance_gradient;</description>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_gradient" size="50" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_gradient();"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_buttons_gradient" size="50" onkeyup="customizemybird.options.manageCharPref('scrollbars_cappearance_buttons_gradient',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbars_cappearance_buttons_hover_color;</description>
-			<colorpicker id="customizemybird_cb_scrollbars_cappearance_buttons_hover_color" type="button" onselect="customizemybird.options.scrollbars_cappearance_buttons_hover_color();"/>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_hover_colort" size="15" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_hover_colort();"/>
+			<colorpicker id="customizemybird_cp_scrollbars_cappearance_buttons_hover_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_buttons_hover_color');"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_buttons_hover_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_buttons_hover_color');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbars_cappearance_gradient;</description>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_hover_gradient" size="50" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_hover_gradient();"/>
+			<textbox id="customizemybird_tb_scrollbars_cappearance_buttons_hover_gradient" size="50" onkeyup="customizemybird.options.manageCharPref('scrollbars_cappearance_buttons_hover_gradient',this.value);"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbars_cappearance_buttons_roundness;</description>
-			<textbox id="customizemybird_cb_scrollbars_cappearance_buttons_roundness" maxlength="3" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.scrollbars_cappearance_buttons_roundness();" onchange="customizemybird.options.scrollbars_cappearance_buttons_roundness();"/>
+			<textbox id="customizemybird_num_scrollbars_cappearance_buttons_roundness" maxlength="3" size="6" min="0" max="99" type="number" onkeyup="customizemybird.options.manageIntPref('scrollbars_cappearance_buttons_roundness',this.value);" onchange="customizemybird.options.manageIntPref('scrollbars_cappearance_buttons_roundness',this.value);"/>
 		  </hbox>
 
 		</vbox>
@@ -511,10 +519,10 @@
 		  <description class="customizemybird_headline">&Customcss;</description>
 		  <hbox align="center">
 			<description>&Customcss;</description>
-			<checkbox id="customizemybird_cb_customcss" label="" oncommand="customizemybird.options.customcss();"/>
+			<checkbox id="customizemybird_cb_customcss" label="" oncommand="customizemybird.options.manageBoolPref('customcss');"/>
 		  </hbox>
 
-		  <textbox align="center" id="customizemybird_tb_customcss" rows="15" multiline="true" onkeyup="customizemybird.options.customcsstb();"/>
+		  <textbox align="center" id="customizemybird_tb_customcss" rows="15" multiline="true" onkeyup="customizemybird.options.manageCharPref('customcsstb',this.value);"/>
 
 		</vbox>
 		

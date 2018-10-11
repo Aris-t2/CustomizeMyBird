@@ -1,12 +1,10 @@
 @import url(chrome://customizemybirdextension/content/css/overlay_base.css);
 
-@-moz-document	url(chrome://messenger/content/messenger.xul) {
-  @media (-moz-os-version:windows-win8),(-moz-os-version:windows-win10) {
+@media (-moz-os-version:windows-win8),(-moz-os-version:windows-win10) {
 	#mail-toolbar-menubar2:-moz-lwtheme {
 	  -moz-appearance: none !important;
 	  background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)) !important;
 	}
-  }
 }
 
 	

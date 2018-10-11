@@ -27,16 +27,16 @@ function startup(params, reason){
   var defaultbranch = Services.prefs.getDefaultBranch("extensions.customizemybirdextension.");
 
   defaultbranch.setCharPref("cmbcategories","cmb_cat_all");
-  defaultbranch.setBoolPref("classictabs",true);
-  defaultbranch.setBoolPref("classictabsaero",false);
+  defaultbranch.setCharPref("classictabsui","classictabsui_def");
   defaultbranch.setIntPref("tabheight",26);
   defaultbranch.setIntPref("tabborderradius",3);
   defaultbranch.setBoolPref("tabtbbuttons_bt",false);
   defaultbranch.setBoolPref("tabtb_lightning",false);
-  defaultbranch.setBoolPref("altaddonsmanager",true);
+  defaultbranch.setCharPref("aboutaddonsui","aboutaddonsui_alt");
   defaultbranch.setBoolPref("addonsmanager_compact",false);
   defaultbranch.setBoolPref("addonsmanager_version",false);
-  defaultbranch.setBoolPref("altaboutprefs",true);
+  defaultbranch.setBoolPref("addon_lastupdateddate",false);
+  defaultbranch.setCharPref("aboutprefsui","aboutprefsui_alt");
   defaultbranch.setCharPref("menubarposition","menubar_below_tabs");
   defaultbranch.setBoolPref("menubar_compact",false);
   defaultbranch.setBoolPref("main_tb_compact",false);
@@ -55,16 +55,12 @@ function startup(params, reason){
   defaultbranch.setBoolPref("appmenubuttonhp",true);
   defaultbranch.setBoolPref("appmenubuttondm",true);
   defaultbranch.setCharPref("appmenubuttonicon","tb_icon_none");
-  defaultbranch.setBoolPref("aerocolors",false);
-  defaultbranch.setBoolPref("aerocolors_mb",false);
-  defaultbranch.setBoolPref("aerocolors_aam",false);
-  defaultbranch.setBoolPref("aerocolors_aap",false);
+  defaultbranch.setCharPref("toolbarsui","toolbarsui_def");
   defaultbranch.setBoolPref("winheader",false);
   defaultbranch.setCharPref("winheaderbg","#eaf2fb");
   defaultbranch.setCharPref("winheadertc","#000000");
   defaultbranch.setCharPref("winheadercc","rgba(211,211,211,0.5)");
-  defaultbranch.setBoolPref("treecol",false);
-  defaultbranch.setBoolPref("treecol_aero",false);
+  defaultbranch.setCharPref("treecolumnsui","treecolumnsui_def");
   
   defaultbranch.setBoolPref("ctb_maintoolbar",false);
   defaultbranch.setIntPref("ctb_maintoolbar_br",0);
@@ -118,10 +114,15 @@ function isFEOption(customizemybirdoption){
 	if (   customizemybirdoption == "cmb_overlay"
 		|| customizemybirdoption == "main_ui"
 		|| customizemybirdoption == "cmbcategories"
+		|| customizemybirdoption == "classictabsui"
+		|| customizemybirdoption == "toolbarsui"
+		|| customizemybirdoption == "aboutaddonsui"
+		|| customizemybirdoption == "aboutprefsui"
 		|| customizemybirdoption == "options52"
 		|| customizemybirdoption == "tabheight"
 		|| customizemybirdoption == "tabborderradius"
 		|| customizemybirdoption == "menubarposition"
+		|| customizemybirdoption == "treecolumnsui"
 		|| customizemybirdoption == "winheaderbg"
 		|| customizemybirdoption == "winheadertc"
 		|| customizemybirdoption == "winheadercc"
@@ -348,25 +349,41 @@ var CMBCategories = Object.create(StylesheetManager, {
     }
 });
 
-var ClassicTabs = Object.create(StylesheetManager, {
+var ClassicTabsUI = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
 		  if(tbdefaulttheme) {
-			if(app_version>=57) return "chrome://customizemybirdextension/content/css/classictabs_tb57.css";
-		    else if(os_platform != "Darwin") return "chrome://customizemybirdextension/content/css/classictabs.css";
-			  else return "chrome://customizemybirdextension/content/css/classictabs_mac.css";
+			
+			var classictabsui = Services.prefs.getCharPref(PrefsObserver.branch + "classictabsui");
+			  
+			switch (classictabsui) {
+				
+			  case "classictabsui_def":
+			    if(app_version>=57) return "chrome://customizemybirdextension/content/css/classictabsui_def.css";
+				else if(os_platform != "Darwin") return "chrome://customizemybirdextension/content/css/classictabsui_def_tb52.css";
+				  else return "chrome://customizemybirdextension/content/css/classictabsui_def_tb52_mac.css";
+			  break;
+			  case "classictabsui_aero":
+			    if(app_version>=57) return "chrome://customizemybirdextension/content/css/classictabsui_aero_tb57.css";
+				else if(os_platform != "Darwin") return "chrome://customizemybirdextension/content/css/classictabsui_aero_tb52.css";
+				  else return "chrome://customizemybirdextension/content/css/classictabsui_aero_tb52_mac.css";
+			  break;
+			  case "classictabsui_glass1":
+			    if(app_version>=57) return "chrome://customizemybirdextension/content/css/classictabsui_glass1_tb57.css";
+				else return "chrome://customizemybirdextension/content/css/classictabsui_glass1_tb52.css";
+			  break;
+			  case "classictabsui_glass2":
+			    if(app_version>=57) return "chrome://customizemybirdextension/content/css/classictabsui_glass2_tb57.css";
+				else return "chrome://customizemybirdextension/content/css/classictabsui_glass2_tb52.css";
+			  break;
+			  case "classictabsui_glass3":
+			    if(app_version>=57) return "chrome://customizemybirdextension/content/css/classictabsui_glass3_tb57.css";
+				else return "chrome://customizemybirdextension/content/css/classictabsui_glass3_tb52.css";
+			  break;
+			
+			}
 		  }
-		}
-    }
-});
-
-var ClassicTabsAero = Object.create(StylesheetManager, {
-    stylesheet: {
-		configurable: false,
-        get: function() {
-		  if(tbdefaulttheme && os_platform != "Darwin")
-			return "chrome://customizemybirdextension/content/css/aero_ui_classictabs.css";
 		}
     }
 });
@@ -456,23 +473,48 @@ var TabToolbarHideLightningButtons = Object.create(StylesheetManager, {
     }
 });
 
-var AltAddonsManager = Object.create(StylesheetManager, {
+var AboutAddonsUI = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			if(app_version>=57) return "chrome://customizemybirdextension/content/css/addons_manager_tb57.css";
-		    else return "chrome://customizemybirdextension/content/css/addons_manager.css";
+		  if(tbdefaulttheme) {
+			  
+			var aboutaddonsui = Services.prefs.getCharPref(PrefsObserver.branch + "aboutaddonsui");
+			  
+			switch (aboutaddonsui) {
+				
+			  case "aboutaddonsui_alt":
+			    if(app_version>=57) return "chrome://customizemybirdextension/content/css/aboutaddonsui_alt_tb57.css";
+				else return "chrome://customizemybirdextension/content/css/aboutaddonsui_alt.css";
+			  break;
+			  case "aboutaddonsui_aero":
+			    if(app_version>=57) return "chrome://customizemybirdextension/content/css/aboutaddonsui_alt_aero_tb57.css";
+				else return "chrome://customizemybirdextension/content/css/aboutaddonsui_alt_aero.css";
+			  break;
+			
+			}
+		
+		  }
 		}
     }
 });
 
-var AltAboutPrefs = Object.create(StylesheetManager, {
+var AboutPrefsUI = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			if(app_version>=60) return "chrome://customizemybirdextension/content/css/aboutpreferences.css";
+		  if(tbdefaulttheme && app_version>=60) {
+			  
+			var aboutprefsui = Services.prefs.getCharPref(PrefsObserver.branch + "aboutprefsui");
+			  
+			switch (aboutprefsui) {
+				
+			  case "aboutprefsui_alt":	return "chrome://customizemybirdextension/content/css/aboutprefsui_alt.css"; break;
+			  case "aboutprefsui_aero":	return "chrome://customizemybirdextension/content/css/aboutprefsui_aero.css"; break;
+			
+			}
+		
+		  }
 		}
     }
 });
@@ -497,6 +539,16 @@ var AddonsManagerVersion = Object.create(StylesheetManager, {
     }
 });
 
+var AddonLastUpdatedDate = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {
+		  if(tbdefaulttheme)
+			return "chrome://customizemybirdextension/content/css/addon_last_updated_date.css";
+		}
+    }
+});
+
 var MenubarPosition = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
@@ -509,6 +561,7 @@ var MenubarPosition = Object.create(StylesheetManager, {
 				
 				case "menubar_above_tabs":	return "chrome://customizemybirdextension/content/css/menubar_above_tabs.css"; break;
 				case "menubar_below_tabs":	return "chrome://customizemybirdextension/content/css/menubar_below_tabs.css"; break;
+				case "menubar_below_tabs_aero":	return "chrome://customizemybirdextension/content/css/menubar_below_tabs_aero.css"; break;
 			
 			  }
 		  
@@ -592,21 +645,23 @@ var QuickFilterBar = Object.create(StylesheetManager, {
     }
 });
 
-var TreeColumns = Object.create(StylesheetManager, {
+var TreeColumnsUI = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/treecol.css";
-		}
-    }
-});
-
-var TreeColumnsAero = Object.create(StylesheetManager, {
-    stylesheet: {
-		configurable: false,
-        get: function() {
-		  if(os_platform != "Darwin" && tbdefaulttheme) return "chrome://customizemybirdextension/content/css/treecol_aero.css";
+			
+		  if(tbdefaulttheme) {
+			
+			var treecolumnsui = Services.prefs.getCharPref(PrefsObserver.branch + "treecolumnsui");
+		  
+			switch (treecolumnsui) {
+			
+			  case "treecolumnsui_alt":		return "chrome://customizemybirdextension/content/css/treecolumnsui_alt.css"; break;
+			  case "treecolumnsui_aero":	return "chrome://customizemybirdextension/content/css/treecolumnsui_aero.css"; break;
+		
+			}
+		  }
+			
 		}
     }
 });
@@ -788,42 +843,23 @@ var AppmenuButton = Object.create(StylesheetManager, {
     }
 });
 
-var AeroColors = Object.create(StylesheetManager, {
+var ToolbarsUI = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {	
-		  if(tbdefaulttheme && os_platform != "Darwin")
-			return "chrome://customizemybirdextension/content/css/aero_ui.css";
-		}
-    }
-});
-
-var AeroColorsMenubar = Object.create(StylesheetManager, {
-    stylesheet: {
-		configurable: false,
-        get: function() {	
-		  if(tbdefaulttheme && os_platform != "Darwin")
-			return "chrome://customizemybirdextension/content/css/aero_ui_mb.css";
-		}
-    }
-});
-
-var AeroColorsAltAddonManager = Object.create(StylesheetManager, {
-    stylesheet: {
-		configurable: false,
-        get: function() {	
-		  if(tbdefaulttheme && os_platform != "Darwin")
-			return "chrome://customizemybirdextension/content/css/aero_ui_aam.css";
-		}
-    }
-});
-
-var AeroColorsAltAboutPrefs = Object.create(StylesheetManager, {
-    stylesheet: {
-		configurable: false,
-        get: function() {	
-		  if(tbdefaulttheme && os_platform != "Darwin" && app_version>=60)
-			return "chrome://customizemybirdextension/content/css/aero_ui_aap.css";
+		  if(tbdefaulttheme) {
+			
+			var toolbarsui = Services.prefs.getCharPref(PrefsObserver.branch + "toolbarsui");
+			  
+			switch (toolbarsui) {
+				
+			  case "toolbarsui_aero":	return "chrome://customizemybirdextension/content/css/toolbarsui_aero.css"; break;
+			  case "toolbarsui_glass1":	return "chrome://customizemybirdextension/content/css/toolbarsui_glass1.css"; break;
+			  case "toolbarsui_glass2":	return "chrome://customizemybirdextension/content/css/toolbarsui_glass2.css"; break;
+			  case "toolbarsui_glass3":	return "chrome://customizemybirdextension/content/css/toolbarsui_glass3.css"; break;
+			
+			}
+		  }
 		}
     }
 });
@@ -1266,7 +1302,8 @@ var ScrollbarsCustomAppearance = Object.create(StylesheetManager, {
 				var scrollbars_cappearance_buttons_gradient = Services.prefs.getCharPref(PrefsObserver.branch + "scrollbars_cappearance_buttons_gradient");
 				var scrollbars_cappearance_buttons_hover_color = Services.prefs.getCharPref(PrefsObserver.branch + "scrollbars_cappearance_buttons_hover_color");
 				var scrollbars_cappearance_buttons_hover_gradient = Services.prefs.getCharPref(PrefsObserver.branch + "scrollbars_cappearance_buttons_hover_gradient");
-				var scrollbars_cappearance_buttons_roundness = Services.prefs.getIntPref(PrefsObserver.branch + "scrollbars_cappearance_buttons_roundness");				
+				var scrollbars_cappearance_buttons_roundness = Services.prefs.getIntPref(PrefsObserver.branch + "scrollbars_cappearance_buttons_roundness");
+				var scrollbar_csize_value = /*Services.prefs.getIntPref(PrefsObserver.branch + "scrollbar_csize_value")*/ 17;
 				
 
 				return "data:text/css;charset=utf-8," + encodeURIComponent('\
@@ -1328,6 +1365,26 @@ var ScrollbarsCustomAppearance = Object.create(StylesheetManager, {
 					scrollbar[orient="horizontal"] scrollbarbutton:hover {\
 					  background-image: linear-gradient(to bottom,'+scrollbars_cappearance_buttons_hover_gradient+') !important;\
 					}\
+					scrollbar[orient="vertical"],\
+					scrollbar[orient="vertical"] thumb {\
+					  min-width: '+scrollbar_csize_value+'px;\
+					  width: '+scrollbar_csize_value+'px;\
+					  max-width: '+scrollbar_csize_value+'px;\
+					}\
+					scrollbar[orient="horizontal"],\
+					scrollbar[orient="horizontal"] thumb{\
+					  min-height: '+scrollbar_csize_value+'px;\
+					  height: '+scrollbar_csize_value+'px;\
+					  max-height: '+scrollbar_csize_value+'px;\
+					}\
+					scrollbar scrollbarbutton {\
+					  min-width: '+scrollbar_csize_value+'px;\
+					  width: '+scrollbar_csize_value+'px;\
+					  max-width: '+scrollbar_csize_value+'px;\
+					  min-height: '+scrollbar_csize_value+'px;\
+					  height: '+scrollbar_csize_value+'px;\
+					  max-height: '+scrollbar_csize_value+'px;\
+					}\
 					\
 					}\
 				');
@@ -1363,16 +1420,16 @@ var customizemybirdsettings = {
 	"cmbcategories": CMBCategories,
 	"main_ui": CMB_Main_UI,
 	"options52": Options52,
-	"classictabs": ClassicTabs,
-	"classictabsaero": ClassicTabsAero,
+	"classictabsui": ClassicTabsUI,
 	"tabheight": TabHeight,
 	"tabborderradius": TabBorderRadius,
 	"tabtbbuttons_bt": TabToolbarButtonsBeforeTabs,
 	"tabtb_lightning": TabToolbarHideLightningButtons,
-	"altaddonsmanager": AltAddonsManager,
+	"aboutaddonsui": AboutAddonsUI,
 	"addonsmanager_compact": AddonsManagerCompact,
 	"addonsmanager_version": AddonsManagerVersion,
-	"altaboutprefs": AltAboutPrefs,
+	"addon_lastupdateddate": AddonLastUpdatedDate,
+	"aboutprefsui": AboutPrefsUI,
 	"menubarposition": MenubarPosition,
 	"menubar_compact": MenubarCompact,
 	"main_tb_compact": MainToolbarCompact,
@@ -1381,8 +1438,7 @@ var customizemybirdsettings = {
 	"attachmentbox_bp": AttachmentboxButtonPosition,
 	"quickfilterbar_lp": QuickFilterBarLowerPosition,
 	"quickfilterbar": QuickFilterBar,
-	"treecol": TreeColumns,
-	"treecol_aero": TreeColumnsAero,
+	"treecolumnsui": TreeColumnsUI,
 	"appmenubutton": AppmenuButton,
 	"appmenubuttonct": AppmenuButton,
 	"appmenubuttonc1": AppmenuButton,
@@ -1393,10 +1449,7 @@ var customizemybirdsettings = {
 	"appmenubuttonhp": AppmenuButton,
 	"appmenubuttondm": AppmenuButton,
 	"appmenubuttonicon": AppmenuButton,
-	"aerocolors": AeroColors,
-	"aerocolors_mb": AeroColorsMenubar,
-	"aerocolors_aam": AeroColorsAltAddonManager,
-	"aerocolors_aap": AeroColorsAltAboutPrefs,
+	"toolbarsui": ToolbarsUI,
 	"winheader": WindowHeaderColor,
 	"winheaderbg": WindowHeaderColor,
 	"winheadertc": WindowHeaderColor,

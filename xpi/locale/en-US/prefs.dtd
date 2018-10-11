@@ -1,31 +1,37 @@
 <!ENTITY CMB_title			"CustomizeMyBird">
 <!ENTITY Allsettings		"All settings">
 <!ENTITY Generalui			"General UI">
-<!ENTITY Classictabs		"Tabs: classic squared tabs">
-<!ENTITY BlueAerocolors		"- blue Aero colors">
+<!ENTITY UI_tabs			"Tabs: ">
+<!ENTITY UI_tabs_default	"Default Thunderbird tabs">
+<!ENTITY Classictabs		"Classic squared tabs">
+<!ENTITY UI_default			"Default">
+<!ENTITY UI_aero			"Aero blue">
+<!ENTITY UI_glass			"Glass">
+<!ENTITY UI_appearance		"Appearance: ">
+<!ENTITY UI_default_col		"Default color">
+<!ENTITY UI_alternative		"Alternative appearance">
 <!ENTITY Tabheight			"Tabs: custom height (in px)">
-<!ENTITY Tabborderradius	"- top border roundness (in px)">
+<!ENTITY Tabborderradius	"Tabs: top border roundness (in px)">
 <!ENTITY Tabtbbuttons_bt	"Tabs and tab toolbar buttons: switch positions">
 <!ENTITY Tabtb_lightning	"Tabs toolbar: hide (Lightning) buttons">
 
-<!ENTITY Menubarposition	"Main menu bar">
-<!ENTITY Menubarposition_at	"above tabs">
-<!ENTITY Menubarposition_bt	"below tabs">
-<!ENTITY Menubar_compact	"Main menubar: compact view">
+<!ENTITY Menubarposition	"Menu bar: ">
+<!ENTITY Menubarposition_at	"Above tabs">
+<!ENTITY Menubarposition_bt	"Below tabs">
+<!ENTITY Menubar_compact	"Main menu bar: compact view">
 <!ENTITY Main_tb_compact	"Main toolbar: compact view">
 <!ENTITY Statusbar_hidden	"Statusbar: hide statusbar">
 <!ENTITY Attachmentbox_hp	"Attachments: move above mail content">
 <!ENTITY Attachmentbox_bp	"Attachments: move button to start position">
-<!ENTITY Quickfilterbar_lp	"Quick-filter-bar: move below mail list">
-<!ENTITY Quickfilterbar		"- mode:">
-<!ENTITY Quickfilterbar_def "default">
-<!ENTITY Quickfilterbar_ico "icons only">
-<!ENTITY Quickfilterbar_txt "text only">
-<!ENTITY Quickfilterbar_it	"icons + text">
-<!ENTITY Treecol			"Column headers: alternative appearance">
-<!ENTITY Aerocolorstoolbar	"Toolbars: blue Aero colors">
+<!ENTITY Quickfilterbar_lp	"Quick-filter-bar: Move below mail list">
+<!ENTITY Quickfilterbar		"Quick-filter-bar mode: ">
+<!ENTITY Quickfilterbar_ico "Icons only">
+<!ENTITY Quickfilterbar_txt "Text only">
+<!ENTITY Quickfilterbar_it	"Icons + text">
+<!ENTITY Treecol			"Column headers: ">
+<!ENTITY Toolbarui			"Main UI &amp; toolbar color: ">
 
-<!ENTITY Windowheader		"Windows header colors">
+<!ENTITY Windowheader		"Window (header) colors">
 <!ENTITY Windowheaderbg		"- custom background color">
 <!ENTITY Windowheadercapc	"- custom caption background color">
 
@@ -39,7 +45,7 @@
 <!ENTITY Appmenubuttontxtcs	"- custom text shadow">
 <!ENTITY Appmenubuttonhp	"- higher position (tab toolbar / menubar)">
 <!ENTITY Appmenubuttondm	"- dropmarker">
-<!ENTITY Appmenubuttonicon	"- icon (instead of text)">
+<!ENTITY Appmenubuttonicon	"- text or icon">
 <!ENTITY Appmenubuttonicont	"&apos;Text&apos;">
 
 <!ENTITY Ctb_settings		"Old toolbar button appearance">
@@ -49,8 +55,8 @@
 <!ENTITY Ctb_borderradius	"- border roundness (in px)">
 <!ENTITY Ctb_buttonheight	"- minimum height (in px)">
 <!ENTITY Ctb_buttonwidth	"- minimum width (in px)">
-<!ENTITY Ctb_icons_main		"Main icons">
-<!ENTITY Ctb_icons_default	"Default">
+<!ENTITY Ctb_icons_main		"Main icons: ">
+<!ENTITY Ctb_icons_def		"Default icons">
 <!ENTITY Ctb_icons_dark		"dark">
 <!ENTITY Ctb_icons_white	"bright">
 <!ENTITY Large				"large">
@@ -61,9 +67,9 @@
 <!ENTITY Tb_nofoldericons	"Remove folder icons">
 
 <!ENTITY Addonsmanager		"Add-on manager">
-<!ENTITY Altaddonsmanager	"Alternative appearance">
 <!ENTITY Addonsm_compact	"Compact view">
-<!ENTITY Addonsm_version	"Show add-on version number">
+<!ENTITY Addonsm_version	"Show add-ons current version number">
+<!ENTITY Addon_lastupdated	"Show add-ons last update date">
 
 <!ENTITY Aboutprefs			"Preferences">
 
@@ -91,8 +97,7 @@
 <!ENTITY Customcss			"Custom CSS Code">
 
 <!ENTITY Nondefault_theme	"Some preferences are not available for 'full themes'!">
-<!ENTITY Tb63plus_compat	"This add-on is not compatible to Thunderbird 63+!">
 
-<!ENTITY Supportsite		"support site">
+<!ENTITY Supportsite		"Github support site">
 <!ENTITY Reportissue		"Report an issue">
 <!ENTITY Latestversion		"Get latest version">

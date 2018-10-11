@@ -1,31 +1,37 @@
 <!ENTITY CMB_title			"CustomizeMyBird">
 <!ENTITY Allsettings		"Alle Einstellungen">
 <!ENTITY Generalui			"Oberfläche">
-<!ENTITY Classictabs		"Tabs: klassische quadratische Tabs">
-<!ENTITY BlueAerocolors		"- blaue Aero-Farben">
+<!ENTITY UI_tabs			"Tabs: ">
+<!ENTITY UI_tabs_default	"Standard Thunderbird Tabs">
+<!ENTITY Classictabs		"Klassische quadratische Tabs">
+<!ENTITY UI_default			"Standard">
+<!ENTITY UI_aero			"Blaue Aero-Farben">
+<!ENTITY UI_glass			"Glass">
+<!ENTITY UI_appearance		"Aussehen: ">
+<!ENTITY UI_default_col		"Standardfarbe">
+<!ENTITY UI_alternative		"Alternative Darstellung">
 <!ENTITY Tabheight			"Tabs: benutzerdefinierte Höhe (in px)">
-<!ENTITY Tabborderradius	"- obere Randrundung (in px)">
+<!ENTITY Tabborderradius	"Tabs: obere Randrundung (in px)">
 <!ENTITY Tabtbbuttons_bt	"Tabs und Tableistenschaltflächen: Positionen tauschen">
 <!ENTITY Tabtb_lightning	"Tableiste: (Lightning-)Schaltflächen verstecken">
 
-<!ENTITY Menubarposition	"Menüleiste">
-<!ENTITY Menubarposition_at	"über der Tableiste anzeigen">
-<!ENTITY Menubarposition_bt	"unter der Tableiste anzeigen">
+<!ENTITY Menubarposition	"Menüleiste: ">
+<!ENTITY Menubarposition_at	"Über der Tableiste anzeigen">
+<!ENTITY Menubarposition_bt	"Unter der Tableiste anzeigen">
 <!ENTITY Menubar_compact	"Menüleiste: kompakte Darstellung">
 <!ENTITY Main_tb_compact	"Hauptleiste: kompakte Darstellung">
 <!ENTITY Statusbar_hidden	"Statusleiste: Statusleiste verstecken">
 <!ENTITY Attachmentbox_hp	"Mailanhänge: über dem Mailinhalt anzeigen">
 <!ENTITY Attachmentbox_bp	"Mailanhänge: Schaltfläche nach links verschieben">
-<!ENTITY Quickfilterbar_lp	"Schnellfilterleiste: unter der Mailliste anzeigen">
-<!ENTITY Quickfilterbar		"- Modus:">
-<!ENTITY Quickfilterbar_def "Standard">
+<!ENTITY Quickfilterbar_lp	"Schnellfilterleiste unter der Mailliste anzeigen">
+<!ENTITY Quickfilterbar		"Schnellfilterleistemodus: ">
 <!ENTITY Quickfilterbar_ico "Symbole">
 <!ENTITY Quickfilterbar_txt "Text">
 <!ENTITY Quickfilterbar_it	"Symbole + Text">
-<!ENTITY Treecol			"Spaltenbezeichnungen: alternative Darstellung">
-<!ENTITY Aerocolorstoolbar	"Leisten: blaue Aero-Farben">
+<!ENTITY Treecol			"Spaltenbezeichnung: ">
+<!ENTITY Toolbarui			"Oberflächen- &amp; Leistenfarbe: ">
 
-<!ENTITY Windowheader		"Oberer Fensterbereich">
+<!ENTITY Windowheader		"(Oberer) Fensterbereich">
 <!ENTITY Windowheaderbg		"- benutzerdefinierte Hintergrundfarbe">
 <!ENTITY Windowheadercapc	"- benutzerdefinierte Fensterschaltfächenfarbe">
 
@@ -50,7 +56,7 @@
 <!ENTITY Ctb_buttonheight	"- minimale Höhe (in px)">
 <!ENTITY Ctb_buttonwidth	"- minimale Breite (in px)">
 <!ENTITY Ctb_icons_main		"Hauptsymbole">
-<!ENTITY Ctb_icons_default	"Standard">
+<!ENTITY Ctb_icons_def		"Standardsymbole">
 <!ENTITY Ctb_icons_dark		"dunkel">
 <!ENTITY Ctb_icons_white	"hell">
 <!ENTITY Large				"groß">
@@ -61,9 +67,9 @@
 <!ENTITY Tb_nofoldericons	"Ordnersymbole entfernen">
 
 <!ENTITY Addonsmanager		"Add-ons-Verwaltung">
-<!ENTITY Altaddonsmanager	"Alternative Darstellung">
 <!ENTITY Addonsm_compact	"Kompakte Erweiterungseinträge">
 <!ENTITY Addonsm_version	"Versionsnummern von Erweiterungen anzeigen">
+<!ENTITY Addon_lastupdated	"Datum der letzen Erweiterungsaktualisierung anzeigen">
 
 <!ENTITY Aboutprefs			"Einstellungen">
 
@@ -91,9 +97,8 @@
 
 <!ENTITY Customcss			"Benutzerdefinierter CSS-Code">
 
-<!ENTITY Nondefault_theme	"Einige Einstellungen sind für 'vollständige Themes' nicht vorhanden!">
-<!ENTITY Tb63plus_compat	"Dieses Add-on is nicht kompatibel mit Thunderbird 63+!">
+<!ENTITY Nondefault_theme	"Einige Einstellungen sind für 'vollständige Themes' nicht vorfügbar!">
 
-<!ENTITY Supportsite		"Support-Seite">
+<!ENTITY Supportsite		"Github Support-Seite">
 <!ENTITY Reportissue		"Fehler melden">
 <!ENTITY Latestversion		"Aktuellste Version herunterladen">

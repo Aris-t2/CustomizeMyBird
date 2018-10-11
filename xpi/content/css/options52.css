@@ -1,6 +1,4 @@
 
-@-moz-document url-prefix(chrome://customizemybirdextension/content/options.xul) {
-
 	#CustomizeMyBird_prefwindow {
 	  min-width: 800px !important;
 	  width: unset !important;
@@ -24,5 +22,3 @@
 	  -moz-margin-start: 0px !important;
 	  -moz-margin-end: 0px !important;
 	}
-
-}

@@ -1,31 +1,37 @@
 <!ENTITY CMB_title			"CustomizeMyBird">
 <!ENTITY Allsettings		"All settings">
 <!ENTITY Generalui			"Interfaz general de usuario">
-<!ENTITY Classictabs		"Pestañas: Cuadradas (clásico)">
-<!ENTITY BlueAerocolors		"- Colores azul Aero (celeste)">
+<!ENTITY UI_tabs			"Pestañas: ">
+<!ENTITY UI_tabs_default	"Default Thunderbird tabs">
+<!ENTITY Classictabs		"Cuadradas (clásico)">
+<!ENTITY UI_default			"Predeterminado">
+<!ENTITY UI_aero			"Aero blue">
+<!ENTITY UI_glass			"Glass">
+<!ENTITY UI_appearance		"Apariencia: ">
+<!ENTITY UI_default_col		"Default color">
+<!ENTITY UI_alternative		"Apariencia alternativa">
 <!ENTITY Tabheight			"Pestañas: Altura personalizada (en píxeles)">
-<!ENTITY Tabborderradius	"- Redondeado personalizado del borde (en píxeles)">
+<!ENTITY Tabborderradius	"Pestañas: Redondeado personalizado del borde (en píxeles)">
 <!ENTITY Tabtbbuttons_bt	"Pestañas y botones de la barra de pestañas: Intercambiar posiciones">
 <!ENTITY Tabtb_lightning	"Barra de pestañas: Ocultar botones (de Lightning)">
 
-<!ENTITY Menubarposition	"Barra de menú principal">
-<!ENTITY Menubarposition_at	"encima de la barra de pestañas">
-<!ENTITY Menubarposition_bt	"debajo de la barra de pestañas">
+<!ENTITY Menubarposition	"Menu bar: ">
+<!ENTITY Menubarposition_at	"Encima de la barra de pestañas">
+<!ENTITY Menubarposition_bt	"Debajo de la barra de pestañas">
 <!ENTITY Menubar_compact	"Barra de menú principal: Vista compacta">
 <!ENTITY Main_tb_compact	"Barra de herramientas principal: Vista compacta">
 <!ENTITY Statusbar_hidden	"Barra de estado: Ocultar barra de estado">
 <!ENTITY Attachmentbox_hp	"Recuadro de adjuntos: Situarlo encima del contenido del correo">
 <!ENTITY Attachmentbox_bp	"Recuadro de adjuntos: Mover botón a la posición inicial">
 <!ENTITY Quickfilterbar_lp	"Barra de filtrado rápido: Situarla debajo de la lista de correos">
-<!ENTITY Quickfilterbar		"- mode:">
-<!ENTITY Quickfilterbar_def "default">
-<!ENTITY Quickfilterbar_ico "icons only">
-<!ENTITY Quickfilterbar_txt "text only">
-<!ENTITY Quickfilterbar_it	"icons + text">
-<!ENTITY Treecol			"Cabeceras de columna: Apariencia alternativa">
-<!ENTITY Aerocolorstoolbar	"Barras de herramientas: Colores azul Aero (celeste)">
+<!ENTITY Quickfilterbar		"Barra de filtrado rápido: Mode">
+<!ENTITY Quickfilterbar_ico "Icons only">
+<!ENTITY Quickfilterbar_txt "Text only">
+<!ENTITY Quickfilterbar_it	"Icono + texto">
+<!ENTITY Treecol			"Apariencia de cabeceras de columna: ">
+<!ENTITY Toolbarui			"Main UI &amp; toolbar color: ">
 
-<!ENTITY Windowheader		"Colores de cabecera de ventanas">
+<!ENTITY Windowheader		"Colores (de cabecera) de ventanas">
 <!ENTITY Windowheaderbg		"- color personalizado">
 <!ENTITY Windowheadercapc	"- custom caption button color">
 
@@ -39,7 +45,7 @@
 <!ENTITY Appmenubuttontxtcs	"- sombra del texto personalizada">
 <!ENTITY Appmenubuttonhp	"- posición más alta (barra de pestañas / barra de menú)">
 <!ENTITY Appmenubuttondm	"- flecha de despliegue">
-<!ENTITY Appmenubuttonicon	"- icono (en lugar de texto)">
+<!ENTITY Appmenubuttonicon	"- icono o texto">
 <!ENTITY Appmenubuttonicont	"&apos;Texto&apos;">
 
 <!ENTITY Ctb_settings		"Estilo clásico para botones">
@@ -49,8 +55,8 @@
 <!ENTITY Ctb_borderradius	"- Radio del borde (en píxeles)">
 <!ENTITY Ctb_buttonheight	"- Altura(-mínima) (en píxeles)">
 <!ENTITY Ctb_buttonwidth	"- Anchura(-mínima) (en píxeles)">
-<!ENTITY Ctb_icons_main		"Estilo de iconos principal">
-<!ENTITY Ctb_icons_default	"Predeterminado">
+<!ENTITY Ctb_icons_main		"Estilo de iconos principal: ">
+<!ENTITY Ctb_icons_def		"Default icons">
 <!ENTITY Ctb_icons_dark		"oscuro">
 <!ENTITY Ctb_icons_white	"claro">
 <!ENTITY Large				"grande">
@@ -61,9 +67,9 @@
 <!ENTITY Tb_nofoldericons	"Remove folder icons">
 
 <!ENTITY Addonsmanager		"Administrador de complementos">
-<!ENTITY Altaddonsmanager	"Apariencia alternativa">
 <!ENTITY Addonsm_compact	"Vista compacta">
 <!ENTITY Addonsm_version	"Mostrar la versión del complemento">
+<!ENTITY Addon_lastupdated	"Show date of add-ons last update">
 
 <!ENTITY Aboutprefs			"Preferencias">
 
@@ -90,9 +96,8 @@
 
 <!ENTITY Customcss			"Custom CSS Code">
 
-<!ENTITY Nondefault_theme	"Some options are not available for 'full themes'!">
-<!ENTITY Tb63plus_compat	"This add-on is not compatible to Thunderbird 63+!">
+<!ENTITY Nondefault_theme	"Some preferences are not available for 'full themes'!">
 
-<!ENTITY Supportsite		"Sitio de soporte">
+<!ENTITY Supportsite		"Github Sitio de soporte">
 <!ENTITY Reportissue		"Report an issue">
 <!ENTITY Latestversion		"Descargue la versión más reciente aquí">

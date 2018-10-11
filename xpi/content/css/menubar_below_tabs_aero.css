@@ -1,5 +1,6 @@
+@import url("./menubar_below_tabs.css");
 
-#messengerWindow  #navigation-toolbox #mail-toolbar-menubar2:not(:-moz-lwtheme) {
+#messengerWindow #navigation-toolbox #mail-toolbar-menubar2:not(:-moz-lwtheme) {
   background: #eaf2fb !important;
 }
 
@@ -9,8 +10,8 @@
 
 @media (-moz-os-version:windows-win8),(-moz-os-version:windows-win10) {
 	#messengerWindow #mail-bar3:not(:-moz-lwtheme),
-	#messengerWindow  #navigation-toolbox #mail-toolbar-menubar2[autohide="false"]:not(:-moz-lwtheme),
-	#messengerWindow  #navigation-toolbox #mail-toolbar-menubar2:not(:-moz-lwtheme) {
+	#messengerWindow #navigation-toolbox #mail-toolbar-menubar2[autohide="false"]:not(:-moz-lwtheme),
+	#messengerWindow #navigation-toolbox #mail-toolbar-menubar2:not(:-moz-lwtheme) {
 	  -moz-appearance: none !important;
 	  background: #eaf2fb !important;
 	}
