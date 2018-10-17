@@ -61,6 +61,12 @@ function startup(params, reason){
   defaultbranch.setCharPref("winheadertc","#000000");
   defaultbranch.setCharPref("winheadercc","rgba(211,211,211,0.5)");
   defaultbranch.setCharPref("treecolumnsui","treecolumnsui_def");
+  defaultbranch.setBoolPref("mailpanel",false);
+  defaultbranch.setCharPref("mailpanelbg","#000000");
+  defaultbranch.setCharPref("mailpaneltc","#ffffff");
+  defaultbranch.setBoolPref("mailcontent",false);
+  defaultbranch.setCharPref("mailcontentbg","#000000");
+  defaultbranch.setCharPref("mailcontenttc","#ffffff");
   
   defaultbranch.setBoolPref("ctb_maintoolbar",false);
   defaultbranch.setIntPref("ctb_maintoolbar_br",0);
@@ -126,6 +132,10 @@ function isFEOption(customizemybirdoption){
 		|| customizemybirdoption == "winheaderbg"
 		|| customizemybirdoption == "winheadertc"
 		|| customizemybirdoption == "winheadercc"
+		|| customizemybirdoption == "mailpanelbg"
+		|| customizemybirdoption == "mailpaneltc"
+		|| customizemybirdoption == "mailcontentbg"
+		|| customizemybirdoption == "mailcontenttc"
 		|| customizemybirdoption == "appmenubuttondm"
 		|| customizemybirdoption == "appmenubuttonct"
 		|| customizemybirdoption == "appmenubuttonc1"
@@ -922,6 +932,79 @@ var WindowHeaderColor = Object.create(StylesheetManager, {
     }
 });
 
+var MailPanelColor = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {	
+			try{
+			  if(tbdefaulttheme && Services.prefs.getBoolPref(PrefsObserver.branch + "mailpanel")) {
+				
+				var mailpanel_background_color = Services.prefs.getCharPref(PrefsObserver.branch + "mailpanelbg");
+				var mailpanel_text_color = Services.prefs.getCharPref(PrefsObserver.branch + "mailpaneltc");
+			
+				return "data:text/css;charset=utf-8," + encodeURIComponent('\
+					/* mail list background */ \
+					:-moz-any(#folderTree, #threadTree) treechildren { \
+					  background: '+mailpanel_background_color+' !important; \
+					} \
+					/* mail list text color */ \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text { \
+					  color: '+mailpanel_text_color+' !important; \
+					} \
+					/* mail list active items background */ \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-row(selected), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-row(current, focus), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-row(selected, focus), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-row(dropOn), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-row(selected, current, focus), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-row(hover), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-row(hover, current), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-row(hover, selected) { \
+					  background: Highlight !important; \
+					  border: 1px solid Highlight !important; \
+					  outer: 1px solid Highlight !important; \
+					} \
+					/* mail list active items text color */ \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text(primary, dropOn), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text(selected), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text(current, focus), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text(selected, focus), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text(dropOn), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text(selected, current, focus), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text(hover), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text(hover, current), \
+					:-moz-any(#folderTree, #threadTree) treechildren::-moz-tree-cell-text(hover, selected) { \
+					  color: HighlightText !important; \
+					} \
+				');
+			  }
+			}catch(e) {Cu.reportError(e)}
+		}
+    }
+});
+
+var MailContentColor = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {	
+			try{
+			  if(tbdefaulttheme && Services.prefs.getBoolPref(PrefsObserver.branch + "mailcontent")) {
+				
+				var mailcontent_background_color = Services.prefs.getCharPref(PrefsObserver.branch + "mailcontentbg");
+				var mailcontent_text_color = Services.prefs.getCharPref(PrefsObserver.branch + "mailcontenttc");
+			
+				return "data:text/css;charset=utf-8," + encodeURIComponent('\
+					/* mail content */ \
+					html body:not([data-app="thunderbird"]) { \
+					  background: '+mailcontent_background_color+' !important; \
+					  color: '+mailcontent_text_color+' !important; \
+					} \
+				');
+			  }
+			}catch(e) {Cu.reportError(e)}
+		}
+    }
+});
 
 var CTBMainToolbar = Object.create(StylesheetManager, {
     stylesheet: {
@@ -1454,6 +1537,12 @@ var customizemybirdsettings = {
 	"winheaderbg": WindowHeaderColor,
 	"winheadertc": WindowHeaderColor,
 	"winheadercc": WindowHeaderColor,
+	"mailpanel": MailPanelColor,
+	"mailpanelbg": MailPanelColor,
+	"mailpaneltc": MailPanelColor,
+	"mailcontent": MailContentColor,
+	"mailcontentbg": MailContentColor,
+	"mailcontenttc": MailContentColor,
 	"ctb_maintoolbar": CTBMainToolbar,
 	"ctb_menubar": CTBMenubar,
 	"ctb_tabstoolbar": CTBTabstoolbar,

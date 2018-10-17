@@ -32,7 +32,7 @@ customizemybird.options = {
 	
 	document.getElementById("customizemybird_cb_menubar_compact").checked = this.prefs.getBoolPref("menubar_compact");
 	document.getElementById("customizemybird_cb_main_tb_compact").checked = this.prefs.getBoolPref("main_tb_compact");
-	document.getElementById("customizemybird_cb_status_hidden").checked = this.prefs.getBoolPref("statusbar_hidden");
+	document.getElementById("customizemybird_cb_statusbar_hidden").checked = this.prefs.getBoolPref("statusbar_hidden");
 	document.getElementById("customizemybird_cb_attachmentbox_hp").checked = this.prefs.getBoolPref("attachmentbox_hp");
 	document.getElementById("customizemybird_cb_attachmentbox_bp").checked = this.prefs.getBoolPref("attachmentbox_bp");
 	document.getElementById("customizemybird_cb_quickfilterbar_lp").checked = this.prefs.getBoolPref("quickfilterbar_lp");
@@ -63,6 +63,18 @@ customizemybird.options = {
 	document.getElementById("customizemybird_tb_winheadertct").value = this.prefs.getCharPref("winheadertc");
 	document.getElementById("customizemybird_cp_winheadercc").color = this.prefs.getCharPref("winheadercc");
 	document.getElementById("customizemybird_tb_winheadercct").value = this.prefs.getCharPref("winheadercc");
+	
+	document.getElementById("customizemybird_cb_mailpanel").checked = this.prefs.getBoolPref("mailpanel");
+	document.getElementById("customizemybird_cp_mailpanelbg").color = this.prefs.getCharPref("mailpanelbg");
+	document.getElementById("customizemybird_tb_mailpanelbgt").value = this.prefs.getCharPref("mailpanelbg");
+	document.getElementById("customizemybird_cp_mailpaneltc").color = this.prefs.getCharPref("mailpaneltc");
+	document.getElementById("customizemybird_tb_mailpaneltct").value = this.prefs.getCharPref("mailpaneltc");
+	
+	document.getElementById("customizemybird_cb_mailcontent").checked = this.prefs.getBoolPref("mailcontent");
+	document.getElementById("customizemybird_cp_mailcontentbg").color = this.prefs.getCharPref("mailcontentbg");
+	document.getElementById("customizemybird_tb_mailcontentbgt").value = this.prefs.getCharPref("mailcontentbg");
+	document.getElementById("customizemybird_cp_mailcontenttc").color = this.prefs.getCharPref("mailcontenttc");
+	document.getElementById("customizemybird_tb_mailcontenttct").value = this.prefs.getCharPref("mailcontenttc");
 	
 	document.getElementById("customizemybird_rg_toolbarsui").value = this.prefs.getCharPref("toolbarsui");
 	

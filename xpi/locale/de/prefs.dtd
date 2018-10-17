@@ -35,6 +35,11 @@
 <!ENTITY Windowheaderbg		"- benutzerdefinierte Hintergrundfarbe">
 <!ENTITY Windowheadercapc	"- benutzerdefinierte Fensterschaltfächenfarbe">
 
+<!ENTITY Mailpanel			"Email- und Ordnerbereich">
+<!ENTITY Mailpanelnote		"- [!] experimentell / Schlagwortfarben werden überschrieben">
+<!ENTITY Mailcontent		"Emailinhalt">
+<!ENTITY Mailcontentnote	"- [!] experimentell / Linkfarben werden nicht überschrieben">
+
 <!ENTITY Appmenubutton0		"Hauptmenüschaltfläche">
 <!ENTITY Appmenubutton		"Alternative Darstellung">
 <!ENTITY Appmenubuttonct	"- keine Hintergrundfarbe (entfernt benutzerdefinierte Hintergrundfarbe)">

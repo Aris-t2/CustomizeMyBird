@@ -112,7 +112,7 @@
 	
 	/* toolbar text */
 	* #mail-menubar:not(:-moz-lwtheme) > menu > label,
-	toolbar:not(:-moz-lwtheme):not(#tabs-toolbar),
+	#messengerWindow toolbar:not(:-moz-lwtheme):not(#tabs-toolbar),
 	menubar > menu:not(:-moz-lwtheme),
 	statusbar:not(:-moz-lwtheme) label,
 	toolbox toolbarbutton:not(:-moz-lwtheme) > label{

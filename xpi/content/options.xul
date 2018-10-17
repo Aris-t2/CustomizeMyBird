@@ -136,7 +136,7 @@
 		  
 		  <hbox align="center">
 			<description>&Statusbar_hidden;</description>
-			<checkbox id="customizemybird_cb_status_hidden" label="" oncommand="customizemybird.options.manageBoolPref('status_hidden');"/>
+			<checkbox id="customizemybird_cb_statusbar_hidden" label="" oncommand="customizemybird.options.manageBoolPref('statusbar_hidden');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
@@ -193,6 +193,44 @@
 			<description>&Windowheadercapc;</description>
 			<colorpicker id="customizemybird_cp_winheadercc" type="button" onselect="customizemybird.options.manageColorPref('cp','winheadercc');"/>
 			<textbox id="customizemybird_tb_winheadercct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','winheadercc');"/>
+		  </hbox>
+		  
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Mailpanel;</description>
+			<checkbox id="customizemybird_cb_mailpanel" label="" oncommand="customizemybird.options.manageBoolPref('mailpanel');"/>
+		  </hbox>
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Mailpanelnote;</description>
+			<label value=" "/>
+		  </hbox>
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Windowheaderbg;</description>
+			<colorpicker id="customizemybird_cp_mailpanelbg" type="button" onselect="customizemybird.options.manageColorPref('cp','mailpanelbg');"/>
+			<textbox id="customizemybird_tb_mailpanelbgt" size="15" onkeyup="customizemybird.options.manageColorPref('tb','mailpanelbg');"/>
+		  </hbox>
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Appmenubuttontxtc;</description>
+			<colorpicker id="customizemybird_cp_mailpaneltc" type="button" onselect="customizemybird.options.manageColorPref('cp','mailpaneltc');"/>
+			<textbox id="customizemybird_tb_mailpaneltct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','mailpaneltc');"/>
+		  </hbox>
+		  
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Mailcontent;</description>
+			<checkbox id="customizemybird_cb_mailcontent" label="" oncommand="customizemybird.options.manageBoolPref('mailcontent');"/>
+		  </hbox>
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Mailcontentnote;</description>
+			<label value=" "/>
+		  </hbox>
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Windowheaderbg;</description>
+			<colorpicker id="customizemybird_cp_mailcontentbg" type="button" onselect="customizemybird.options.manageColorPref('cp','mailcontentbg');"/>
+			<textbox id="customizemybird_tb_mailcontentbgt" size="15" onkeyup="customizemybird.options.manageColorPref('tb','mailcontentbg');"/>
+		  </hbox>
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Appmenubuttontxtc;</description>
+			<colorpicker id="customizemybird_cp_mailcontenttc" type="button" onselect="customizemybird.options.manageColorPref('cp','mailcontenttc');"/>
+			<textbox id="customizemybird_tb_mailcontenttct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','mailcontenttc');"/>
 		  </hbox>
 	  
 		</vbox>

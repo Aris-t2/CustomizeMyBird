@@ -1,14 +1,14 @@
 <!ENTITY CMB_title			"CustomizeMyBird">
-<!ENTITY Allsettings		"All settings">
+<!ENTITY Allsettings		"Todas las opciones">
 <!ENTITY Generalui			"Interfaz general de usuario">
 <!ENTITY UI_tabs			"Pestañas: ">
-<!ENTITY UI_tabs_default	"Default Thunderbird tabs">
+<!ENTITY UI_tabs_default	"Pestañas predeterminadas de Thunderbird">
 <!ENTITY Classictabs		"Cuadradas (clásico)">
 <!ENTITY UI_default			"Predeterminado">
 <!ENTITY UI_aero			"Aero blue">
 <!ENTITY UI_glass			"Glass">
 <!ENTITY UI_appearance		"Apariencia: ">
-<!ENTITY UI_default_col		"Default color">
+<!ENTITY UI_default_col		"Color predeterminado">
 <!ENTITY UI_alternative		"Apariencia alternativa">
 <!ENTITY Tabheight			"Pestañas: Altura personalizada (en píxeles)">
 <!ENTITY Tabborderradius	"Pestañas: Redondeado personalizado del borde (en píxeles)">
@@ -25,15 +25,20 @@
 <!ENTITY Attachmentbox_bp	"Recuadro de adjuntos: Mover botón a la posición inicial">
 <!ENTITY Quickfilterbar_lp	"Barra de filtrado rápido: Situarla debajo de la lista de correos">
 <!ENTITY Quickfilterbar		"Barra de filtrado rápido: Mode">
-<!ENTITY Quickfilterbar_ico "Icons only">
-<!ENTITY Quickfilterbar_txt "Text only">
+<!ENTITY Quickfilterbar_ico "Solo iconos">
+<!ENTITY Quickfilterbar_txt "Solo texto">
 <!ENTITY Quickfilterbar_it	"Icono + texto">
 <!ENTITY Treecol			"Apariencia de cabeceras de columna: ">
-<!ENTITY Toolbarui			"Main UI &amp; toolbar color: ">
+<!ENTITY Toolbarui			"Main UI &amp; color de la barra de herramientas: ">
 
 <!ENTITY Windowheader		"Colores (de cabecera) de ventanas">
 <!ENTITY Windowheaderbg		"- color personalizado">
-<!ENTITY Windowheadercapc	"- custom caption button color">
+<!ENTITY Windowheadercapc	"- color del botón de subtitulos personalizado">
+
+<!ENTITY Mailpanel			"Mail panel colors">
+<!ENTITY Mailpanelnote		"- [!] experimental / tagged colors get overridden">
+<!ENTITY Mailcontent		"Mail content colors">
+<!ENTITY Mailcontentnote	"- [!] experimental / link colors do not get overridden">
 
 <!ENTITY Appmenubutton0		"Botón principal de menú de la aplicación">
 <!ENTITY Appmenubutton		"Apariencia alternativa">
@@ -56,7 +61,7 @@
 <!ENTITY Ctb_buttonheight	"- Altura(-mínima) (en píxeles)">
 <!ENTITY Ctb_buttonwidth	"- Anchura(-mínima) (en píxeles)">
 <!ENTITY Ctb_icons_main		"Estilo de iconos principal: ">
-<!ENTITY Ctb_icons_def		"Default icons">
+<!ENTITY Ctb_icons_def		"Iconos predeterminados">
 <!ENTITY Ctb_icons_dark		"oscuro">
 <!ENTITY Ctb_icons_white	"claro">
 <!ENTITY Large				"grande">
@@ -64,12 +69,12 @@
 <!ENTITY Small				"pequeño">
 <!ENTITY Tiny				"minúsculo">
 <!ENTITY Nb_tbmailicons_hr	"Reducir tamaño del icono al señalar">
-<!ENTITY Tb_nofoldericons	"Remove folder icons">
+<!ENTITY Tb_nofoldericons	"Quitar iconos de carpeta">
 
 <!ENTITY Addonsmanager		"Administrador de complementos">
 <!ENTITY Addonsm_compact	"Vista compacta">
 <!ENTITY Addonsm_version	"Mostrar la versión del complemento">
-<!ENTITY Addon_lastupdated	"Show date of add-ons last update">
+<!ENTITY Addon_lastupdated	"Mostrar la fecha de la última actualización de los complementos">
 
 <!ENTITY Aboutprefs			"Preferencias">
 
@@ -94,10 +99,10 @@
 <!ENTITY Scrollbars_vertical						"vertical">
 <!ENTITY Scrollbar_horizontal						"horizontal">
 
-<!ENTITY Customcss			"Custom CSS Code">
+<!ENTITY Customcss			"Código CSS personalizado">
 
-<!ENTITY Nondefault_theme	"Some preferences are not available for 'full themes'!">
+<!ENTITY Nondefault_theme	"Algunas opciones no están disponibles para 'temas completos'!">
 
 <!ENTITY Supportsite		"Github Sitio de soporte">
-<!ENTITY Reportissue		"Report an issue">
+<!ENTITY Reportissue		"Reportar problemas">
 <!ENTITY Latestversion		"Descargue la versión más reciente aquí">

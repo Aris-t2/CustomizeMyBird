@@ -35,6 +35,11 @@
 <!ENTITY Windowheaderbg		"- custom background color">
 <!ENTITY Windowheadercapc	"- custom caption background color">
 
+<!ENTITY Mailpanel			"Mail panel colors">
+<!ENTITY Mailpanelnote		"- [!] experimental / tagged colors get overridden">
+<!ENTITY Mailcontent		"Mail content colors">
+<!ENTITY Mailcontentnote	"- [!] experimental / link colors do not get overridden">
+
 <!ENTITY Appmenubutton0		"Application menu button">
 <!ENTITY Appmenubutton		"Alternative appearance">
 <!ENTITY Appmenubuttonct	"- transparent background (overrides custom background)">
