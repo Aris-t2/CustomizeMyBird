@@ -18,6 +18,7 @@
 <!ENTITY Menubarposition	"Menüleiste: ">
 <!ENTITY Menubarposition_at	"Über der Tableiste anzeigen">
 <!ENTITY Menubarposition_bt	"Unter der Tableiste anzeigen">
+<!ENTITY Menubarposition_wb	"Unter der Tableiste und mit unterem Rand anzeigen">
 <!ENTITY Menubar_compact	"Menüleiste: kompakte Darstellung">
 <!ENTITY Main_tb_compact	"Hauptleiste: kompakte Darstellung">
 <!ENTITY Statusbar_hidden	"Statusleiste: Statusleiste verstecken">

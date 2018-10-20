@@ -18,6 +18,7 @@
 <!ENTITY Menubarposition	"Menu bar: ">
 <!ENTITY Menubarposition_at	"Above tabs">
 <!ENTITY Menubarposition_bt	"Below tabs">
+<!ENTITY Menubarposition_wb	"Below tabs and with bottom border">
 <!ENTITY Menubar_compact	"Main menu bar: compact view">
 <!ENTITY Main_tb_compact	"Main toolbar: compact view">
 <!ENTITY Statusbar_hidden	"Statusbar: hide statusbar">

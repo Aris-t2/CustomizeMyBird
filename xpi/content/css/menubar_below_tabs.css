@@ -124,21 +124,10 @@
 	  margin-top: unset !important;
 	}
 	
-	#messengerWindow[sizemode="normal"] #mail-toolbar-menubar2 {
-	  border-left: 0 !important;
-	  border-right: 0 !important;
-	}
-	
 	#mail-menubar:not(:-moz-lwtheme) > menu {
 	  color: black !important;
 	}
-	
-	#mail-bar3:not(:-moz-lwtheme),
-	#messengerWindow  #navigation-toolbox #mail-toolbar-menubar2:not(:-moz-lwtheme) {
-	  -moz-appearance: none !important;
-	  background: #f0f0f0 !important;
-	}
-	
+
 	#messengerWindow #tabs-toolbar #titlebar-placeholder-on-TabsToolbar-for-captions-buttons[type="caption-buttons"] {
 	  display: -moz-box !important;
 	}
@@ -149,4 +138,30 @@
 		  margin-bottom: 0px !important;
 		}
 	}
+}
+
+
+@media (-moz-os-version:windows-win8) {
+	
+	#mail-bar3:not(:-moz-lwtheme),
+	#messengerWindow #navigation-toolbox #mail-toolbar-menubar2:not(:-moz-lwtheme) {
+	  -moz-appearance: none !important;
+	  background: #f9f9fa !important;
+	}
+
+}
+
+@media (-moz-os-version:windows-win10) {
+	
+	#mail-bar3:not(:-moz-lwtheme),
+	#messengerWindow #navigation-toolbox #mail-toolbar-menubar2:not(:-moz-lwtheme) {
+	  -moz-appearance: none !important;
+	  background: #f0f0f0 !important;
+	}
+	
+	#messengerWindow[sizemode="normal"] #mail-toolbar-menubar2 {
+	  border-left: 0 !important;
+	  border-right: 0 !important;
+	}
+
 }

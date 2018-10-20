@@ -18,6 +18,7 @@
 <!ENTITY Menubarposition	"Menu bar: ">
 <!ENTITY Menubarposition_at	"Encima de la barra de pestañas">
 <!ENTITY Menubarposition_bt	"Debajo de la barra de pestañas">
+<!ENTITY Menubarposition_wb	"Below tabs and with bottom border">
 <!ENTITY Menubar_compact	"Barra de menú principal: Vista compacta">
 <!ENTITY Main_tb_compact	"Barra de herramientas principal: Vista compacta">
 <!ENTITY Statusbar_hidden	"Barra de estado: Ocultar barra de estado">

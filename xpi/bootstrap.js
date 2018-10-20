@@ -569,9 +569,11 @@ var MenubarPosition = Object.create(StylesheetManager, {
 			  
 			  switch (menubarposition) {
 				
-				case "menubar_above_tabs":	return "chrome://customizemybirdextension/content/css/menubar_above_tabs.css"; break;
-				case "menubar_below_tabs":	return "chrome://customizemybirdextension/content/css/menubar_below_tabs.css"; break;
-				case "menubar_below_tabs_aero":	return "chrome://customizemybirdextension/content/css/menubar_below_tabs_aero.css"; break;
+				case "menubar_above_tabs":					return "chrome://customizemybirdextension/content/css/menubar_above_tabs.css"; break;
+				case "menubar_below_tabs":					return "chrome://customizemybirdextension/content/css/menubar_below_tabs.css"; break;
+				case "menubar_below_tabs_aero":				return "chrome://customizemybirdextension/content/css/menubar_below_tabs_aero.css"; break;
+				case "menubar_below_tabs_with_border":		return "chrome://customizemybirdextension/content/css/menubar_below_tabs_with_border.css"; break;
+				case "menubar_below_tabs_with_border_aero":	return "chrome://customizemybirdextension/content/css/menubar_below_tabs_with_border_aero.css"; break;
 			
 			  }
 		  

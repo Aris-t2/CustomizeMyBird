@@ -125,6 +125,8 @@
 				<menuitem label="&Menubarposition; &Menubarposition_at;" value="menubar_above_tabs" id="menubar_above_tabs" oncommand="customizemybird.options.manageCharPref('menubarposition','menubar_above_tabs');"/>
 				<menuitem label="&Menubarposition; &Menubarposition_bt;" value="menubar_below_tabs" id="menubar_below_tabs" oncommand="customizemybird.options.manageCharPref('menubarposition','menubar_below_tabs');"/>
 				<menuitem label="&Menubarposition; &Menubarposition_bt; (&UI_aero;)" value="menubar_below_tabs_aero" id="menubar_below_tabs_aero" oncommand="customizemybird.options.manageCharPref('menubarposition','menubar_below_tabs_aero');"/>
+				<menuitem label="&Menubarposition; &Menubarposition_wb;" value="menubar_below_tabs_with_border" id="menubar_below_tabs_with_border" oncommand="customizemybird.options.manageCharPref('menubarposition','menubar_below_tabs_with_border');"/>
+				<menuitem label="&Menubarposition; &Menubarposition_wb; (&UI_aero;)" value="menubar_below_tabs_with_border_aero" id="menubar_below_tabs_with_border_aero" oncommand="customizemybird.options.manageCharPref('menubarposition','menubar_below_tabs_with_border_aero');"/>
 			  </menupopup>
 			</menulist>
 		  </hbox>

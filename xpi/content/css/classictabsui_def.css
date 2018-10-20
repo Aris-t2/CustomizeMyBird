@@ -213,10 +213,10 @@
 							linear-gradient(to top,rgba(0,0,0,.4),-moz-dialog 1px, -moz-dialog) !important;
 		}
 
-		#tabs-toolbar:not(:-moz-lwtheme) .tabmail-tab[selected] {
+		/*#tabs-toolbar:not(:-moz-lwtheme) .tabmail-tab[selected] {
 		  background-image: linear-gradient(rgba(255,255,255,.7), rgba(240,240,240,.4) 50%),
 							linear-gradient(-moz-dialog, -moz-dialog) !important;
-		}
+		}*/
 		
 		#tabs-toolbar:not(:-moz-lwtheme) {
 		  background-image: linear-gradient(to top, rgba(0,0,0,.6), transparent 1px) !important;
@@ -230,6 +230,25 @@
 		}
 		
 	}
+	
+	@media (-moz-os-version:windows-win8) {
+		
+		#tabs-toolbar:not(:-moz-lwtheme) .tabmail-tab[selected] {
+		  background-image: linear-gradient(rgba(255,255,255,.7), rgba(240,240,240,.0) 50%),
+							linear-gradient(-moz-dialog, #f9f9fa) !important;
+		}
+	
+	}
+	
+	@media (-moz-os-version:windows-win10) {
+		
+		#tabs-toolbar:not(:-moz-lwtheme) .tabmail-tab[selected] {
+		  background-image: linear-gradient(rgba(255,255,255,.7), rgba(240,240,240,.4) 50%),
+							linear-gradient(-moz-dialog, -moz-dialog) !important;
+		}
+	
+	}
+
 }
 
 
