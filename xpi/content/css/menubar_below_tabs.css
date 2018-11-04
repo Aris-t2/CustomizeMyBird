@@ -20,6 +20,8 @@
 					  linear-gradient(-moz-dialog, -moz-dialog) !important;
 		}
 		
+		
+		#mail-toolbar-menubar2[autohide="false"] + #tabs-toolbar > .titlebar-placeholder[type="caption-buttons"],
 		#messengerWindow #tabs-toolbar #titlebar-placeholder-on-TabsToolbar-for-captions-buttons[type="caption-buttons"] {
 		  display: -moz-box !important;
 		}
@@ -85,6 +87,7 @@
 	  margin-top: unset !important;
 	}
 	
+	#mail-toolbar-menubar2[autohide="false"] + #tabs-toolbar > .titlebar-placeholder[type="caption-buttons"],
 	#messengerWindow #tabs-toolbar #titlebar-placeholder-on-TabsToolbar-for-captions-buttons[type="caption-buttons"] {
 	  display: -moz-box !important;
 	}
@@ -128,6 +131,7 @@
 	  color: black !important;
 	}
 
+	#mail-toolbar-menubar2[autohide="false"] + #tabs-toolbar > .titlebar-placeholder[type="caption-buttons"],
 	#messengerWindow #tabs-toolbar #titlebar-placeholder-on-TabsToolbar-for-captions-buttons[type="caption-buttons"] {
 	  display: -moz-box !important;
 	}

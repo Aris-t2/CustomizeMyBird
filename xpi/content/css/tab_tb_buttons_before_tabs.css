@@ -4,8 +4,13 @@
   -moz-padding-end: 1px !important;
 }
 
+:root[tabsintitlebar][sizemode=normal] #navigation-toolbox #tabs-toolbar,
+:root[tabsintitlebar][sizemode=maximized] #navigation-toolbox #tabs-toolbar {
+  -moz-padding-start: 0px !important;
+}
+
 @media all and (-moz-windows-classic) {
-	#mail-toolbar-menubar2[autohide="false"] + #tabs-toolbar > .titlebar-placeholder {
-	  display: block !important;
-	}
+  #mail-toolbar-menubar2[autohide="false"] + #tabs-toolbar > .titlebar-placeholder {
+	display: block !important;
+  }
 }

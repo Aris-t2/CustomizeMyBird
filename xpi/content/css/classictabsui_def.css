@@ -38,7 +38,6 @@
   background:none !important;
 }
 
-
 /* tab icon position */
 .tab-throbber,
 .tab-icon-image {
@@ -67,7 +66,6 @@
 }
 
 /* remove tab background margin */
-
 .tab-background {
   margin-inline-end: 0px !important;
   margin-inline-start: 0px !important;
@@ -373,8 +371,21 @@
   height: 16px !important;
 }
 
-
 #messengerWindow[sizemode="maximized"] #tabbar-toolbar {
   min-height: 1px !important;
   height: 1px !important;
+}
+
+/* fix tabs toolbar position */
+:root[tabsintitlebar][sizemode=normal] #tabs-toolbar {
+  -moz-padding-start: 3px !important;
+}
+:root[tabsintitlebar][sizemode=maximized] #tabs-toolbar {
+  -moz-padding-start: 0px !important;
+}
+
+/* fix menubar postion */
+#mail-toolbar-menubar2 {
+  padding-top: unset !important;
+  margin-top: unset !important;
 }

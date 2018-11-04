@@ -408,11 +408,10 @@ var TabHeight = Object.create(StylesheetManager, {
 				var titlebarbuttonheight = Math.min(9-(32-tabheight), 9);
 				var titlebarbuttonheight2 = Math.min(11-(32-tabheight), 8);
 				
-				return "data:text/css;charset=utf-8," + encodeURIComponent('\
-					:root {\
-					  --tab-min-height: '+tabheight+'px !important;\
-					}\
-					#tabs-toolbar .tabmail-tab { \
+				var adjust_height = "";
+				
+				if(tabheight < 30){
+				  adjust_height = '#tabs-toolbar .tabmail-tab { \
 					  height: '+tabheight+'px !important;\
 					  max-height: '+tabheight+'px !important;\
 					}\
@@ -426,10 +425,22 @@ var TabHeight = Object.create(StylesheetManager, {
 						padding-top: '+titlebarbuttonheight2+'px !important;\
 						padding-bottom: '+titlebarbuttonheight2+'px !important;\
 					  }\
-					  #titlebar-buttonbox-container {\
+					  #messengerWindow[sizemode=normal] #titlebar-buttonbox-container {\
+						margin-bottom: 2px !important;\
+					  }\
+					}';
+				}
+				
+				return "data:text/css;charset=utf-8," + encodeURIComponent('\
+					:root {\
+					  --tab-min-height: '+tabheight+'px !important;\
+					}\
+					@media (-moz-os-version:windows-win10) {\
+					  #messengerWindow[sizemode=maximized] #titlebar-buttonbox-container {\
 						margin-bottom: 2px !important;\
 					  }\
 					}\
+					'+adjust_height+'\
 				');
 				
 			  }

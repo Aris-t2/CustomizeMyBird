@@ -279,13 +279,16 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
 
 
 
+	#heading,
 	#list-view-heading {
 	  margin-top: unset !important;
 	  margin-bottom: unset !important;
 	  margin-inline-start: unset !important;
 	  min-width: 100% !important;
+	  margin-top: -30px !important;
 	}
 
+	#heading .header-name,
 	#list-view-heading .header-name {
 	  font-size: inherit !important;
 	  font-weight: unset !important;
@@ -307,10 +310,6 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
 	
 	#header-inner #search-label {
 	  display: none !important;
-	}
-
-	#list-view-heading {
-	  margin-top: -30px !important;
 	}
 
 	#list-view-heading-name {
