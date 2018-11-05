@@ -280,6 +280,8 @@
 			rgb(210, 210, 255) 0px 0px 18px !important;
 	}
 	
+	.chromeclass-status:not(:-moz-lwtheme) statusbarpanel,
+	.chromeclass-status:not(:-moz-lwtheme) .statusbar-resizerpanel,
 	#messengerWindow:not(:-moz-lwtheme) #status-bar statusbarpanel,
 	#messengerWindow:not(:-moz-lwtheme) #status-bar .statusbar-resizerpanel,
 	* #unifinder-searchBox,

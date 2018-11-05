@@ -61,6 +61,11 @@
 	#messengerWindow:not(:-moz-lwtheme) #status-bar statusbarpanel toolbarbutton{
 	  background: unset !important;
 	}
+	
+	.chromeclass-status:not(:-moz-lwtheme) statusbarpanel,
+	.chromeclass-status:not(:-moz-lwtheme) .statusbar-resizerpanel{
+	  background: -moz-dialog !important;
+	}
 
 }
 

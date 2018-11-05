@@ -41,6 +41,8 @@
 	}
   }
   
+	.chromeclass-status:not(:-moz-lwtheme) statusbarpanel,
+	.chromeclass-status:not(:-moz-lwtheme) .statusbar-resizerpanel,
 	.today-subpane,#buttonspacer,#today-pane-panel,#agenda-panel,
 	#todo-tab-panel,#mini-day-box,#today-minimonth-box,
 	#weekdayNameContainer,daypicker,#event-menubar,#event-toolbar,
