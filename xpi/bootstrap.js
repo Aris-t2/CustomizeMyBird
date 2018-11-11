@@ -524,7 +524,16 @@ var AboutPrefsUI = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme && app_version>=60) {
+			
+		  var incontent = true; 
+		  
+		  try {
+			if(app_version>=60 && app_version<64)
+			  if(!Services.prefs.getBoolPref('mail.preferences.inContent'))
+				incontent = false;
+		  } catch(e) {Cu.reportError(e)}
+		  
+		  if(tbdefaulttheme && app_version>=60 && incontent==true) {
 			  
 			var aboutprefsui = Services.prefs.getCharPref(PrefsObserver.branch + "aboutprefsui");
 			  
