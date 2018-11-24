@@ -14,6 +14,12 @@ dialog .mail-toolbox:not(:-moz-lwtheme),
   background: unset !important;
 }
 
+/**/
+#contentTabToolbox1 {
+  -moz-appearance: none !important;
+  background: #dbeaf9 !important;
+}
+
 /* filter bar */
 #messengerWindow:not(:-moz-lwtheme) :-moz-any(#quick-filter-bar,#quick-filter-bar-main-bar) {
   -moz-appearance: none !important;

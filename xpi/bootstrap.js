@@ -573,8 +573,7 @@ var AddonLastUpdatedDate = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(tbdefaulttheme)
-			return "chrome://customizemybirdextension/content/css/addon_last_updated_date.css";
+		  return "chrome://customizemybirdextension/content/css/addon_last_updated_date.css";
 		}
     }
 });
@@ -727,10 +726,33 @@ var AppmenuButton = Object.create(StylesheetManager, {
 			
 			var higherpos = '';
 			
-			var higherpos_win = '-5';
+			var higherpos_win = '\
+			  #messengerWindow[sizemode="normal"] #tabs-toolbar #button-appmenu {\
+				margin: -5px 1px 8px 1px !important;\
+			  }\
+			';
 			
-			if (os_platform != "WINNT" && os_platform != "Darwin")
-			  higherpos_win = '-1';
+		
+			if (os_platform != "WINNT" && os_platform != "Darwin" && app_version<64)
+			  higherpos_win = '\
+				#messengerWindow[sizemode="normal"] #tabs-toolbar #button-appmenu {\
+				  margin: -1px 1px 8px 1px !important;\
+				}\
+			  ';
+			
+			if (os_platform == "WINNT" && app_version>=64)
+			  higherpos_win = '\
+				#messengerWindow[sizemode="normal"] #navigation-toolbox { \
+				  margin-top: -5px !important; \
+				} \
+				#messengerWindow[sizemode="normal"] #mail-toolbar-menubar2:not([autohide="true"]) ~ #tabs-toolbar, \
+				#messengerWindow[sizemode="normal"] #mail-toolbar-menubar2[autohide="true"]:not([inactive]) ~ #tabs-toolbar { \
+				  margin-top: 5px !important; \
+				} \
+				#messengerWindow[sizemode="normal"] #tabs-toolbar #button-appmenu {\
+				  margin: -1px 1px 4px 1px !important;\
+				}\
+			  ';
 			
 			if(Services.prefs.getBoolPref(PrefsObserver.branch + "appmenubuttonhp"))
 			  higherpos = '\
@@ -740,7 +762,6 @@ var AppmenuButton = Object.create(StylesheetManager, {
 				}\
 				#messengerWindow[sizemode="normal"] #tabs-toolbar #button-appmenu {\
 				  border-top: none !important;\
-				  margin: '+higherpos_win+'px 1px 8px 1px !important;\
 				}\
 				#messengerWindow[sizemode="maximized"] #tabs-toolbar #button-appmenu {\
 				  border-top: none !important;\
@@ -754,6 +775,7 @@ var AppmenuButton = Object.create(StylesheetManager, {
 				#messengerWindow:-moz-any([sizemode="normal"],[sizemode="maximized"]) #tabs-toolbar #button-appmenu:-moz-any(:hover:active,[open]) {\
 				  border-radius: 0 !important;\
 				}\
+				'+higherpos_win+' \
 			  ';
 			  
 			var appmenubuttonicon = '\

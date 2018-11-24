@@ -277,15 +277,13 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
   margin-right: 0px !important;
 }
 
-
-
 	#heading,
 	#list-view-heading {
 	  margin-top: unset !important;
 	  margin-bottom: unset !important;
 	  margin-inline-start: unset !important;
 	  min-width: 100% !important;
-	  margin-top: -30px !important;
+	  margin-top: -26px !important;
 	}
 
 	#heading .header-name,
@@ -299,25 +297,62 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
 	}
 	
 	#header-utils-btn {
-	  min-height: 28px !important;
+	  min-height: 26px !important;
 	  min-width: 40px !important;
+	  -moz-box-ordinal-group: 0 !important;
 	}
 
 	#header-inner {
-	  width: unset !important;
-	  margin: 2px 0 !important;
+	  margin: unset !important;
+	  width: calc(100vw - 246px) !important;
 	}
 	
-	#header-inner #search-label {
-	  display: none !important;
-	}
+	/* tweaks for small windows */
+	@media (max-width: 830px) {
+	  
+		#header-inner {
+		  margin: unset !important;
+		  width: calc(100vw - 120px) !important;
+		}
+		
+		#heading #updates-container {
+		  display: none !important;
+		}
 
+	}
+	
 	#list-view-heading-name {
 	  visibility: hidden !important;
 	}
 	
-	#category-box {
-	  background: transparent !important;
+	#show-all-extensions,
+	#heading-name,
+	#header-inner #search-label{
+	  display: none !important;
+	}
+
+	#header-search {
+	  padding: 0 0px !important;
+	  min-width: 200px !important;
+	  width: unset !important;
+	}
+	
+	#header-search .textbox-input {
+	  font-size: 0.96em !important;
+	}
+	
+	#header-inner button,
+	#header-inner button .button-box {
+	  margin: 0 !important;
+	  padding: 0 !important;
+	}
+	
+	#heading .heading-inner {
+	  margin-inline-start: 0 !important;	
+	}
+	
+	.message-bar {
+	  background-color: white !important;
 	}
 	
 	.addon {
@@ -360,13 +395,18 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
 	#detail-view .detail-view-container {
 	  width: calc(100vw - 300px) !important;
 	}
+
 	#detail-view .detail-view-wrapper > spacer {
 	  display: none !important;
 	}
 	
 	#detail-icon {
-	  min-width: 64px !important;
-	  min-height: 64px !important;
-	  max-width: 64px !important;
-	  max-height: 64px !important;
+	  min-width: 32px !important;
+	  min-height: 32px !important;
+	  max-width: 32px !important;
+	  max-height: 32px !important;
+	}
+	
+	#category-box {
+	  background: transparent !important;
 	}
