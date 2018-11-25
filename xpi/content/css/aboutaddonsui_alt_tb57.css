@@ -277,136 +277,165 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
   margin-right: 0px !important;
 }
 
-	#heading,
-	#list-view-heading {
-	  margin-top: unset !important;
-	  margin-bottom: unset !important;
-	  margin-inline-start: unset !important;
-	  min-width: 100% !important;
-	  margin-top: -26px !important;
-	}
+/* Thunderbird 64+ tweaks, changes and fixes */
 
-	#heading .header-name,
-	#list-view-heading .header-name {
-	  font-size: inherit !important;
-	  font-weight: unset !important;
-	}
+#category-box {
+  background: transparent !important;
+}
 
-	#nav-header {
-	  min-height: unset !important;;
-	}
-	
-	#header-utils-btn {
-	  min-height: 26px !important;
-	  min-width: 40px !important;
-	  -moz-box-ordinal-group: 0 !important;
-	}
+#heading,
+#list-view-heading {
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+  margin-inline-start: unset !important;
+  min-width: 100% !important;
+  margin-top: -26px !important;
+}
 
+#heading .header-name,
+#list-view-heading .header-name {
+  font-size: inherit !important;
+  font-weight: unset !important;
+}
+
+#nav-header {
+  min-height: unset !important;;
+}
+
+#header-utils-btn {
+  min-height: 26px !important;
+  min-width: 40px !important;
+  -moz-box-ordinal-group: 0 !important;
+}
+
+#header-inner {
+  margin: unset !important;
+  width: calc(100vw - 246px) !important;
+}
+
+/* tweaks for small windows */
+@media (max-width: 830px) {
+  
 	#header-inner {
 	  margin: unset !important;
-	  width: calc(100vw - 246px) !important;
+	  width: calc(100vw - 120px) !important;
 	}
-	
-	/* tweaks for small windows */
-	@media (max-width: 830px) {
-	  
-		#header-inner {
-		  margin: unset !important;
-		  width: calc(100vw - 120px) !important;
-		}
-		
-		#heading #updates-container {
-		  display: none !important;
-		}
 
-	}
-	
-	#list-view-heading-name {
-	  visibility: hidden !important;
-	}
-	
-	#show-all-extensions,
-	#heading-name,
-	#header-inner #search-label{
+	#heading #updates-container {
 	  display: none !important;
 	}
 
-	#header-search {
-	  padding: 0 0px !important;
-	  min-width: 200px !important;
-	  width: unset !important;
-	}
-	
-	#header-search .textbox-input {
-	  font-size: 0.96em !important;
-	}
-	
-	#header-inner button,
-	#header-inner button .button-box {
-	  margin: 0 !important;
-	  padding: 0 !important;
-	}
-	
-	#heading .heading-inner {
-	  margin-inline-start: 0 !important;	
-	}
-	
-	.message-bar {
-	  background-color: white !important;
-	}
-	
-	.addon {
-	  padding-top: 7px !important;
-	  padding-bottom: 7px !important;
-	}
+}
 
-	.addon.card {
-	  max-width: unset !important;
-	  padding-inline-end: 0px !important;
-	}
+#list-view-heading-name {
+  visibility: hidden !important;
+}
 
-	.list-view-heading-inner {
-	  -moz-box-flex: 1 !important;
-	  width: unset !important;
-	}
+#show-all-extensions,
+#heading-name,
+#header-inner #search-label{
+  display: none !important;
+}
 
-	.list > .addon {
-	  margin: unset !important;
-	}
+#header-search {
+  padding: 0 0px !important;
+  min-width: 200px !important;
+  width: unset !important;
+}
 
-	.list > .addon,
-	.list > .addon:hover {
-	  outset: unset !important;
-	  box-shadow: unset !important;
-	  duration: unset !important;
-	  border-bottom: 1px solid var(--in-content-box-border-color) !important;
-	}
+#header-search .textbox-input {
+  font-size: 0.83em !important;
+  padding: 2px 0 !important;
+}
 
-	.sidebar-footer-button .text-link {
-	  margin-inline-start: 0 !important;
-	}
-	
-	#detail-view .card {
-	  outset: unset !important;
-	  box-shadow: unset !important;
-	  duration: unset !important;
-	}
+#header-inner button,
+#header-inner button .button-box {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
-	#detail-view .detail-view-container {
-	  width: calc(100vw - 300px) !important;
-	}
+#heading .heading-inner {
+  margin-inline-start: 0 !important;
+}
 
-	#detail-view .detail-view-wrapper > spacer {
-	  display: none !important;
-	}
-	
-	#detail-icon {
-	  min-width: 32px !important;
-	  min-height: 32px !important;
-	  max-width: 32px !important;
-	  max-height: 32px !important;
-	}
-	
-	#category-box {
-	  background: transparent !important;
-	}
+.message-bar {
+  background-color: white !important;
+}
+
+.addon {
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+
+.addon.card {
+  max-width: unset !important;
+  padding-inline-end: 0px !important;
+}
+
+.list-view-heading-inner {
+  -moz-box-flex: 1 !important;
+  width: unset !important;
+}
+
+.list > .addon {
+  margin: unset !important;
+}
+
+.list > .addon,
+.list > .addon:hover {
+  outset: unset !important;
+  box-shadow: unset !important;
+  duration: unset !important;
+  border-bottom: 1px solid var(--in-content-box-border-color) !important;
+}
+
+.sidebar-footer-button .text-link {
+  margin-inline-start: 0 !important;
+}
+
+#tb-legacy-extensions-notice {
+  -moz-box-align: unset !important;
+}
+
+.list-view-notice {
+  margin-inline-start: 0 !important;
+}
+
+#detail-view .card {
+  outset: unset !important;
+  box-shadow: unset !important;
+  duration: unset !important;
+}
+
+#detail-view .detail-view-container {
+  width: calc(100vw - 300px) !important;
+}
+
+#detail-view .detail-view-wrapper > spacer {
+  display: none !important;
+}
+
+#detail-icon {
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+}
+
+#detail-contributions {
+  -moz-box-ordinal-group: 99 !important;
+}
+
+#detail-desc-container {
+  -moz-box-ordinal-group: 100 !important;
+}
+
+#detail-controls {
+  padding-bottom: 20px !important;
+}
+
+#detail-name-container,
+#detail-name-container > * {
+  font-size: 1.25em !important;
+  font-weight: bold !important;
+}

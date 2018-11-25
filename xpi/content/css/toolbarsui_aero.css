@@ -15,9 +15,18 @@ dialog .mail-toolbox:not(:-moz-lwtheme),
 }
 
 /**/
-#contentTabToolbox1 {
+#messengerWindow:not(:-moz-lwtheme) #contentTabToolbox1 {
   -moz-appearance: none !important;
-  background: #dbeaf9 !important;
+  background: #eaf2fb !important;
+}
+#messengerWindow:not(:-moz-lwtheme) #contentTabToolbox1 .searchBox {
+  -moz-appearance: none !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+#messengerWindow:not(:-moz-lwtheme) #contentTabToolbox1 .searchBox .contentTabUrlbar {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
 }
 
 /* filter bar */
@@ -99,8 +108,8 @@ resizer {
 }
 
 /* Lightning */
-#messengerWindow #today-pane-panel:not(:-moz-lwtheme) > sidebarheader,
-#messengerWindow #today-pane-panel:not(:-moz-lwtheme) {
+#messengerWindow:not(:-moz-lwtheme) #today-pane-panel:not(:-moz-lwtheme) > sidebarheader,
+#messengerWindow:not(:-moz-lwtheme) #today-pane-panel:not(:-moz-lwtheme) {
   background-color: #eaf2fb !important;
 }
 #messengerWindow:not(:-moz-lwtheme) #today-pane-panel > sidebarheader {
@@ -126,7 +135,8 @@ resizer {
   }
 }
 
-#folderTree,#dirTree,
+#messengerWindow:not(:-moz-lwtheme) #folderTree,
+#messengerWindow:not(:-moz-lwtheme) #dirTree,
 window:not(#messengerWindow) .chromeclass-menubar:not(:-moz-lwtheme),
 #msgcomposeWindow:not(:-moz-lwtheme) .toolbox-top{
   background: #eaf2fb !important;
