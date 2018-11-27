@@ -4,6 +4,7 @@
 <!DOCTYPE window SYSTEM "chrome://customizemybirdextension/locale/prefs.dtd">
 
 <window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml"
 	id="CustomizeMyBird_prefwindow"
 	title="&CMB_title;"
 	onload="customizemybird.options.init()"
@@ -183,17 +184,17 @@
 		  </hbox>
 		  <hbox align="center" class="cmb_win cmb_defaulttheme">
 			<description>&Windowheaderbg;</description>
-			<colorpicker id="customizemybird_cp_winheaderbg" type="button" onselect="customizemybird.options.manageColorPref('cp','winheaderbg');"/>
+			<html:input type="color" id="customizemybird_cp_winheaderbg" onchange="customizemybird.options.manageColorPref('cp','winheaderbg');"/>
 			<textbox id="customizemybird_tb_winheaderbgt" size="15" onkeyup="customizemybird.options.manageColorPref('tb','winheaderbg');"/>
 		  </hbox>
 		  <hbox align="center" class="cmb_win cmb_defaulttheme">
 			<description>&Appmenubuttontxtc;</description>
-			<colorpicker id="customizemybird_cp_winheadertc" type="button" onselect="customizemybird.options.manageColorPref('cp','winheadertc');"/>
+			<html:input type="color" id="customizemybird_cp_winheadertc" onchange="customizemybird.options.manageColorPref('cp','winheadertc');"/>
 			<textbox id="customizemybird_tb_winheadertct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','winheadertc');"/>
 		  </hbox>
 		  <hbox align="center" class="cmb_win cmb_defaulttheme" id="customizemybird_windowheader_caption_bgc">
 			<description>&Windowheadercapc;</description>
-			<colorpicker id="customizemybird_cp_winheadercc" type="button" onselect="customizemybird.options.manageColorPref('cp','winheadercc');"/>
+			<html:input type="color" id="customizemybird_cp_winheadercc" onchange="customizemybird.options.manageColorPref('cp','winheadercc');"/>
 			<textbox id="customizemybird_tb_winheadercct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','winheadercc');"/>
 		  </hbox>
 		  
@@ -207,12 +208,12 @@
 		  </hbox>
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Windowheaderbg;</description>
-			<colorpicker id="customizemybird_cp_mailpanelbg" type="button" onselect="customizemybird.options.manageColorPref('cp','mailpanelbg');"/>
+			<html:input type="color" id="customizemybird_cp_mailpanelbg" onchange="customizemybird.options.manageColorPref('cp','mailpanelbg');"/>
 			<textbox id="customizemybird_tb_mailpanelbgt" size="15" onkeyup="customizemybird.options.manageColorPref('tb','mailpanelbg');"/>
 		  </hbox>
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Appmenubuttontxtc;</description>
-			<colorpicker id="customizemybird_cp_mailpaneltc" type="button" onselect="customizemybird.options.manageColorPref('cp','mailpaneltc');"/>
+			<html:input type="color" id="customizemybird_cp_mailpaneltc" onchange="customizemybird.options.manageColorPref('cp','mailpaneltc');"/>
 			<textbox id="customizemybird_tb_mailpaneltct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','mailpaneltc');"/>
 		  </hbox>
 		  
@@ -226,12 +227,12 @@
 		  </hbox>
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Windowheaderbg;</description>
-			<colorpicker id="customizemybird_cp_mailcontentbg" type="button" onselect="customizemybird.options.manageColorPref('cp','mailcontentbg');"/>
+			<html:input type="color" id="customizemybird_cp_mailcontentbg" onchange="customizemybird.options.manageColorPref('cp','mailcontentbg');"/>
 			<textbox id="customizemybird_tb_mailcontentbgt" size="15" onkeyup="customizemybird.options.manageColorPref('tb','mailcontentbg');"/>
 		  </hbox>
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Appmenubuttontxtc;</description>
-			<colorpicker id="customizemybird_cp_mailcontenttc" type="button" onselect="customizemybird.options.manageColorPref('cp','mailcontenttc');"/>
+			<html:input type="color" id="customizemybird_cp_mailcontenttc" onchange="customizemybird.options.manageColorPref('cp','mailcontenttc');"/>
 			<textbox id="customizemybird_tb_mailcontenttct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','mailcontenttc');"/>
 		  </hbox>
 	  
@@ -251,13 +252,13 @@
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttonc1;</description>
-			<colorpicker id="customizemybird_cp_appmenubuttonc1" type="button" onselect="customizemybird.options.manageColorPref('cp','appmenubuttonc1');"/>
+			<html:input type="color" id="customizemybird_cp_appmenubuttonc1" onchange="customizemybird.options.manageColorPref('cp','appmenubuttonc1');"/>
 			<textbox id="customizemybird_tb_appmenubuttonc1t" size="15" onkeyup="customizemybird.options.manageColorPref('tb','appmenubuttonc1');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttonc2;</description>
-			<colorpicker id="customizemybird_cp_appmenubuttonc2" type="button" onselect="customizemybird.options.manageColorPref('cp','appmenubuttonc2');"/>
+			<html:input type="color" id="customizemybird_cp_appmenubuttonc2" onchange="customizemybird.options.manageColorPref('cp','appmenubuttonc2');"/>
 			<textbox id="customizemybird_tb_appmenubuttonc2t" size="15" onkeyup="customizemybird.options.manageColorPref('tb','appmenubuttonc2');"/>
 		  </hbox>
 		  
@@ -281,13 +282,13 @@
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttontxtc;</description>
-			<colorpicker id="customizemybird_cp_appmenubuttontxtc" type="button" onselect="customizemybird.options.manageColorPref('cp','appmenubuttontxtc');"/>
+			<html:input type="color" id="customizemybird_cp_appmenubuttontxtc" onchange="customizemybird.options.manageColorPref('cp','appmenubuttontxtc');"/>
 			<textbox id="customizemybird_tb_appmenubuttontxtct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','appmenubuttontxtc');"/>
 		  </hbox>
 		  
 		  <hbox align="center">
 			<description>&Appmenubuttontxtcs;</description>
-			<colorpicker id="customizemybird_cp_appmenubuttontxtcs" type="button" onselect="customizemybird.options.manageColorPref('cp','appmenubuttontxtcs');"/>
+			<html:input type="color" id="customizemybird_cp_appmenubuttontxtcs" onchange="customizemybird.options.manageColorPref('cp','appmenubuttontxtcs');"/>
 			<textbox id="customizemybird_tb_appmenubuttontxtcst" size="15" onkeyup="customizemybird.options.manageColorPref('tb','appmenubuttontxtcs');"/>
 		  </hbox>
 		  
@@ -478,7 +479,7 @@
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_background_color;</description>
-			<colorpicker id="customizemybird_cp_scrollbars_cappearance_background_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_background_color');"/>
+			<html:input type="color" id="customizemybird_cp_scrollbars_cappearance_background_color" onchange="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_background_color');"/>
 			<textbox id="customizemybird_tb_scrollbars_cappearance_background_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_background_color');"/>
 		  </hbox>
 		  
@@ -489,7 +490,7 @@
 				  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_color;</description>
-			<colorpicker id="customizemybird_cp_scrollbars_cappearance_thumb_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_thumb_color');"/>
+			<html:input type="color" id="customizemybird_cp_scrollbars_cappearance_thumb_color" onchange="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_thumb_color');"/>
 			<textbox id="customizemybird_tb_scrollbars_cappearance_thumb_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_thumb_color');"/>
 		  </hbox>
 		  
@@ -500,7 +501,7 @@
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_hover_color;</description>
-			<colorpicker id="customizemybird_cp_scrollbars_cappearance_thumb_hover_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_thumb_hover_color');"/>
+			<html:input type="color" id="customizemybird_cp_scrollbars_cappearance_thumb_hover_color" onchange="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_thumb_hover_color');"/>
 			<textbox id="customizemybird_tb_scrollbars_cappearance_thumb_hover_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_thumb_hover_color');"/>
 		  </hbox>
 		  
@@ -521,13 +522,13 @@
 		  
 		  <hbox align="center">
 			<description>&Scrollbars_cappearance_thumb_border_color;</description>
-			<colorpicker id="customizemybird_cp_scrollbars_cappearance_thumb_border_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_thumb_border_color');"/>
+			<html:input type="color" id="customizemybird_cp_scrollbars_cappearance_thumb_border_color" onchange="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_thumb_border_color');"/>
 			<textbox id="customizemybird_tb_scrollbars_cappearance_thumb_border_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_thumb_border_color');"/>
 		  </hbox>
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbars_cappearance_buttons_color;</description>
-			<colorpicker id="customizemybird_cp_scrollbars_cappearance_buttons_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_buttons_color');"/>
+			<html:input type="color" id="customizemybird_cp_scrollbars_cappearance_buttons_color" onchange="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_buttons_color');"/>
 			<textbox id="customizemybird_tb_scrollbars_cappearance_buttons_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_buttons_color');"/>
 		  </hbox>
 		  
@@ -538,7 +539,7 @@
 		  
 		  <hbox align="center" class="cmb_winlin">
 			<description>&Scrollbars_cappearance_buttons_hover_color;</description>
-			<colorpicker id="customizemybird_cp_scrollbars_cappearance_buttons_hover_color" type="button" onselect="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_buttons_hover_color');"/>
+			<html:input type="color" id="customizemybird_cp_scrollbars_cappearance_buttons_hover_color" onchange="customizemybird.options.manageColorPref('cp','scrollbars_cappearance_buttons_hover_color');"/>
 			<textbox id="customizemybird_tb_scrollbars_cappearance_buttons_hover_colort" size="15" onkeyup="customizemybird.options.manageColorPref('tb','scrollbars_cappearance_buttons_hover_color');"/>
 		  </hbox>
 		  

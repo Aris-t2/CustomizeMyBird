@@ -15,16 +15,16 @@ dialog .mail-toolbox:not(:-moz-lwtheme),
 }
 
 /**/
-#messengerWindow:not(:-moz-lwtheme) #contentTabToolbox1 {
+#messengerWindow:not(:-moz-lwtheme) .contentTabToolbox {
   -moz-appearance: none !important;
   background: #eaf2fb !important;
 }
-#messengerWindow:not(:-moz-lwtheme) #contentTabToolbox1 .searchBox {
+#messengerWindow:not(:-moz-lwtheme) .contentTabToolbox .searchBox {
   -moz-appearance: none !important;
   background: #ffffff !important;
   color: #000000 !important;
 }
-#messengerWindow:not(:-moz-lwtheme) #contentTabToolbox1 .searchBox .contentTabUrlbar {
+#messengerWindow:not(:-moz-lwtheme) .contentTabToolbox .searchBox .contentTabUrlbar {
   padding-left: 4px !important;
   padding-right: 4px !important;
 }

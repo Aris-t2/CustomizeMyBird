@@ -43,37 +43,37 @@ customizemybird.options = {
 	
 	document.getElementById("customizemybird_cb_appmenubutton").checked = this.prefs.getBoolPref("appmenubutton");
 	document.getElementById("customizemybird_cb_appmenubuttonct").checked = this.prefs.getBoolPref("appmenubuttonct");
-	document.getElementById("customizemybird_cp_appmenubuttonc1").color = this.prefs.getCharPref("appmenubuttonc1");
+	document.getElementById("customizemybird_cp_appmenubuttonc1").value = this.prefs.getCharPref("appmenubuttonc1");
 	document.getElementById("customizemybird_tb_appmenubuttonc1t").value = this.prefs.getCharPref("appmenubuttonc1");
-	document.getElementById("customizemybird_cp_appmenubuttonc2").color = this.prefs.getCharPref("appmenubuttonc2");
+	document.getElementById("customizemybird_cp_appmenubuttonc2").value = this.prefs.getCharPref("appmenubuttonc2");
 	document.getElementById("customizemybird_tb_appmenubuttonc2t").value = this.prefs.getCharPref("appmenubuttonc2");
 	document.getElementById("customizemybird_tb_appmenubuttontxt").value = this.prefs.getCharPref("appmenubuttontxt");
-	document.getElementById("customizemybird_cp_appmenubuttontxtc").color = this.prefs.getCharPref("appmenubuttontxtc");
+	document.getElementById("customizemybird_cp_appmenubuttontxtc").value = this.prefs.getCharPref("appmenubuttontxtc");
 	document.getElementById("customizemybird_tb_appmenubuttontxtct").value = this.prefs.getCharPref("appmenubuttontxtc");
-	document.getElementById("customizemybird_cp_appmenubuttontxtcs").color = this.prefs.getCharPref("appmenubuttontxtcs");
+	document.getElementById("customizemybird_cp_appmenubuttontxtcs").value = this.prefs.getCharPref("appmenubuttontxtcs");
 	document.getElementById("customizemybird_tb_appmenubuttontxtcst").value = this.prefs.getCharPref("appmenubuttontxtcs");
 	document.getElementById("customizemybird_cb_appmenubuttonhp").checked = this.prefs.getBoolPref("appmenubuttonhp");
 	document.getElementById("customizemybird_cb_appmenubuttondm").checked = this.prefs.getBoolPref("appmenubuttondm");
 	document.getElementById("customizemybird_rg_appmenubuttonicon").value = this.prefs.getCharPref("appmenubuttonicon");
 	
 	document.getElementById("customizemybird_cb_winheader").checked = this.prefs.getBoolPref("winheader");
-	document.getElementById("customizemybird_cp_winheaderbg").color = this.prefs.getCharPref("winheaderbg");
+	document.getElementById("customizemybird_cp_winheaderbg").value = this.prefs.getCharPref("winheaderbg");
 	document.getElementById("customizemybird_tb_winheaderbgt").value = this.prefs.getCharPref("winheaderbg");
-	document.getElementById("customizemybird_cp_winheadertc").color = this.prefs.getCharPref("winheadertc");
+	document.getElementById("customizemybird_cp_winheadertc").value = this.prefs.getCharPref("winheadertc");
 	document.getElementById("customizemybird_tb_winheadertct").value = this.prefs.getCharPref("winheadertc");
-	document.getElementById("customizemybird_cp_winheadercc").color = this.prefs.getCharPref("winheadercc");
+	document.getElementById("customizemybird_cp_winheadercc").value = this.prefs.getCharPref("winheadercc");
 	document.getElementById("customizemybird_tb_winheadercct").value = this.prefs.getCharPref("winheadercc");
 	
 	document.getElementById("customizemybird_cb_mailpanel").checked = this.prefs.getBoolPref("mailpanel");
-	document.getElementById("customizemybird_cp_mailpanelbg").color = this.prefs.getCharPref("mailpanelbg");
+	document.getElementById("customizemybird_cp_mailpanelbg").value = this.prefs.getCharPref("mailpanelbg");
 	document.getElementById("customizemybird_tb_mailpanelbgt").value = this.prefs.getCharPref("mailpanelbg");
-	document.getElementById("customizemybird_cp_mailpaneltc").color = this.prefs.getCharPref("mailpaneltc");
+	document.getElementById("customizemybird_cp_mailpaneltc").value = this.prefs.getCharPref("mailpaneltc");
 	document.getElementById("customizemybird_tb_mailpaneltct").value = this.prefs.getCharPref("mailpaneltc");
 	
 	document.getElementById("customizemybird_cb_mailcontent").checked = this.prefs.getBoolPref("mailcontent");
-	document.getElementById("customizemybird_cp_mailcontentbg").color = this.prefs.getCharPref("mailcontentbg");
+	document.getElementById("customizemybird_cp_mailcontentbg").value = this.prefs.getCharPref("mailcontentbg");
 	document.getElementById("customizemybird_tb_mailcontentbgt").value = this.prefs.getCharPref("mailcontentbg");
-	document.getElementById("customizemybird_cp_mailcontenttc").color = this.prefs.getCharPref("mailcontenttc");
+	document.getElementById("customizemybird_cp_mailcontenttc").value = this.prefs.getCharPref("mailcontenttc");
 	document.getElementById("customizemybird_tb_mailcontenttct").value = this.prefs.getCharPref("mailcontenttc");
 	
 	document.getElementById("customizemybird_rg_toolbarsui").value = this.prefs.getCharPref("toolbarsui");
@@ -107,29 +107,29 @@ customizemybird.options = {
 	document.getElementById("customizemybird_num_scrollbar_copacity_value").value = this.prefs.getIntPref("scrollbar_copacity_value");
 	document.getElementById("customizemybird_cb_scrollbars_cappearance").checked = this.prefs.getBoolPref("scrollbars_cappearance");
 	
-	document.getElementById("customizemybird_cp_scrollbars_cappearance_background_color").color = this.prefs.getCharPref("scrollbars_cappearance_background_color");
+	document.getElementById("customizemybird_cp_scrollbars_cappearance_background_color").value = this.prefs.getCharPref("scrollbars_cappearance_background_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_background_colort").value = this.prefs.getCharPref("scrollbars_cappearance_background_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_background_gradient").value = this.prefs.getCharPref("scrollbars_cappearance_background_gradient");
 
-	document.getElementById("customizemybird_cp_scrollbars_cappearance_thumb_color").color = this.prefs.getCharPref("scrollbars_cappearance_thumb_color");
+	document.getElementById("customizemybird_cp_scrollbars_cappearance_thumb_color").value = this.prefs.getCharPref("scrollbars_cappearance_thumb_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_thumb_colort").value = this.prefs.getCharPref("scrollbars_cappearance_thumb_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_thumb_gradient").value = this.prefs.getCharPref("scrollbars_cappearance_thumb_gradient");
 	
-	document.getElementById("customizemybird_cp_scrollbars_cappearance_thumb_hover_color").color = this.prefs.getCharPref("scrollbars_cappearance_thumb_hover_color");
+	document.getElementById("customizemybird_cp_scrollbars_cappearance_thumb_hover_color").value = this.prefs.getCharPref("scrollbars_cappearance_thumb_hover_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_thumb_hover_colort").value = this.prefs.getCharPref("scrollbars_cappearance_thumb_hover_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_thumb_hover_gradient").value = this.prefs.getCharPref("scrollbars_cappearance_thumb_hover_gradient");
 	
 	document.getElementById("customizemybird_num_scrollbars_cappearance_thumb_roundness").value = this.prefs.getIntPref("scrollbars_cappearance_thumb_roundness");
 	document.getElementById("customizemybird_num_scrollbars_cappearance_thumb_border").value = this.prefs.getIntPref("scrollbars_cappearance_thumb_border");
 	
-	document.getElementById("customizemybird_cp_scrollbars_cappearance_thumb_border_color").color = this.prefs.getCharPref("scrollbars_cappearance_thumb_border_color");
+	document.getElementById("customizemybird_cp_scrollbars_cappearance_thumb_border_color").value = this.prefs.getCharPref("scrollbars_cappearance_thumb_border_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_thumb_border_colort").value = this.prefs.getCharPref("scrollbars_cappearance_thumb_border_color");
 	
-	document.getElementById("customizemybird_cp_scrollbars_cappearance_buttons_color").color = this.prefs.getCharPref("scrollbars_cappearance_buttons_color");
+	document.getElementById("customizemybird_cp_scrollbars_cappearance_buttons_color").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_buttons_colort").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_buttons_gradient").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_gradient");
 	
-	document.getElementById("customizemybird_cp_scrollbars_cappearance_buttons_hover_color").color = this.prefs.getCharPref("scrollbars_cappearance_buttons_hover_color");
+	document.getElementById("customizemybird_cp_scrollbars_cappearance_buttons_hover_color").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_hover_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_buttons_hover_colort").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_hover_color");
 	document.getElementById("customizemybird_tb_scrollbars_cappearance_buttons_hover_gradient").value = this.prefs.getCharPref("scrollbars_cappearance_buttons_hover_gradient");
 	document.getElementById("customizemybird_num_scrollbars_cappearance_buttons_roundness").value = this.prefs.getIntPref("scrollbars_cappearance_buttons_roundness");
@@ -159,11 +159,11 @@ customizemybird.options = {
   manageColorPref: function(fromwhere,which) {
 
 	if(fromwhere=="cp") { // color picker
-		this.prefs.setCharPref(which,document.getElementById("customizemybird_cp_"+which).color);
+		this.prefs.setCharPref(which,document.getElementById("customizemybird_cp_"+which).value);	
 		document.getElementById("customizemybird_tb_"+which+"t").value = this.prefs.getCharPref(which);
 	} else { // textbox
 		this.prefs.setCharPref(which,document.getElementById("customizemybird_tb_"+which+"t").value);
-		document.getElementById("customizemybird_cp_"+which).color = this.prefs.getCharPref(which);
+		document.getElementById("customizemybird_cp_"+which).value = this.prefs.getCharPref(which);
 	}
 		
   },

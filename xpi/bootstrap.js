@@ -563,8 +563,10 @@ var AddonsManagerVersion = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
         get: function() {
-		  if(app_version>=59) return "chrome://customizemybirdextension/content/css/addonversion_tb59.css";
-			else return "chrome://customizemybirdextension/content/css/addonversion.css";
+		  
+		  if(app_version>=64) return "chrome://customizemybirdextension/content/css/addonversion_tb64.css";
+		    else if(app_version>=59) return "chrome://customizemybirdextension/content/css/addonversion_tb59.css";
+			  else return "chrome://customizemybirdextension/content/css/addonversion.css";
 		}
     }
 });

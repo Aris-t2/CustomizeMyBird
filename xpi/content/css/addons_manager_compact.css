@@ -17,7 +17,6 @@
 	  padding-left: 0 !important;
 	}
 
-
 	#addons-page #detail-view,
 	#addons-page #userstyle-sorting,
 	#addons-page .global-warning-container,
@@ -72,26 +71,10 @@
 	  height: unset !important;
 	}
 	
-	/*#addons-page .addon .name-container,
-	#addons-page #addon-list .name-container {
-	  font-size: 130% !important;
-	}
-	.sort-controls,
-	#addons-page #addon-list .warning,
-	#addons-page #addon-list .pending,
-	#addons-page #addon-list .error{
-	  font-size: 90% !important;
-	}*/
-	
 	button.addon-control image{
 	  margin-top: -1.5px !important;
 	  margin-bottom: -1.5px !important;
 	}
-
-	/* search */
-	/*#search-filter {
-	  font-size: 90% !important;
-	}*/
 
 	/* detail view */
 	#detail-view button:not(.button-link):not(.text-link),
@@ -109,14 +92,6 @@
 	  height:auto !important;
 	  width: auto !important;
 	}
-	
-	/*#detail-view label{
-	  font-size: 90% !important;
-	}
-
-	#detail-view .creator-link{
-	  font-size: 110% !important;
-	}*/
 	
 	/* checkbox and radio items */
 	#addons-page checkbox image,
@@ -139,11 +114,6 @@
 	  height: unset !important;
 	}
 	
-	/*#addons-page .addon .icon-container {
-	  -moz-margin-start: -10px !important;
-	  -moz-margin-end: -14px !important;
-	}*/
-
 	#addons-page .addon .icon-container .icon {
 	  min-width: unset !important;
 	  min-height: unset !important;
@@ -176,10 +146,6 @@
 	  -moz-margin-end: 0 !important;
 	}
 	
-	/*.addon .content-container * {
-	  font-size: 100% !important;
-	}*/
-
 	.addon .update-available button,
 	.addon .control-container button,
 	.addon .control-container menulist {
@@ -202,6 +168,7 @@
 	
 	.addon .experiment-container {
 	  display: none !important;
+	}
 
 	.description-container spacer {
 	  display: none !important;
@@ -282,3 +249,4 @@
 	#addons-page .addon .description-container {
 	  margin-inline-start: 5px !important;
 	}
+	

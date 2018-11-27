@@ -1,9 +1,9 @@
 	
-#addons-page .addon:not([pending])[status="installed"] {
+#addons-page .addon[active="true"][status="installed"] {
   -moz-binding: url("chrome://customizemybirdextension/content/addonversion_tb59.xml#addon-generic") !important;
 }
 
-#addons-page .addon:not([pending])[status="installed"] .name-container .version {
+#addons-page .addon[active="true"][status="installed"] .name-container .version {
   visibility: visible !important;
 }
 
@@ -15,6 +15,7 @@
   margin-inline-start: 0px !important;
   -moz-box-align: center !important;
   font-size: 1.25rem !important;
+   min-height: 26px !important;
 }
 
 #addons-page .addon .description {
