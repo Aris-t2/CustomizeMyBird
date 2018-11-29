@@ -734,7 +734,6 @@ var AppmenuButton = Object.create(StylesheetManager, {
 			  }\
 			';
 			
-		
 			if (os_platform != "WINNT" && os_platform != "Darwin" && app_version<64)
 			  higherpos_win = '\
 				#messengerWindow[sizemode="normal"] #tabs-toolbar #button-appmenu {\
@@ -805,7 +804,7 @@ var AppmenuButton = Object.create(StylesheetManager, {
 
 			// create custom appbutton
 			var customappbutton = "data:text/css;charset=utf-8," + encodeURIComponent('\
-				#button-appmenu:not(:hover):not(:active):not([open="true"]){\
+				#button-appmenu:not(:hover):not(:active):not([open]){\
 				  -moz-appearance: none !important;\
 				  background: linear-gradient('+appmenubuttonc1+', '+appmenubuttonc2+' 95%) !important;\
 				  transition: unset !important;\
@@ -820,7 +819,7 @@ var AppmenuButton = Object.create(StylesheetManager, {
 							  1px 0 0 0px rgba(255,255,255,.6),\
 							  -1px 0 0 0px rgba(255,255,255,.6) !important;\
 				}\
-				#button-appmenu:hover:not(:active):not([open="true"]){\
+				#button-appmenu:hover:not(:active):not([open]){\
 				  -moz-appearance: none !important;\
 				  background: radial-gradient(farthest-side at center bottom, hsla(0,0%,100%,.5) 10%, hsla(0,0%,100%,0) 70%),\
 							  radial-gradient(farthest-side at center bottom, hsla(0,0%,100%,.7), hsla(0,0%,100%,0)),\
@@ -837,7 +836,7 @@ var AppmenuButton = Object.create(StylesheetManager, {
 				}\
 				#button-appmenu:active,\
 				#button-appmenu:hover:active,\
-				#button-appmenu[open="true"] {\
+				#button-appmenu[open] {\
 				  -moz-appearance: none !important;\
 				  background: radial-gradient(farthest-side at center bottom, hsla(0,0%,100%,.5) 10%, hsla(0,0%,100%,0) 70%),\
 							  radial-gradient(farthest-side at center bottom, hsla(0,0%,100%,.7), hsla(0,0%,100%,0)),\
@@ -864,6 +863,8 @@ var AppmenuButton = Object.create(StylesheetManager, {
 				  border-right: 1px solid !important;\
 				  border-left: 1px solid !important;\
 				  border-bottom: 1px solid !important;\
+				}\
+				#messengerWindow toolbox toolbar #button-appmenu {\
 				  min-height: 20px !important;\
 				  min-width: 24px !important;\
 				}\
@@ -1091,18 +1092,11 @@ var CtbMaintoolbarButtonRadius = Object.create(StylesheetManager, {
 				var ctb_maintoolbar_br = Services.prefs.getIntPref(PrefsObserver.branch + "ctb_maintoolbar_br");
 				
 				return "data:text/css;charset=utf-8," + encodeURIComponent('\
-					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
-					@-moz-document	url(chrome://messenger/content/messenger.xul),\
-									url(chrome://messenger/content/messageWindow.xul),\
-									url(chrome://messenger/content/messengercompose/messengercompose.xul),\
-									url(chrome://messenger/content/addressbook/addressbook.xul),\
-									url(chrome://calendar/content/calendar-event-dialog.xul){\
-						.chromeclass-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
-						.chromeclass-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,\
-						.chromeclass-toolbar .toolbarbutton-1,\
-						.chromeclass-toolbar #button-appmenu {\
-							border-radius: '+ctb_maintoolbar_br+'px !important;\
-						}\
+					.chromeclass-toolbar:not(#tabs-toolbar) .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
+					.chromeclass-toolbar:not(#tabs-toolbar) .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,\
+					.chromeclass-toolbar:not(#tabs-toolbar) .toolbarbutton-1,\
+					.chromeclass-toolbar:not(#tabs-toolbar) #button-appmenu {\
+						border-radius: '+ctb_maintoolbar_br+'px !important;\
 					}\
 				');
 			  }
@@ -1120,18 +1114,12 @@ var CtbMenubarButtonRadius = Object.create(StylesheetManager, {
 				var ctb_menubar_br = Services.prefs.getIntPref(PrefsObserver.branch + "ctb_menubar_br");
 				
 				return "data:text/css;charset=utf-8," + encodeURIComponent('\
-					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
-					@-moz-document	url(chrome://messenger/content/messenger.xul),\
-									url(chrome://messenger/content/messageWindow.xul),\
-									url(chrome://messenger/content/addressbook/addressbook.xul),\
-									url(chrome://messenger/content/messengercompose/messengercompose.xul) {\
-						.chromeclass-menubar toolbarbutton[type="menu"],\
-						.chromeclass-menubar .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
-						.chromeclass-menubar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,\
-						.chromeclass-menubar .toolbarbutton-1,\
-						.chromeclass-menubar  #button-appmenu {\
-							border-radius: '+ctb_menubar_br+'px !important;\
-						}\
+					.chromeclass-menubar toolbarbutton[type="menu"],\
+					.chromeclass-menubar .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
+					.chromeclass-menubar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,\
+					.chromeclass-menubar .toolbarbutton-1,\
+					.chromeclass-menubar  #button-appmenu {\
+						border-radius: '+ctb_menubar_br+'px !important;\
 					}\
 				');
 			  }
@@ -1150,17 +1138,14 @@ var CtbTabsToolbarButtonRadius = Object.create(StylesheetManager, {
 				var ctb_tabstoolbar_br = Services.prefs.getIntPref(PrefsObserver.branch + "ctb_tabstoolbar_br");
 				
 				return "data:text/css;charset=utf-8," + encodeURIComponent('\
-					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
-					@-moz-document	url(chrome://messenger/content/messenger.xul){\
-						#tabs-toolbar #alltabs-button,\
-						#tabbar-toolbar toolbarbutton[type="menu"],\
-						#tabbar-toolbar toolbarbutton,\
-						#tabbar-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
-						#tabbar-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,\
-						#tabbar-toolbar .toolbarbutton-1,\
-						#tabbar-toolbar  #button-appmenu {\
-							border-radius: '+ctb_tabstoolbar_br+'px !important;\
-						}\
+					#tabs-toolbar #alltabs-button,\
+					#tabbar-toolbar toolbarbutton[type="menu"],\
+					#tabbar-toolbar toolbarbutton,\
+					#tabbar-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
+					#tabbar-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,\
+					#tabbar-toolbar .toolbarbutton-1,\
+					#tabbar-toolbar #button-appmenu {\
+						border-radius: '+ctb_tabstoolbar_br+'px !important;\
 					}\
 				');
 			  }
@@ -1223,18 +1208,11 @@ var CtbMaintoolbarButtonHeight = Object.create(StylesheetManager, {
 					var ctb_maintoolbar_bh = Services.prefs.getIntPref(PrefsObserver.branch + "ctb_maintoolbar_bh");
 					
 					return "data:text/css;charset=utf-8," + encodeURIComponent('\
-						@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
-						@-moz-document	url(chrome://messenger/content/messenger.xul),\
-										url(chrome://messenger/content/messageWindow.xul),\
-										url(chrome://messenger/content/messengercompose/messengercompose.xul),\
-										url(chrome://messenger/content/addressbook/addressbook.xul),\
-										url(chrome://calendar/content/calendar-event-dialog.xul){\
-							.chromeclass-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
-							.chromeclass-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,\
-							.chromeclass-toolbar .toolbarbutton-1,\
-							.chromeclass-toolbar #button-appmenu {\
-								min-height: '+ctb_maintoolbar_bh+'px !important;\
-							}\
+						.chromeclass-toolbar:not(#tabs-toolbar) .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
+						.chromeclass-toolbar:not(#tabs-toolbar) .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,\
+						.chromeclass-toolbar:not(#tabs-toolbar) .toolbarbutton-1,\
+						.chromeclass-toolbar:not(#tabs-toolbar) #button-appmenu {\
+							min-height: '+ctb_maintoolbar_bh+'px !important;\
 						}\
 					');
 				}
@@ -1254,17 +1232,10 @@ var CtbMaintoolbarButtonWidth = Object.create(StylesheetManager, {
 					var ctb_maintoolbar_bw = Services.prefs.getIntPref(PrefsObserver.branch + "ctb_maintoolbar_bw");
 					
 					return "data:text/css;charset=utf-8," + encodeURIComponent('\
-						@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
-						@-moz-document	url(chrome://messenger/content/messenger.xul),\
-										url(chrome://messenger/content/messageWindow.xul),\
-										url(chrome://messenger/content/messengercompose/messengercompose.xul),\
-										url(chrome://messenger/content/addressbook/addressbook.xul),\
-										url(chrome://calendar/content/calendar-event-dialog.xul){\
-							.chromeclass-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
-							.chromeclass-toolbar .toolbarbutton-1,\
-							.chromeclass-toolbar #button-appmenu {\
-								min-width: '+ctb_maintoolbar_bw+'px !important;\
-							}\
+						.chromeclass-toolbar:not(#tabs-toolbar) .toolbarbutton-1 > .toolbarbutton-menubutton-button,\
+						.chromeclass-toolbar:not(#tabs-toolbar) .toolbarbutton-1,\
+						.chromeclass-toolbar:not(#tabs-toolbar) #button-appmenu {\
+							min-width: '+ctb_maintoolbar_bw+'px !important;\
 						}\
 					');
 				}
@@ -1284,14 +1255,9 @@ var CtbMenubarButtonHeight = Object.create(StylesheetManager, {
 					var ctb_menubar_bh = Services.prefs.getIntPref(PrefsObserver.branch + "ctb_menubar_bh");
 					
 					return "data:text/css;charset=utf-8," + encodeURIComponent('\
-						@-moz-document	url(chrome://messenger/content/messenger.xul),\
-										url(chrome://messenger/content/messageWindow.xul),\
-										url(chrome://messenger/content/addressbook/addressbook.xul),\
-										url(chrome://messenger/content/messengercompose/messengercompose.xul) {\
-							.chromeclass-menubar .toolbarbutton-1:not(.toolbarbutton-menubutton-button),\
-							.chromeclass-menubar #button-appmenu {\
-								min-height: '+ctb_menubar_bh+'px !important;\
-							}\
+						.chromeclass-menubar .toolbarbutton-1:not(.toolbarbutton-menubutton-button),\
+						.chromeclass-menubar #button-appmenu {\
+							min-height: '+ctb_menubar_bh+'px !important;\
 						}\
 					');
 				}
@@ -1311,14 +1277,9 @@ var CtbMenubarButtonWidth = Object.create(StylesheetManager, {
 					var ctb_menubar_bw = Services.prefs.getIntPref(PrefsObserver.branch + "ctb_menubar_bw");
 					
 					return "data:text/css;charset=utf-8," + encodeURIComponent('\
-						@-moz-document	url(chrome://messenger/content/messenger.xul),\
-										url(chrome://messenger/content/messageWindow.xul),\
-										url(chrome://messenger/content/addressbook/addressbook.xul),\
-										url(chrome://messenger/content/messengercompose/messengercompose.xul) {\
-							.chromeclass-menubar .toolbarbutton-1:not(.toolbarbutton-menubutton-button),\
-							.chromeclass-menubar #button-appmenu {\
-								min-width: '+ctb_menubar_bw+'px !important;\
-							}\
+						.chromeclass-menubar .toolbarbutton-1:not(.toolbarbutton-menubutton-button),\
+						.chromeclass-menubar #button-appmenu {\
+							min-width: '+ctb_menubar_bw+'px !important;\
 						}\
 					');
 				}

@@ -50,7 +50,7 @@
 		  </vbox>
 		  
 		  <vbox>
-			<radiogroup id="customizemybird_rg_categories" orient="vertical">
+			<radiogroup id="customizemybird_rg_cmbcategories" orient="vertical">
 			  <radio label="&Allsettings;" value="cmb_cat_all" id="cmb_cat_all" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_all');"/>
 			  <radio label="&Generalui;" value="cmb_cat_generalui" id="cmb_cat_generalui" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_generalui');"/>
 			  <radio label="&Appmenubutton0;" value="cmb_cat_appbutton" id="cmb_cat_appbutton" onmousedown="customizemybird.options.manageCharPref('cmbcategories','cmb_cat_appbutton');"/>
@@ -563,7 +563,7 @@
 			<checkbox id="customizemybird_cb_customcss" label="" oncommand="customizemybird.options.manageBoolPref('customcss');"/>
 		  </hbox>
 
-		  <textbox align="center" id="customizemybird_tb_customcss" rows="15" multiline="true" onkeyup="customizemybird.options.manageCharPref('customcsstb',this.value);"/>
+		  <textbox align="center" id="customizemybird_tb_customcsstb" rows="15" multiline="true" onkeyup="customizemybird.options.manageCharPref('customcsstb',this.value);"/>
 
 		</vbox>
 		

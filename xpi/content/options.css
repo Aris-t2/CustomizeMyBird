@@ -91,27 +91,27 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 !important;
 }
 
-#customizemybird_rg_categories radio:hover {
+#customizemybird_rg_cmbcategories radio:hover {
   cursor: pointer !important;
 }
 
-#customizemybird_rg_categories radio .radio-label {
+#customizemybird_rg_cmbcategories radio .radio-label {
   padding: 0 4px !important;
 }
 
-#customizemybird_rg_categories radio:not([selected="true"]) :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
+#customizemybird_rg_cmbcategories radio:not([selected="true"]) :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
   visibility: hidden !important;
 }
 
-#customizemybird_rg_categories radio:not([selected="true"]):hover :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
+#customizemybird_rg_cmbcategories radio:not([selected="true"]):hover :-moz-any(.radio-spacer-box,.radio-check,.radio-check-box1) {
   visibility: visible !important;
   opacity: 0.2 !important;
 }
 
-#customizemybird_rg_categories radio:not([selected="true"]) :-moz-any(.radio-label-center-box,.radio-label-box) {
+#customizemybird_rg_cmbcategories radio:not([selected="true"]) :-moz-any(.radio-label-center-box,.radio-label-box) {
   -moz-appearance: none !important;
 }
-#customizemybird_rg_categories radio:-moz-any([selected="true"],:hover) :-moz-any(.radio-label-center-box,.radio-label-box) {
+#customizemybird_rg_cmbcategories radio:-moz-any([selected="true"],:hover) :-moz-any(.radio-label-center-box,.radio-label-box) {
   -moz-appearance: none !important;
   background: Highlight !important;
   color: Highlighttext !important;
@@ -119,7 +119,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #cmb_tb63plus_compatibility,
-#customizemybird_rg_categories radio[selected="true"] :-moz-any(.radio-label-center-box,.radio-label-box),
+#customizemybird_rg_cmbcategories radio[selected="true"] :-moz-any(.radio-label-center-box,.radio-label-box),
 .text-link,
 .cmb_nondefault_theme {
   font-weight: bold;
@@ -151,7 +151,7 @@ input[type=number]::-webkit-outer-spin-button {
   -moz-image-region: rect(0px, 432px, 18px, 414px);
 }
 
-#customizemybird_tb_customcss {
+#customizemybird_tb_customcsstb {
   min-width: 480px;
   width: calc( 100vw - 330px );
 }
