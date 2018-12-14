@@ -283,7 +283,7 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
   background: transparent !important;
 }
 
-#heading,
+#addons-page #heading,
 #list-view-heading {
   margin-top: unset !important;
   margin-bottom: unset !important;
@@ -292,7 +292,7 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
   margin-top: -26px !important;
 }
 
-#heading .header-name,
+#addons-page #heading .header-name,
 #list-view-heading .header-name {
   font-size: inherit !important;
   font-weight: unset !important;
@@ -321,7 +321,7 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
 	  width: calc(100vw - 120px) !important;
 	}
 
-	#heading #updates-container {
+	#addons-page #heading #updates-container {
 	  display: none !important;
 	}
 
@@ -354,7 +354,7 @@ html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
   padding: 0 !important;
 }
 
-#heading .heading-inner {
+#addons-page #heading .heading-inner {
   margin-inline-start: 0 !important;
 }
 

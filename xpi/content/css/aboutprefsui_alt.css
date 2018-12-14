@@ -35,8 +35,8 @@
 @media (max-width: 830px) {
   
   #MailPreferences #category-box radio {
-padding-inline-start: 10px !important;
-margin-inline-end: 0px !important;
+	padding-inline-start: 10px !important;
+	margin-inline-end: 0px !important;
   }
 
 }
