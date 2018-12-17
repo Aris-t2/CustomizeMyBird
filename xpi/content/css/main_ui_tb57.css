@@ -52,7 +52,7 @@
 	#messengerWindow:not(:-moz-lwtheme) #status-bar statusbarpanel,
 	#messengerWindow:not(:-moz-lwtheme) #status-bar .statusbar-resizerpanel{
 	  -moz-appearance: none !important;  
-	  border-top: 1px solid rgba(0,0,0,.2) !important;
+	  /*border-top: 1px solid rgba(0,0,0,.2) !important;*/
 	  border-left: 0px !important;
 	  border-right: 0px !important;
 	  border-bottom: 0px !important;
@@ -62,10 +62,16 @@
 	  background: unset !important;
 	}
 	
+	#messengerWindow:not(:-moz-lwtheme) #status-bar,
 	.chromeclass-status:not(:-moz-lwtheme) statusbarpanel,
 	.chromeclass-status:not(:-moz-lwtheme) .statusbar-resizerpanel{
 	  background: -moz-dialog !important;
 	}
+	
+	#messengerWindow:not(:-moz-lwtheme) #status-bar {
+	  border-top: 1px solid rgba(0,0,0,.2) !important;
+	}
+
 
 }
 

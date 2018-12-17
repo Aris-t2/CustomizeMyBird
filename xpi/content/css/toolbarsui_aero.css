@@ -81,14 +81,19 @@ dialog .mail-toolbox:not(:-moz-lwtheme),
 	}
 }
 
+#messengerWindow:not(:-moz-lwtheme) #status-bar,
 #messengerWindow:not(:-moz-lwtheme) #status-bar statusbarpanel,
 #messengerWindow:not(:-moz-lwtheme) #status-bar .statusbar-resizerpanel{
   -moz-appearance: none !important;  
   background: #dbeaf9 !important;
-  border-top: 1px solid rgba(0,0,0,.2) !important;
+  /*border-top: 1px solid rgba(0,0,0,.2) !important;*/
   border-left: 0px !important;
   border-right: 0px !important;
   border-bottom: 0px !important;
+}
+
+#messengerWindow:not(:-moz-lwtheme) #status-bar {
+  border-top: 1px solid rgba(0,0,0,.2) !important;
 }
 
 #messengerWindow:not(:-moz-lwtheme) #status-bar .statusbar-resizerpanel{
