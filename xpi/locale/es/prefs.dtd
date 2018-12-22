@@ -24,6 +24,7 @@
 <!ENTITY Statusbar_hidden	"Barra de estado: Ocultar barra de estado">
 <!ENTITY Attachmentbox_hp	"Recuadro de adjuntos: Situarlo encima del contenido del correo">
 <!ENTITY Attachmentbox_bp	"Recuadro de adjuntos: Mover botón a la posición inicial">
+<!ENTITY Writewindowbiu		"Mail window: ">
 <!ENTITY Quickfilterbar_lp	"Barra de filtrado rápido: Situarla debajo de la lista de correos">
 <!ENTITY Quickfilterbar		"Barra de filtrado rápido: Mode">
 <!ENTITY Quickfilterbar_ico "Solo iconos">

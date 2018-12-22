@@ -155,3 +155,15 @@ input[type=number]::-webkit-outer-spin-button {
   min-width: 480px;
   width: calc( 100vw - 330px );
 }
+
+.cmb_bold {
+  font-weight: bold;
+}
+
+.cmb_italic {
+  font-style: italic;
+}
+
+.cmb_underlined {
+  text-decoration: underline;
+}

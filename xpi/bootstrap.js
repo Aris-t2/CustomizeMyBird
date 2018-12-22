@@ -43,6 +43,7 @@ function startup(params, reason){
   defaultbranch.setBoolPref("statusbar_hidden",false);
   defaultbranch.setBoolPref("attachmentbox_hp",false);
   defaultbranch.setBoolPref("attachmentbox_bp",false);
+  defaultbranch.setBoolPref("write_window_biu_icons",false);
   defaultbranch.setBoolPref("quickfilterbar_lp",false);
   defaultbranch.setCharPref("quickfilterbar","quickfilterbar_def");
   defaultbranch.setBoolPref("appmenubutton",false);
@@ -646,6 +647,15 @@ var AttachmentboxButtonPosition = Object.create(StylesheetManager, {
 		configurable: false,
         get: function() {
 		  return "chrome://customizemybirdextension/content/css/attachmentbox_bp.css";
+		}
+    }
+});
+
+var WriteWindowBIUIcons = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {
+		  return "chrome://customizemybirdextension/content/css/write_window_biu_icons.css";
 		}
     }
 });
@@ -1526,6 +1536,7 @@ var customizemybirdsettings = {
 	"statusbar_hidden": StatusbarHidden,
 	"attachmentbox_hp": AttachmentboxHigherPosition,
 	"attachmentbox_bp": AttachmentboxButtonPosition,
+	"write_window_biu_icons": WriteWindowBIUIcons,
 	"quickfilterbar_lp": QuickFilterBarLowerPosition,
 	"quickfilterbar": QuickFilterBar,
 	"treecolumnsui": TreeColumnsUI,

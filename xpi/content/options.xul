@@ -153,6 +153,18 @@
 		  </hbox>
 		  
 		  <hbox align="center">
+			<description>&Writewindowbiu;</description>
+			<description class="cmb_bold">A</description>
+			<description class="cmb_italic">A</description>
+			<description class="cmb_underlined">A</description>
+			<description> &gt; </description>
+			<description class="cmb_bold">B</description>
+			<description class="cmb_italic">I</description>
+			<description class="cmb_underlined">U</description>
+			<checkbox id="customizemybird_cb_write_window_biu_icons" label="" oncommand="customizemybird.options.manageBoolPref('write_window_biu_icons');"/>
+		  </hbox>
+		  
+		  <hbox align="center">
 			<description>&Quickfilterbar_lp;</description>
 			<checkbox id="customizemybird_cb_quickfilterbar_lp" label="" oncommand="customizemybird.options.manageBoolPref('quickfilterbar_lp');"/>
 		  </hbox>

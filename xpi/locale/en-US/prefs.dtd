@@ -24,6 +24,7 @@
 <!ENTITY Statusbar_hidden	"Statusbar: hide statusbar">
 <!ENTITY Attachmentbox_hp	"Attachments: move above mail content">
 <!ENTITY Attachmentbox_bp	"Attachments: move button to start position">
+<!ENTITY Writewindowbiu		"Mail window: ">
 <!ENTITY Quickfilterbar_lp	"Quick-filter-bar: Move below mail list">
 <!ENTITY Quickfilterbar		"Quick-filter-bar mode: ">
 <!ENTITY Quickfilterbar_ico "Icons only">

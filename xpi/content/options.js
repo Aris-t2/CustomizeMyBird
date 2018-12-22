@@ -63,7 +63,7 @@ customizemybird.options = {
   },
 
   manageBoolPref: function(which) {
-	if(this.prefs.getBoolPref(which)) this.prefs.setBoolPref(which,false); else this.prefs.setBoolPref(which,true);
+	this.prefs.setBoolPref(which,!this.prefs.getBoolPref(which));
   },
 
   manageCharPref: function(pref,value) {

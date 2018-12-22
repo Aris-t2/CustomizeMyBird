@@ -24,6 +24,7 @@
 <!ENTITY Statusbar_hidden	"Statusleiste: Statusleiste verstecken">
 <!ENTITY Attachmentbox_hp	"Mailanhänge: über dem Mailinhalt anzeigen">
 <!ENTITY Attachmentbox_bp	"Mailanhänge: Schaltfläche nach links verschieben">
+<!ENTITY Writewindowbiu		"Mailfenster: ">
 <!ENTITY Quickfilterbar_lp	"Schnellfilterleiste unter der Mailliste anzeigen">
 <!ENTITY Quickfilterbar		"Schnellfilterleistemodus: ">
 <!ENTITY Quickfilterbar_ico "Symbole">
