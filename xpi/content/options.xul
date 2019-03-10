@@ -228,6 +228,10 @@
 			<html:input type="color" id="customizemybird_cp_mailpaneltc" onchange="customizemybird.options.manageColorPref('cp','mailpaneltc');"/>
 			<textbox id="customizemybird_tb_mailpaneltct" size="15" onkeyup="customizemybird.options.manageColorPref('tb','mailpaneltc');"/>
 		  </hbox>
+		  <hbox align="center" class="cmb_defaulttheme">
+			<description>&Mailpaneltag;</description>
+			<checkbox id="customizemybird_cb_mailpaneltagcolors" label="" oncommand="customizemybird.options.manageBoolPref('mailpaneltagcolors');"/>
+		  </hbox>
 		  
 		  <hbox align="center" class="cmb_defaulttheme">
 			<description>&Mailcontent;</description>

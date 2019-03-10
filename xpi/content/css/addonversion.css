@@ -1,12 +1,12 @@
+#addons-page .addon:not([pending="uninstall"])[status="installed"]	{
+  -moz-binding: url("chrome://customizemybirdextension/content/addonversion.xml#addon-generic") !important;
+}
 
-	#addons-page .addon:not([pending="uninstall"])[status="installed"]	{
-	  -moz-binding: url("chrome://customizemybirdextension/content/addonversion.xml#addon-generic") !important;
-	}
-
-	#addons-page .addon:not([pending="uninstall"])[status="installed"] .name-container .version {
-	  visibility: visible !important;
-	}
+#addons-page .addon:not([pending="uninstall"])[status="installed"] .name-container .version {
+  visibility: visible !important;
+  -moz-padding-end: 4px !important;
+}
 	
-	#addons-page .addon .legacy-warning {
-	  visibility: collapse !important;
-	}
+#addons-page .addon .legacy-warning {
+  visibility: collapse !important;
+}

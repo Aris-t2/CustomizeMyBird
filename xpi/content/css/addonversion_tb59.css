@@ -5,6 +5,7 @@
 
 #addons-page .addon:not([pending])[status="installed"] .name-container .version {
   visibility: visible !important;
+  -moz-padding-end: 4px !important;
 }
 
 #addons-page .addon .legacy-warning {

@@ -4,7 +4,7 @@
         <em:id>CustomizeMyBird@Aris_CTRdev</em:id>
         <em:type>2</em:type>
         <em:name>CustomizeMyBird</em:name>
-        <em:version>2.7.8</em:version>
+        <em:version>2.7.9</em:version>
         <em:bootstrap>true</em:bootstrap>
         <em:creator>Aris</em:creator>
 		<em:description>CustomizeMyBird offers tweaks to customize Thunderbirds default theme and lightweight themes (e.g. squared tabs, custom tab height, alternative menu button, alternative add-on manager and more).</em:description>
@@ -16,7 +16,7 @@
             <Description>
                 <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
                 <em:minVersion>52.0</em:minVersion>
-                <em:maxVersion>66.0</em:maxVersion>
+                <em:maxVersion>67.0</em:maxVersion>
             </Description>
         </em:targetApplication>
 

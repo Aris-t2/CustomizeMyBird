@@ -5,7 +5,9 @@
 #mail-toolbar-menubar2,
 #tabs-toolbar,
 #tabs-toolbar::after,
-#tabs-toolbar::before{
+#tabs-toolbar::before,
+#navigation-toolbox::before,
+#navigation-toolbox::after {
   box-shadow: none !important;
 }
 

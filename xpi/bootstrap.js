@@ -58,13 +58,14 @@ function startup(params, reason){
   defaultbranch.setCharPref("appmenubuttonicon","tb_icon_none");
   defaultbranch.setCharPref("toolbarsui","toolbarsui_def");
   defaultbranch.setBoolPref("winheader",false);
-  defaultbranch.setCharPref("winheaderbg","#eaf2fb");
-  defaultbranch.setCharPref("winheadertc","#000000");
-  defaultbranch.setCharPref("winheadercc","rgba(211,211,211,0.5)");
+  defaultbranch.setCharPref("winheaderbg","#202340");
+  defaultbranch.setCharPref("winheadertc","#ffffff");
+  defaultbranch.setCharPref("winheadercc","rgba(255,255,255,0.3)");
   defaultbranch.setCharPref("treecolumnsui","treecolumnsui_def");
   defaultbranch.setBoolPref("mailpanel",false);
   defaultbranch.setCharPref("mailpanelbg","#000000");
   defaultbranch.setCharPref("mailpaneltc","#ffffff");
+  defaultbranch.setBoolPref("mailpaneltagcolors",false);
   defaultbranch.setBoolPref("mailcontent",false);
   defaultbranch.setCharPref("mailcontentbg","#000000");
   defaultbranch.setCharPref("mailcontenttc","#ffffff");
@@ -439,6 +440,11 @@ var TabHeight = Object.create(StylesheetManager, {
 					@media (-moz-os-version:windows-win10) {\
 					  #messengerWindow[sizemode=maximized] #titlebar-buttonbox-container {\
 						margin-bottom: 2px !important;\
+					  }\
+					}\
+					@media (-moz-os-version:windows-win7) {\
+					  #messengerWindow[sizemode=maximized] #navigation-toolbox::before  {\
+						-moz-margin-end: 150px !important;\
 					  }\
 					}\
 					'+adjust_height+'\
@@ -1040,6 +1046,16 @@ var MailPanelColor = Object.create(StylesheetManager, {
     }
 });
 
+var MailPanelTagColors = Object.create(StylesheetManager, {
+    stylesheet: {
+		configurable: false,
+        get: function() {
+		  if(tbdefaulttheme)
+			return "chrome://customizemybirdextension/content/css/tag_colors.css";
+		}
+    }
+});
+
 var MailContentColor = Object.create(StylesheetManager, {
     stylesheet: {
 		configurable: false,
@@ -1556,6 +1572,7 @@ var customizemybirdsettings = {
 	"winheadertc": WindowHeaderColor,
 	"winheadercc": WindowHeaderColor,
 	"mailpanel": MailPanelColor,
+	"mailpaneltagcolors": MailPanelTagColors,
 	"mailpanelbg": MailPanelColor,
 	"mailpaneltc": MailPanelColor,
 	"mailcontent": MailContentColor,

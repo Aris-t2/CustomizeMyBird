@@ -38,7 +38,8 @@
 <!ENTITY Windowheadercapc	"- custom caption background color">
 
 <!ENTITY Mailpanel			"Mail panel colors">
-<!ENTITY Mailpanelnote		"- [!] experimental / tagged colors get overridden">
+<!ENTITY Mailpanelnote		"- [!] experimental">
+<!ENTITY Mailpaneltag		"- fix text colors of tagged elements">
 <!ENTITY Mailcontent		"Mail content colors">
 <!ENTITY Mailcontentnote	"- [!] experimental / link colors do not get overridden">
 

@@ -38,7 +38,8 @@
 <!ENTITY Windowheadercapc	"- benutzerdefinierte Fensterschaltfächenfarbe">
 
 <!ENTITY Mailpanel			"Email- und Ordnerbereich">
-<!ENTITY Mailpanelnote		"- [!] experimentell / Schlagwortfarben werden überschrieben">
+<!ENTITY Mailpanelnote		"- [!] experimentell">
+<!ENTITY Mailpaneltag		"- Schlagwortfarben korrigieren">
 <!ENTITY Mailcontent		"Emailinhalt">
 <!ENTITY Mailcontentnote	"- [!] experimentell / Linkfarben werden nicht überschrieben">
 
