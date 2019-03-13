@@ -757,16 +757,20 @@ var AppmenuButton = Object.create(StylesheetManager, {
 				}\
 			  ';
 			
-			if (os_platform == "WINNT" && app_version>=64)
+			if (os_platform == "WINNT" && app_version>=60)
 			  higherpos_win = '\
-				#messengerWindow[sizemode="normal"] #navigation-toolbox { \
-				  margin-top: -5px !important; \
+				#messengerWindow[tabsintitlebar][sizemode="normal"] #navigation-toolbox { \
+				  margin-top: -4px !important; \
 				} \
-				#messengerWindow[sizemode="normal"] #mail-toolbar-menubar2:not([autohide="true"]) ~ #tabs-toolbar, \
-				#messengerWindow[sizemode="normal"] #mail-toolbar-menubar2[autohide="true"]:not([inactive]) ~ #tabs-toolbar { \
-				  margin-top: 5px !important; \
+				#messengerWindow[tabsintitlebar][sizemode="normal"] #mail-toolbar-menubar2:not([autohide="true"]) ~ #tabs-toolbar, \
+				#messengerWindow[tabsintitlebar][sizemode="normal"] #mail-toolbar-menubar2[autohide="true"][inactive="true"] ~ #tabs-toolbar { \
+				  margin-top: 0px !important; \
 				} \
-				#messengerWindow[sizemode="normal"] #tabs-toolbar #button-appmenu {\
+				#messengerWindow[tabsintitlebar][sizemode="normal"] #mail-toolbar-menubar2[autohide="true"]:not([inactive]) ~ #tabs-toolbar, \
+				#messengerWindow[tabsintitlebar][sizemode="normal"] #mail-toolbar-menubar2[autohide="false"][inactive="true"] ~ #tabs-toolbar { \
+				  margin-top: 4px !important; \
+				} \
+				#messengerWindow[tabsintitlebar][sizemode="normal"] #tabs-toolbar #button-appmenu {\
 				  margin: -1px 1px 4px 1px !important;\
 				}\
 			  ';

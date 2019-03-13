@@ -51,7 +51,7 @@
 <!ENTITY Appmenubuttontxt	"- benutzerdefinierter Text">
 <!ENTITY Appmenubuttontxtc	"- benutzerdefinierte Textfarbe">
 <!ENTITY Appmenubuttontxtcs	"- benutzerdefinierter Textschatten">
-<!ENTITY Appmenubuttonhp	"- höhere Position auf Tab- und Menüleiste)">
+<!ENTITY Appmenubuttonhp	"- höhere Position auf Tab- und Menüleiste">
 <!ENTITY Appmenubuttondm	"- Aufklappschaltfläche anzeigen">
 <!ENTITY Appmenubuttonicon	"- Text oder Symbol">
 <!ENTITY Appmenubuttonicont	"'Text'">
