@@ -1,6 +1,6 @@
 ## Thunderbird 68+
 
-**CMB will not be updated for Thunderbird 68+. I'm done with Mozilla!**  
+**CMB will not be updated for Thunderbird 68+. I'm done with Mozilla and not going to rewrite this add-on again! Time to move to another Email client.**  
 
 ## Download
 
