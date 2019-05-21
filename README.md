@@ -1,6 +1,10 @@
+## Thunderbird 68+
+
+**CMB will not be updated for Thunderbird 68+. I'm done with Mozilla!**  
+
 ## Download
 
-**[CustomizeMyBird for Thunderbird 52-63+](https://github.com/Aris-t2/CustomizeMyBird/releases)**  
+**[CustomizeMyBird for Thunderbird 52-67](https://github.com/Aris-t2/CustomizeMyBird/releases)**  
 
 ## Want to support this project?
 
