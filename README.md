@@ -4,7 +4,7 @@
 
 ## Download
 
-**[CustomizeMyBird for Thunderbird 52-67](https://github.com/Aris-t2/CustomizeMyBird/releases)**  
+**[CustomizeMyBird for Thunderbird 52-60.x](https://github.com/Aris-t2/CustomizeMyBird/releases)**  
 
 ## Want to support this project?
 
