@@ -15,33 +15,33 @@
 <!ENTITY Tabtbbuttons_bt	"Pestañas y botones de la barra de pestañas: Intercambiar posiciones">
 <!ENTITY Tabtb_lightning	"Barra de pestañas: Ocultar botones (de Lightning)">
 
-<!ENTITY Menubarposition	"Menu bar: ">
+<!ENTITY Menubarposition	"Barra de menús: ">
 <!ENTITY Menubarposition_at	"Encima de la barra de pestañas">
 <!ENTITY Menubarposition_bt	"Debajo de la barra de pestañas">
-<!ENTITY Menubarposition_wb	"Below tabs and with bottom border">
+<!ENTITY Menubarposition_wb	"Debajo de las pestañas y con borde inferior">
 <!ENTITY Menubar_compact	"Barra de menú principal: Vista compacta">
 <!ENTITY Main_tb_compact	"Barra de herramientas principal: Vista compacta">
 <!ENTITY Statusbar_hidden	"Barra de estado: Ocultar barra de estado">
 <!ENTITY Attachmentbox_hp	"Recuadro de adjuntos: Situarlo encima del contenido del correo">
 <!ENTITY Attachmentbox_bp	"Recuadro de adjuntos: Mover botón a la posición inicial">
-<!ENTITY Writewindowbiu		"Mail window: ">
+<!ENTITY Writewindowbiu		"Ventana de correo: ">
 <!ENTITY Quickfilterbar_lp	"Barra de filtrado rápido: Situarla debajo de la lista de correos">
 <!ENTITY Quickfilterbar		"Barra de filtrado rápido: Mode">
 <!ENTITY Quickfilterbar_ico "Solo iconos">
 <!ENTITY Quickfilterbar_txt "Solo texto">
 <!ENTITY Quickfilterbar_it	"Icono + texto">
 <!ENTITY Treecol			"Apariencia de cabeceras de columna: ">
-<!ENTITY Toolbarui			"Main UI &amp; color de la barra de herramientas: ">
+<!ENTITY Toolbarui			"Interfaz de usuario y color de la barra de herramientas: ">
 
 <!ENTITY Windowheader		"Colores (de cabecera) de ventanas">
 <!ENTITY Windowheaderbg		"- color personalizado">
 <!ENTITY Windowheadercapc	"- color del botón de subtitulos personalizado">
 
-<!ENTITY Mailpanel			"Mail panel colors">
+<!ENTITY Mailpanel			"Colores del panel de correo">
 <!ENTITY Mailpanelnote		"- [!] experimental">
-<!ENTITY Mailpaneltag		"- fix text colors of tagged elements">
-<!ENTITY Mailcontent		"Mail content colors">
-<!ENTITY Mailcontentnote	"- [!] experimental / link colors do not get overridden">
+<!ENTITY Mailpaneltag		"- corrige los colores del texto de elementos etiquetados">
+<!ENTITY Mailcontent		"Colores del contenido de correo">
+<!ENTITY Mailcontentnote	"- [!] experimental / los colores de los enlaces no son reemplazados">
 
 <!ENTITY Appmenubutton0		"Botón principal de menú de la aplicación">
 <!ENTITY Appmenubutton		"Apariencia alternativa">
@@ -106,6 +106,6 @@
 
 <!ENTITY Nondefault_theme	"Algunas opciones no están disponibles para 'temas completos'!">
 
-<!ENTITY Supportsite		"Github Sitio de soporte">
+<!ENTITY Supportsite		"Sitio de soporte en Github">
 <!ENTITY Reportissue		"Reportar problemas">
 <!ENTITY Latestversion		"Descargue la versión más reciente aquí">
