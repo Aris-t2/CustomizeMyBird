@@ -1,4 +1,5 @@
 <!ENTITY CMB_title			"CustomizeMyBird">
+<!ENTITY CMB_nosupport68	"Es wird keine Unterstützung für Thunderbird 68+ geben!">
 <!ENTITY Allsettings		"Alle Einstellungen">
 <!ENTITY Generalui			"Oberfläche">
 <!ENTITY UI_tabs			"Tabs: ">

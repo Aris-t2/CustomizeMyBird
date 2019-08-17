@@ -27,6 +27,11 @@
 		  <spacer flex="1"/>
 		</hbox>
 		
+		<hbox>
+		  <description id="customizemybird_nosupport">&CMB_nosupport68;</description>
+		  <spacer flex="1"/>
+		</hbox>
+		
 		<vbox class="cmb_nondefault_theme">
 		  <description>[!] &Nondefault_theme;</description>
 		  <description> </description>
