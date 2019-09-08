@@ -1,6 +1,6 @@
 ## Thunderbird 68+
 
-**CMB will not be updated for Thunderbird 68+, please don't ask for it. I'm done with Mozilla and their lies about keeping the "old" add-on eco system in Thunderbird. This add-on will not be rewritten by me again!**  
+**CMB will not be updated for Thunderbird 68+, please don't ask for it. I'm done with Mozilla and their lies about keeping the "old" add-on eco system in Thunderbird. This add-on will not be rewritten by me again! Use [CustomCSSforTb](https://github.com/Aris-t2/CustomCSSforTb) instead**  
 
 ## Download
 
